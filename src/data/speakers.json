@@ -1,8 +1,8 @@
 {
   "featured": {
     "name": "Shivam Shivam",
-    "role": "Founding Technical Partner · High Scale Artificial Systems",
-    "topic": "Featured Speaker · AICSSYC 2026",
+    "role": "AI Architect / AI Innovation Leader",
+    "topic": "ZS Associates",
     "bio": "Joining AICSSYC 2026 as a featured voice on high-scale artificial systems and the evolving relationship between intelligent agents and the people who work with them.",
     "initials": "SS",
     "photo": "shivam",
@@ -11,32 +11,32 @@
   "speakers": [
     {
       "name": "Utkarsh Siddharth",
-      "org": "Principal Software Architect",
-      "focus": "Enterprise Distributed Systems",
+      "org": "Co-Founder & CTO",
+      "focus": "Equartis Technologies",
       "initials": "US",
       "photo": "utkarsh",
       "linkedin": "https://www.linkedin.com/in/utkarsh-siddharth-5bb11b126/"
     },
     {
       "name": "Eric Berkowitz",
-      "org": "Global Management Consultant",
-      "focus": "Strategy & Venture Engineering",
+      "org": "Director Of Membership",
+      "focus": "IEEE Computer Society",
       "initials": "EB",
       "photo": "eric",
       "linkedin": "https://www.linkedin.com/in/ericberkowitz/"
     },
     {
       "name": "Andrew Seely",
-      "org": "Enterprise Cloud Architect",
-      "focus": "Secure Systems Infrastructure",
+      "org": "Chair, IEEE U.S. Government Community of Interest",
+      "focus": "IEEE Computer Society",
       "initials": "AS",
       "photo": "andrew",
       "linkedin": "https://www.linkedin.com/in/andrewseelytampa/"
     },
     {
       "name": "Nikky Kumar Jha",
-      "org": "Co-Founder & Tech Entrepreneur",
-      "focus": "Innovation & Startup Leadership",
+      "org": "Founder & CEO",
+      "focus": "Saptkrishi (Sabjikothi)",
       "initials": "NJ",
       "photo": "nikky",
       "linkedin": "https://www.linkedin.com/in/nikkykumarjha/"
