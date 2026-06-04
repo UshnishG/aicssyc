@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 type Tier = {
   name: string;
@@ -106,11 +107,16 @@ export function Tickets() {
               ? [...baseFeatures, "SRM IST campus accommodation included"]
               : baseFeatures;
             return (
-              <article
+              <motion.article
                 key={t.name}
+                initial={{ opacity: 0, y: 50, scale: 0.92 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: tiers.indexOf(t) * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className={`relative p-8 md:p-10 border flex flex-col ${
                   t.popular
-                    ? "bg-transparent text-ivory border-gold"
+                    ? "bg-transparent text-ivory border-gold shadow-[var(--shadow-gold)]"
                     : "bg-midnight-deep/55 border-white/10 text-ivory"
                 }`}
               >
@@ -168,7 +174,7 @@ export function Tickets() {
                 >
                   Register →
                 </a>
-              </article>
+              </motion.article>
             );
           })}
         </div>
