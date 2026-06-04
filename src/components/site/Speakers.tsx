@@ -102,7 +102,7 @@ export function Speakers() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </CardGrid>
         <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/75">
           More speakers being announced · subject to change
         </p>
