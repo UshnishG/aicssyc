@@ -103,9 +103,9 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.05 }}
+            initial={{ opacity: 0, y: 30, filter: "blur(14px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.1, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-[clamp(2.25rem,5.2vw,4.75rem)] leading-[1.02] tracking-tight text-balance"
           >
             All India Computer Society
