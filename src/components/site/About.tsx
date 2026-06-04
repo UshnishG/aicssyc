@@ -1,12 +1,3 @@
-import { motion } from "framer-motion";
-
-const editions = [
-  { year: "2023", note: "AICSSYC · Strengthened SYP focus" },
-  { year: "2024", note: "Expanded chapter participation" },
-  { year: "2025", note: "Record student & YP turnout" },
-  { year: "2026", note: "SRM IST · Where Agent Meets Humans", current: true },
-];
-
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-36 bg-ivory">
