@@ -113,8 +113,8 @@ export function Speakers() {
             </motion.div>
           ))}
         </CardGrid>
-        <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/75">
-          More speakers being announced · subject to change
+        <p className="mt-24 md:mt-32 text-center text-xs uppercase tracking-[0.18em] text-ivory/75">
+          More speakers being announced
         </p>
       </div>
     </section>
