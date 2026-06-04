@@ -9,6 +9,7 @@ import { WhyAttend } from "@/components/site/WhyAttend";
 import { Tickets } from "@/components/site/Tickets";
 import { Sponsors } from "@/components/site/Sponsors";
 import { FAQ } from "@/components/site/FAQ";
+import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
 
 const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
