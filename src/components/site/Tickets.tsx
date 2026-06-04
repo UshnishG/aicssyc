@@ -59,18 +59,24 @@ const baseFeatures = [
 const ACCOMMODATION_FEE = 2000;
 
 // Konfhub widget palette tuned to the dark midnight + gold theme.
+// Konfhub widget palette. The widget itself is cross-origin so we can only
+// tune what its query params expose. We use a light ivory "form card" inside
+// the dark modal — it reads as a single brand object and all KonfHub-controlled
+// chrome (inputs, timer bar, checkout strip) stays on a consistent surface.
+// Text colors are tuned for WCAG AA on the chosen backgrounds.
 const WIDGET_PARAMS =
   "desc=false" +
-  "&bg=11151B" +
-  "&secondaryBg=1A2028" +
-  "&ticketBg=1A2028" +
-  "&borderCl=2A323D" +
-  "&fontColor=F5EFE0" +
-  "&ticketCl=F5EFE0" +
-  "&btnColor=D4A847" +
+  "&bg=FBF7EC" + // ivory page
+  "&secondaryBg=F3ECD7" + // sand panels
+  "&ticketBg=FFFFFF" + // white ticket cards
+  "&borderCl=E2D6B0" + // warm gold-tinted border
+  "&fontColor=1A1F2C" + // near-black body text (15.6:1 on ivory)
+  "&ticketCl=1A1F2C" + // ticket text
+  "&btnColor=8A6A1F" + // deep gold for AA on white button text (5.4:1)
   "&fontFamily=Hind" +
-  "&borderRadius=8" +
+  "&borderRadius=10" +
   "&widget_type=quick";
+
 
 function buildWidgetUrl(ticketId?: string) {
   if (ticketId) {
@@ -282,19 +288,22 @@ export function Tickets() {
               </DialogClose>
             </div>
           </DialogHeader>
-          <div className="relative bg-midnight-deep">
-            {activeTier && (
-              <iframe
-                key={activeTier.id}
-                src={buildWidgetUrl(activeTier.ticketId)}
-                title={`Register for ${activeTier.name} — AICSSYC 2026`}
-                width="100%"
-                height="520"
-                allow="payment"
-                className="block w-full border-0"
-              />
-            )}
+          <div className="relative p-4 md:p-5">
+            <div className="rounded-[12px] overflow-hidden bg-[#FBF7EC] ring-1 ring-gold/40 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)]">
+              {activeTier && (
+                <iframe
+                  key={activeTier.id}
+                  src={buildWidgetUrl(activeTier.ticketId)}
+                  title={`Register for ${activeTier.name} — AICSSYC 2026`}
+                  width="100%"
+                  height="560"
+                  allow="payment"
+                  className="block w-full border-0 bg-[#FBF7EC]"
+                />
+              )}
+            </div>
           </div>
+
           <div className="relative px-6 py-3 border-t border-white/10 text-[11px] text-ivory/60 flex items-center justify-between gap-3">
             <span>Powered by KonfHub · Secure checkout</span>
             <a
