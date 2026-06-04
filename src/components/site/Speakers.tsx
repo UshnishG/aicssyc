@@ -3,9 +3,9 @@ import { Linkedin } from "lucide-react";
 
 const featured = {
   name: "Shivam Shivam",
-  role: "Featured Speaker · AICSSYC 2026",
-  topic: "Flagship session · Day 0",
-  bio: "Joining AICSSYC 2026 as a featured voice on agentic systems and the evolving relationship between intelligent agents and the people who work with them.",
+  role: "Founding Technical Partner · High Scale Artificial Systems",
+  topic: "Featured Speaker · AICSSYC 2026",
+  bio: "Joining AICSSYC 2026 as a featured voice on high-scale artificial systems and the evolving relationship between intelligent agents and the people who work with them.",
   initials: "SS",
   linkedin: "https://www.linkedin.com/in/shivamshivam96/",
 };
@@ -13,33 +13,34 @@ const featured = {
 const speakers = [
   {
     name: "Utkarsh Siddharth",
-    org: "Featured Speaker",
-    focus: "AI & intelligent systems",
+    org: "Principal Software Architect",
+    focus: "Enterprise Distributed Systems",
     initials: "US",
     linkedin: "https://www.linkedin.com/in/utkarsh-siddharth-5bb11b126/",
   },
   {
     name: "Eric Berkowitz",
-    org: "Featured Speaker",
-    focus: "Industry leadership",
+    org: "Global Management Consultant",
+    focus: "Strategy & Venture Engineering",
     initials: "EB",
     linkedin: "https://www.linkedin.com/in/ericberkowitz/",
   },
   {
     name: "Andrew Seely",
-    org: "Featured Speaker",
-    focus: "Engineering at scale",
+    org: "Enterprise Cloud Architect",
+    focus: "Secure Systems Infrastructure",
     initials: "AS",
     linkedin: "https://www.linkedin.com/in/andrewseelytampa/",
   },
   {
     name: "Nikky Kumar Jha",
-    org: "Featured Speaker",
-    focus: "Innovation & strategy",
+    org: "Co-Founder & Tech Entrepreneur",
+    focus: "Innovation & Startup Leadership",
     initials: "NJ",
     linkedin: "https://www.linkedin.com/in/nikkykumarjha/",
   },
 ];
+
 
 function Avatar({ initials, large }: { initials: string; large?: boolean }) {
   return (
