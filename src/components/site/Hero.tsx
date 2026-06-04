@@ -73,10 +73,10 @@ function NetworkCanvas() {
 }
 
 const stats = [
-  { value: "4,200+", label: "Delegates" },
-  { value: "180", label: "Speakers" },
-  { value: "32", label: "Countries" },
-  { value: "5 days", label: "Programme" },
+  { value: "1,000+", label: "Delegates" },
+  { value: "6", label: "Themes" },
+  { value: "4 tracks", label: "Technical talks" },
+  { value: "4 days", label: "Core programme" },
 ];
 
 export function Hero() {
@@ -99,7 +99,7 @@ export function Hero() {
             className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-slate-mist mb-8"
           >
             <span className="h-px w-8 bg-gold" />
-            IEEE Flagship Congress · Edition XII
+            IEEE Computer Society · SYP Flagship · AICSSYC 2026
           </motion.div>
 
           <motion.h1
@@ -108,9 +108,9 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.05 }}
             className="font-display text-[clamp(2.75rem,6.2vw,5.75rem)] leading-[0.98] tracking-tight text-balance"
           >
-            The architecture
+            Where <em className="italic font-normal text-gold">Agent</em>
             <br />
-            of <em className="italic font-normal text-gold">what comes next.</em>
+            meets Humans.
           </motion.h1>
 
           <motion.p
@@ -119,9 +119,10 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.15 }}
             className="mt-8 max-w-[58ch] text-lg md:text-xl leading-relaxed text-ivory/75"
           >
-            Convergence brings together the researchers, engineers and founders shaping
-            the next decade of intelligent systems, advanced computing and resilient
-            infrastructure — across five deliberately curated days.
+            The All India Computer Society Student & Young Professional Congress
+            convenes students, researchers, young professionals and industry leaders
+            to exchange ideas, foster innovation and build lasting connections in
+            the computing community.
           </motion.p>
 
           <motion.div
@@ -131,15 +132,15 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm"
           >
             <div className="flex items-center gap-3">
-              <span className="font-display text-3xl text-gold">14—18</span>
+              <span className="font-display text-3xl text-gold">Oct 8</span>
               <span className="text-ivory/70 leading-tight">
-                October<br />2026
+                — Nov 2<br />2026
               </span>
             </div>
             <div className="h-10 w-px bg-white/10" />
             <div>
-              <p className="text-ivory">Lisbon Congress Centre</p>
-              <p className="text-ivory/60">Praça das Indústrias, Portugal</p>
+              <p className="text-ivory">TP Ganesan Auditorium</p>
+              <p className="text-ivory/60">SRM IST, Kattankulathur</p>
             </div>
           </motion.div>
 
@@ -153,7 +154,7 @@ export function Hero() {
               href="#tickets"
               className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-midnight hover:bg-gold-soft transition"
             >
-              Reserve your seat
+              Reserve your pass
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
@@ -180,8 +181,8 @@ export function Hero() {
           </div>
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="text-center">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Edition</p>
-              <p className="font-display text-7xl text-ivory mt-1">XII</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Congress</p>
+              <p className="font-display text-7xl text-ivory mt-1">'26</p>
             </div>
           </div>
         </motion.div>

@@ -3,14 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Search } from "lucide-react";
 
 const faqs = [
-  { q: "Is Convergence open to anyone, or invite-only?", a: "Open to anyone who registers, until we sell out. Roughly 40% of seats are held for academic and student delegates, and ~10% are issued by invitation to programme alumni and committee guests." },
-  { q: "What's included in the price of a pass?", a: "All five days of programming, daily breakfast and lunch, the opening reception, the printed proceedings volume, and lifetime access to session recordings. The Practitioner and Executive tiers add curated meetings, gala dinner and roundtables." },
-  { q: "Do you offer student or IEEE member discounts?", a: "Yes — students attend at 50% off with valid academic ID, and IEEE members receive a 20% discount. Both are stackable with group rates for 5+ attendees." },
-  { q: "Will sessions be recorded?", a: "Every keynote, panel and main-track session is recorded in 4K. Workshops, roundtables and Chatham House sessions are deliberately off the record." },
-  { q: "Can I get a visa invitation letter?", a: "Yes. Once registration is complete, our delegate office issues a formal invitation letter within 48 hours, addressed for your local consulate." },
-  { q: "What's the cancellation policy?", a: "Full refunds until 60 days before the event. 50% refunds until 30 days before. After that, passes are transferable to a colleague at no cost." },
-  { q: "Is the venue accessible?", a: "Yes. The Lisbon Congress Centre is fully wheelchair accessible, with live captioning on all main stages and induction loops in every auditorium. Specific accommodations can be requested during registration." },
-  { q: "Are there opportunities to sponsor or exhibit?", a: "Yes — partnership packages range from programme sponsorship through to founding partner status. Request the prospectus from our partnerships team." },
+  { q: "What is AICSSYC 2026?", a: "The All India Computer Society Student & Young Professional Congress — a flagship initiative of the IEEE Computer Society SYP that brings together students, young professionals, researchers and industry leaders for technical sessions, workshops, discussions and networking." },
+  { q: "When and where is it happening?", a: "October 8 to November 2, 2026, at the TP Ganesan Auditorium, SRM Institute of Science and Technology, Kattankulathur. The core programme runs from October 8 to 11, followed by extended activities." },
+  { q: "What is the theme of the 2026 edition?", a: "‘Where Agent Meets Humans’ — exploring the design, behaviour and impact of intelligent agents working alongside people across research, industry and everyday life." },
+  { q: "Which themes are covered?", a: "Six tracks: Research & Academia, Management & Strategy, Agents & Human Interaction, AI & Intelligent Systems, Entrepreneurship & Innovation, and Finance & Digital Economy. Final tracks are subject to change." },
+  { q: "Who should attend?", a: "Students, young professionals, researchers, faculty, entrepreneurs and industry practitioners — particularly IEEE and IEEE Computer Society members and chapter office-bearers from across India." },
+  { q: "What's the difference between the three pass tiers?", a: "The IEEE CS Member pass (₹1,000) is the most subsidised tier for verified IEEE Computer Society members. The IEEE Member pass (₹1,500) is for IEEE members outside the Computer Society. The General Admission pass (₹2,000) is the standard ticket for non-IEEE attendees. All three include full event access, catering and networking." },
+  { q: "How is IEEE membership verified?", a: "A valid IEEE membership ID (or IEEE CS membership ID for the lowest tier) must be provided at registration. Verification happens before your pass is approved." },
+  { q: "Is the Day 3 heritage visit included?", a: "Yes. October 11 is a guided heritage visit. Lunch is provided; breakfast is not provided that day." },
+  { q: "Are meals included?", a: "Yes — lunch, dinner and tea breaks are included across the core programme. Day 2 dinner is provided as optional dinner packets. Day 3 includes lunch only." },
 ];
 
 export function FAQ() {
@@ -48,8 +49,8 @@ export function FAQ() {
 
           <p className="mt-8 text-sm text-midnight/65 max-w-sm">
             Can't find your answer? Email{" "}
-            <a href="mailto:delegates@convergence.org" className="text-midnight border-b border-midnight/30 hover:border-midnight">
-              delegates@convergence.org
+            <a href="mailto:contact@aicssyc2026.in" className="text-midnight border-b border-midnight/30 hover:border-midnight">
+              contact@aicssyc2026.in
             </a>
             .
           </p>

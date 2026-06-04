@@ -5,35 +5,44 @@ const categories = [
   {
     icon: BookOpen,
     name: "Learn",
-    line: "Knowledge you can't acquire in a quarter.",
+    line: "Discover emerging technologies and future trends.",
     benefits: [
-      "180 sessions across six tracks",
-      "Workshops led by working researchers",
-      "First showings of unpublished work",
+      "Keynote talks and expert technical sessions",
+      "Discussions across six curated themes",
+      "Hands-on workshops and competitions",
     ],
-    outcomes: ["A curated 60-page proceedings volume", "Lifetime access to recordings"],
+    outcomes: [
+      "Practical and leadership skills",
+      "Exposure to live research and industry work",
+    ],
   },
   {
     icon: Users,
     name: "Connect",
-    line: "Rooms designed so that the right introductions actually happen.",
+    line: "Collaborate with students, professionals and leaders.",
     benefits: [
-      "Curated 1:1 meeting matchmaking",
-      "Programme committee receptions",
-      "Industry-specific dinners",
+      "Network with researchers and entrepreneurs",
+      "Meet IEEE Computer Society leaders from across India",
+      "Cultural evening and community interactions",
     ],
-    outcomes: ["Direct intro to ~30 peers", "Two structured networking nights"],
+    outcomes: [
+      "Lasting peer and mentor relationships",
+      "Cross-chapter and cross-industry introductions",
+    ],
   },
   {
     icon: Hammer,
     name: "Build",
-    line: "Coalitions, standards and deployments — drafted in the room.",
+    line: "Explore innovation, research and entrepreneurship.",
     benefits: [
-      "Hands-on hack days with sponsors' SDKs",
-      "Open standards working sessions",
-      "Investor & customer office hours",
+      "Innovation Expo and Startup Showcase",
+      "Industrial Showcase and chapter presentations",
+      "Be part of a flagship IEEE CS SYP gathering",
     ],
-    outcomes: ["Take home running code", "Sign letters of intent on-site"],
+    outcomes: [
+      "Visibility for your work",
+      "Pathways into research, startups and industry",
+    ],
   },
 ];
 

@@ -8,7 +8,7 @@ const links = [
   { label: "Themes", href: "#themes" },
   { label: "Speakers", href: "#speakers" },
   { label: "Agenda", href: "#agenda" },
-  { label: "Tickets", href: "#tickets" },
+  { label: "Passes", href: "#tickets" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -36,13 +36,13 @@ export function SiteNav() {
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-sm bg-gold text-midnight font-display font-bold text-sm">
-            C
+          <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-midnight font-display font-bold text-sm">
+            A
             <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-emerald" />
           </span>
           <div className="flex flex-col leading-none">
-            <span className="text-ivory font-display text-base tracking-tight">Convergence</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-slate-mist">IEEE · 2026</span>
+            <span className="text-ivory font-display text-base tracking-tight">AICSSYC 2026</span>
+            <span className="text-[10px] uppercase tracking-[0.18em] text-slate-mist">IEEE CS · SRM IST</span>
           </div>
         </Link>
 
