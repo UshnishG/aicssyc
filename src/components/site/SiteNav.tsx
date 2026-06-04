@@ -37,15 +37,16 @@ export function SiteNav() {
       }`}
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-ivory font-display font-bold text-sm">
-            A
-            <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-emerald" />
-          </span>
-          <div className="flex flex-col leading-none">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logoAsset.url}
+            alt="AICSSYC 2026"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
+          <span className="hidden sm:flex flex-col leading-none">
             <span className="text-ivory font-display text-base tracking-tight">AICSSYC 2026</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-slate-mist">IEEE CS · SRM IST</span>
-          </div>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
