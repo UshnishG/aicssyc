@@ -18,7 +18,7 @@ const photoMap: Record<string, string> = {
 
 // Treat every speaker (including the previously "featured" one) as equal.
 const featured = speakersData.featured;
-const allSpeakers = [
+const speakerPool = [
   {
     name: featured.name,
     org: featured.role,
@@ -29,6 +29,16 @@ const allSpeakers = [
   },
   ...speakersData.speakers,
 ];
+
+// Explicit display order requested by the organisers.
+const displayOrder = ["eric", "andrew", "shivam", "utkarsh", "nikky"];
+const allSpeakers = displayOrder
+  .map((key) => speakerPool.find((s) => s.photo === key))
+  .filter((s): s is (typeof speakerPool)[number] => Boolean(s));
+
+// Vertical float offsets per column to break the rigid grid.
+const floatOffsets = ["md:translate-y-0", "md:translate-y-10", "md:-translate-y-6", "md:translate-y-14", "md:translate-y-2"];
+const floatDelays = [0, 0.6, 0.3, 0.9, 0.45];
 
 function Avatar({ initials, photo, name }: { initials: string; photo?: string; name: string }) {
   const photoUrl = photo ? photoMap[photo] : undefined;
