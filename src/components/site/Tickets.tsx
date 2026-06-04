@@ -249,7 +249,11 @@ export function Tickets() {
 
                 {t.registerUrl ? (
                   <a
-                    href={t.registerUrl}
+                    href={
+                      accommodation && t.registerUrlWithAccommodation
+                        ? t.registerUrlWithAccommodation
+                        : t.registerUrl
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Register for ${t.name} (opens KonfHub checkout in a new tab)`}
