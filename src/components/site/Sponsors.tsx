@@ -22,7 +22,7 @@ const marquee = [...tiers[2].names, ...tiers[1].names, ...tiers[2].names];
 
 export function Sponsors() {
   return (
-    <section className="relative py-24 md:py-36 bg-ivory overflow-hidden">
+    <section id="sponsors" className="relative py-24 md:py-36 bg-ivory overflow-hidden">
       <div className="container-editorial">
         <div className="grid md:grid-cols-[1fr_auto] items-end gap-8 mb-16">
           <div className="max-w-2xl">
