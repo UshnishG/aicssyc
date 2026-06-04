@@ -165,7 +165,9 @@ export function Tickets() {
                 )}
 
                 <a
-                  href="#"
+                  href="https://konfhub.com/aicssyc-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
                     t.popular
                       ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
