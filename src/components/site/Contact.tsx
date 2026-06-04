@@ -39,7 +39,7 @@ export function Contact() {
               href="https://www.instagram.com/ieeecs_srmist/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-transparent border border-ivory/15 p-8 transition hover:border-emerald"
+              className="group block bg-midnight-deep/60 border border-ivory/15 p-8 transition hover:border-emerald hover:bg-midnight-deep/75"
             >
               <Instagram size={22} className="text-emerald" />
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-emerald">Instagram</p>
