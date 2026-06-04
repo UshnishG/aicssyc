@@ -12,43 +12,44 @@ type Tier = {
 const tiers: Tier[] = [
   {
     name: "IEEE Computer Society Member",
-    tagline: "Our most exclusive tier, at our lowest subsidised rate.",
+    tagline: "Reserved for active IEEE Computer Society members.",
     price: 1000,
     features: [
-      "Full event access across all four days",
-      "All standard attendee perks",
-      "Catering, networking and event swag",
-      "Daily lucky-draw entries",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
     requirement:
-      "Valid IEEE CS membership ID required and verified prior to approval.",
+      "Valid IEEE CS Membership ID required and verified prior to approval.",
     popular: true,
   },
   {
     name: "IEEE Member",
-    tagline: "For active IEEE members outside the Computer Society.",
+    tagline: "For active IEEE members who are not IEEE CS members.",
     price: 1500,
     features: [
-      "Complete event access",
-      "Catering and networking opportunities",
-      "All standard attendee perks",
-      "Daily lucky-draw entries",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
     requirement:
-      "Valid IEEE membership ID required and verified prior to approval.",
+      "Valid IEEE Membership ID required and verified prior to approval.",
   },
   {
     name: "General Admission",
-    tagline: "Standard entry for students, professionals and tech enthusiasts.",
+    tagline: "Open to students, professionals, researchers and technology enthusiasts.",
     price: 2000,
     features: [
-      "Full access to the entire event",
-      "Participation in all open sessions",
-      "Networking with industry specialists",
-      "Daily lucky-draw entries and event swag",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
   },
 ];
+
 
 export function Tickets() {
   return (
