@@ -22,6 +22,8 @@ type Tier = {
   ticketId?: string;
   /** External register URL; when set, the Register button links out instead of opening the widget dialog. */
   registerUrl?: string;
+  /** External register URL used when the accommodation add-on is toggled on. */
+  registerUrlWithAccommodation?: string;
 };
 
 const tiers: Tier[] = [
