@@ -31,7 +31,6 @@ const tiers: Tier[] = [
     requirement:
       "Valid IEEE CS Membership ID required and verified prior to approval.",
     popular: true,
-    ticketId: "104339",
   },
   {
     id: "ieee",
