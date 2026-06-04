@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
           "@type": "Event",
           name: "AICSSYC 2026 — IEEE Computer Society SYP Congress",
           startDate: "2026-10-08",
-          endDate: "2026-11-02",
+          endDate: "2026-10-11",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
