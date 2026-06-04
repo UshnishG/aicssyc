@@ -52,11 +52,11 @@
   --midnight: oklch(0.22 0.04 200);
   --midnight-deep: oklch(0.16 0.035 200);
   --teal-deep: oklch(0.20 0.045 195);
-  --emerald: oklch(0.42 0.07 180);
-  --gold: oklch(0.76 0.13 75);
-  --gold-soft: oklch(0.84 0.10 78);
-  --ivory: oklch(0.975 0.012 85);
-  --slate-mist: oklch(0.72 0.012 200);
+  --emerald: oklch(0.78 0.12 175);
+  --gold: oklch(0.80 0.14 78);
+  --gold-soft: oklch(0.88 0.10 80);
+  --ivory: oklch(0.98 0.012 85);
+  --slate-mist: oklch(0.82 0.018 195);
 
   --background: var(--midnight-deep);
   --foreground: var(--ivory);

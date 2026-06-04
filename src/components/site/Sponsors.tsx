@@ -22,7 +22,7 @@ export function Sponsors() {
           <p className="mt-6 font-display text-3xl md:text-5xl text-ivory leading-tight text-balance">
             To be announced soon.
           </p>
-          <p className="mt-5 max-w-xl mx-auto text-ivory/65 leading-relaxed">
+          <p className="mt-5 max-w-xl mx-auto text-ivory/80 leading-relaxed">
             Founding partners, principal sponsors and programme partners for
             AICSSYC 2026 will be unveiled in the coming weeks. To collaborate
             with the congress, write to us.

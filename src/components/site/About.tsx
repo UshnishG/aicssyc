@@ -31,7 +31,7 @@ export function About() {
             <p className="font-display italic text-2xl md:text-3xl text-ivory leading-snug">
               "Where Agent meets Humans."
             </p>
-            <p className="mt-3 text-sm text-ivory/65 leading-relaxed">
+            <p className="mt-3 text-sm text-ivory/80 leading-relaxed">
               Exploring the cutting-edge intersections of artificial agency,
               collaborative machine intelligence and human systems.
             </p>

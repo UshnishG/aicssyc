@@ -29,7 +29,7 @@ export function Contact() {
               <p className="mt-2 font-display text-lg text-ivory break-words">
                 ieeecomputersocietysrmist@gmail.com
               </p>
-              <p className="mt-4 text-sm text-ivory/60 inline-flex items-center gap-2">
+              <p className="mt-4 text-sm text-ivory/75 inline-flex items-center gap-2">
                 Send an email
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>
@@ -39,14 +39,14 @@ export function Contact() {
               href="https://www.instagram.com/ieeecs_srmist/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-transparent border border-ivory/15 p-8 transition hover:border-emerald"
+              className="group block bg-midnight-deep/60 border border-ivory/15 p-8 transition hover:border-emerald hover:bg-midnight-deep/75"
             >
               <Instagram size={22} className="text-emerald" />
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-emerald">Instagram</p>
               <p className="mt-2 font-display text-lg text-ivory">
                 @ieeecs_srmist
               </p>
-              <p className="mt-4 text-sm text-ivory/60 inline-flex items-center gap-2">
+              <p className="mt-4 text-sm text-ivory/75 inline-flex items-center gap-2">
                 Follow updates
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>

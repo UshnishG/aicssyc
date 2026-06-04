@@ -72,7 +72,7 @@ export function Agenda() {
               The full <em className="italic font-normal text-emerald">congress timeline.</em>
             </h2>
           </div>
-          <div className="text-sm text-ivory/65 max-w-xs">
+          <div className="text-sm text-ivory/80 max-w-xs">
             8 October – 2 November 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
           </div>
         </div>
@@ -92,7 +92,7 @@ export function Agenda() {
                       : "bg-transparent text-ivory border-ivory/15 hover:border-ivory/40"
                   }`}
                 >
-                  <span className={`block text-[10px] uppercase tracking-[0.18em] ${active ? "text-gold" : "text-ivory/55"}`}>
+                  <span className={`block text-[10px] uppercase tracking-[0.18em] ${active ? "text-gold" : "text-ivory/75"}`}>
                     {d.label}
                   </span>
                   <span className="block text-sm mt-1 whitespace-nowrap">{d.date}</span>
@@ -123,7 +123,7 @@ export function Agenda() {
               <h3 className="mt-3 font-display text-3xl text-ivory leading-tight text-balance">
                 {days[day].title}
               </h3>
-              <p className="mt-4 text-ivory/65 text-sm">
+              <p className="mt-4 text-ivory/80 text-sm">
                 {days[day].blocks.length} programmed blocks · Venue: {days[day].venue}.
               </p>
             </div>
@@ -137,7 +137,7 @@ export function Agenda() {
                       <span className="text-[10px] uppercase tracking-[0.18em] text-emerald bg-emerald/10 px-2 py-0.5 rounded-sm">
                         {b.kind}
                       </span>
-                      <span className="text-xs text-ivory/55">{b.room}</span>
+                      <span className="text-xs text-ivory/75">{b.room}</span>
                     </div>
                     <p className="font-display text-xl text-ivory leading-tight">{b.title}</p>
                   </div>

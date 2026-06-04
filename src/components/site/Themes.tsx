@@ -75,7 +75,7 @@ export function Themes() {
               Six tracks. <em className="italic font-normal text-gold">One coherent argument</em> about what to build.
             </h2>
           </div>
-          <p className="md:max-w-sm md:justify-self-end text-ivory/65 leading-relaxed">
+          <p className="md:max-w-sm md:justify-self-end text-ivory/80 leading-relaxed">
             Hover or tap a track to expand. Each is curated end-to-end by a dedicated
             programme committee.
             <span className="block mt-3 text-[10px] uppercase tracking-[0.22em] text-gold/80">Final themes subject to change</span>
@@ -95,7 +95,7 @@ export function Themes() {
                   onClick={() => setActive(i)}
                   onMouseEnter={() => setActive(i)}
                   className={`group text-left border-b border-white/10 py-5 flex items-center gap-4 transition-colors ${
-                    isActive ? "text-ivory" : "text-ivory/55 hover:text-ivory/85"
+                    isActive ? "text-ivory" : "text-ivory/75 hover:text-ivory/85"
                   }`}
                   aria-expanded={isActive}
                 >
@@ -110,7 +110,7 @@ export function Themes() {
                   </span>
                   <span className="flex-1">
                     <span className="block font-display text-lg leading-tight">{t.title}</span>
-                    <span className="block text-xs text-ivory/45 mt-0.5">{t.speakers}</span>
+                    <span className="block text-xs text-ivory/70 mt-0.5">{t.speakers}</span>
                   </span>
                   <span
                     className={`text-2xl font-display transition-transform ${
@@ -134,7 +134,7 @@ export function Themes() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="relative h-full p-8 md:p-10 border border-white/10 bg-white/[0.03]"
+                className="relative h-full p-8 md:p-10 border border-white/10 bg-midnight-deep/50"
               >
                 <div aria-hidden className="absolute top-0 left-0 h-1 w-16 bg-gold" />
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">
@@ -149,7 +149,7 @@ export function Themes() {
 
                 <div className="mt-10 grid md:grid-cols-2 gap-8">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/55 mb-4">
+                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/75 mb-4">
                       Key topics
                     </p>
                     <ul className="space-y-2">
@@ -162,7 +162,7 @@ export function Themes() {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/55 mb-4">
+                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/75 mb-4">
                       Expected outcomes
                     </p>
                     <ul className="space-y-2">

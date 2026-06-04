@@ -18,14 +18,10 @@ export function Footer() {
       <div className="container-editorial py-20 md:py-24">
         <div className="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="AICSSYC 2026" className="h-12 w-auto object-contain" />
-              <div>
-                <p className="font-display text-lg">AICSSYC 2026</p>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-slate-mist">IEEE CS · SYP Flagship</p>
-              </div>
+            <div className="flex items-center">
+              <img src={logoAsset.url} alt="AICSSYC 2026" className="h-16 w-auto object-contain" />
             </div>
-            <p className="mt-6 text-ivory/65 leading-relaxed max-w-sm">
+            <p className="mt-6 text-ivory/80 leading-relaxed max-w-sm">
               The All India Computer Society Student & Young Professional Congress —
               hosted at SRM IST, Kattankulathur.
             </p>
@@ -36,10 +32,10 @@ export function Footer() {
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-slate-mist mb-5">Venue</p>
             <p className="text-ivory">TP Ganesan Auditorium</p>
-            <p className="text-ivory/65 text-sm mt-1">
+            <p className="text-ivory/80 text-sm mt-1">
               SRM Institute of Science<br />and Technology<br />Kattankulathur, Tamil Nadu
             </p>
-            <p className="mt-4 text-sm text-ivory/65">8 – 11 October 2026</p>
+            <p className="mt-4 text-sm text-ivory/80">8 – 11 October 2026</p>
           </div>
 
           <div>
@@ -62,7 +58,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-ivory/50">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-ivory/70">
           <p>© 2026 AICSSYC. A flagship initiative of the IEEE Computer Society Student & Young Professional programme.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-ivory">Code of conduct</a>

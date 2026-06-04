@@ -46,7 +46,7 @@ export function CallToAction() {
                 <p className="text-[10px] uppercase tracking-[0.22em] text-gold/80">Venue</p>
                 <p className="mt-2 text-ivory leading-snug">
                   TP Ganesan Auditorium<br />
-                  <span className="text-ivory/65 text-sm">SRM IST, Kattankulathur</span>
+                  <span className="text-ivory/80 text-sm">SRM IST, Kattankulathur</span>
                 </p>
               </div>
             </div>
