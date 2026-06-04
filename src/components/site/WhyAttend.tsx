@@ -1,48 +1,36 @@
 import { motion } from "framer-motion";
-import { BookOpen, Users, Hammer } from "lucide-react";
+import { Sparkles, Hammer, Users, Rocket, PartyPopper, Award } from "lucide-react";
 
-const categories = [
+const cards = [
   {
-    icon: BookOpen,
-    name: "Learn",
-    line: "Discover emerging technologies and future trends.",
-    benefits: [
-      "Keynote talks and expert technical sessions",
-      "Discussions across six curated themes",
-      "Hands-on workshops and competitions",
-    ],
-    outcomes: [
-      "Practical and leadership skills",
-      "Exposure to live research and industry work",
-    ],
-  },
-  {
-    icon: Users,
-    name: "Connect",
-    line: "Collaborate with students, professionals and leaders.",
-    benefits: [
-      "Network with researchers and entrepreneurs",
-      "Meet IEEE Computer Society leaders from across India",
-      "Cultural evening and community interactions",
-    ],
-    outcomes: [
-      "Lasting peer and mentor relationships",
-      "Cross-chapter and cross-industry introductions",
-    ],
+    icon: Sparkles,
+    title: "Discover emerging technologies & future trends",
+    body: "Keynotes and technical sessions across six curated themes spanning AI, agents, FinTech and beyond.",
   },
   {
     icon: Hammer,
-    name: "Build",
-    line: "Explore innovation, research and entrepreneurship.",
-    benefits: [
-      "Innovation Expo and Startup Showcase",
-      "Industrial Showcase and chapter presentations",
-      "Be part of a flagship IEEE CS SYP gathering",
-    ],
-    outcomes: [
-      "Visibility for your work",
-      "Pathways into research, startups and industry",
-    ],
+    title: "Participate in hands-on workshops & leadership experiences",
+    body: "Practical workshops, competitions and leadership tracks designed for students and young professionals.",
+  },
+  {
+    icon: Users,
+    title: "Connect with students, researchers, professionals & IEEE leaders",
+    body: "Meet peers from across India and engage with IEEE Computer Society leadership face-to-face.",
+  },
+  {
+    icon: Rocket,
+    title: "Explore innovation, entrepreneurship & career opportunities",
+    body: "Innovation Expo, Startup Showcase and Industrial Showcase opening pathways into research and industry.",
+  },
+  {
+    icon: PartyPopper,
+    title: "Experience cultural events & meaningful networking",
+    body: "A cultural evening, heritage visit and curated networking moments built into every day of the congress.",
+  },
+  {
+    icon: Award,
+    title: "Be part of India's flagship IEEE CS SYP congress",
+    body: "Join a national-scale gathering convened by the IEEE Computer Society Student & Young Professional programme.",
   },
 ];
 
@@ -56,20 +44,20 @@ export function WhyAttend() {
             Why attend
           </p>
           <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
-            Three things you will leave with.
+            Why you should attend.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-midnight/10 border border-midnight/10">
-          {categories.map((c, idx) => {
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-midnight/10 border border-midnight/10">
+          {cards.map((c, idx) => {
             const Icon = c.icon;
             return (
               <motion.article
-                key={c.name}
+                key={c.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ delay: (idx % 3) * 0.08 }}
                 className="relative bg-ivory p-8 md:p-10 flex flex-col"
               >
                 <div className="flex items-center gap-4 mb-8">
@@ -77,38 +65,17 @@ export function WhyAttend() {
                     <Icon size={20} />
                   </span>
                   <span className="text-xs uppercase tracking-[0.22em] text-midnight/50">
-                    0{idx + 1} — {c.name}
+                    0{idx + 1}
                   </span>
                 </div>
 
-                <h3 className="font-display text-3xl md:text-4xl text-midnight leading-[1.05] text-balance">
-                  {c.line}
+                <h3 className="font-display text-2xl md:text-[1.7rem] text-midnight leading-[1.15] text-balance">
+                  {c.title}
                 </h3>
 
-                <div className="mt-10 pt-8 border-t border-midnight/10 space-y-6 flex-1">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-emerald mb-3">Benefits</p>
-                    <ul className="space-y-2">
-                      {c.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-3 text-midnight/80 text-sm leading-relaxed">
-                          <span className="mt-2 h-1 w-1 rounded-full bg-emerald flex-shrink-0" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-gold mb-3">Outcomes</p>
-                    <ul className="space-y-2">
-                      {c.outcomes.map((b) => (
-                        <li key={b} className="flex items-start gap-3 text-midnight/80 text-sm leading-relaxed">
-                          <span className="mt-2 h-1 w-1 rounded-full bg-gold flex-shrink-0" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <p className="mt-6 text-midnight/70 text-sm leading-relaxed">
+                  {c.body}
+                </p>
               </motion.article>
             );
           })}
