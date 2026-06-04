@@ -1,59 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import timelineData from "@/data/timeline.json";
 
-const days = [
-  {
-    label: "Day 0",
-    date: "Inaugural Day",
-    title: "Inauguration & opening keynotes",
-    venue: "TP Ganesan Auditorium",
-    blocks: [
-      { title: "Inauguration Ceremony", kind: "Ceremony", room: "Main hall" },
-      { title: "Keynote Session I", kind: "Keynote", room: "Main hall" },
-      { title: "Keynote Session II", kind: "Keynote", room: "Main hall" },
-      { title: "Expert Panel Discussion", kind: "Panel", room: "Main hall" },
-      { title: "Networking Dinner", kind: "Reception", room: "On site" },
-    ],
-  },
-  {
-    label: "Day 1",
-    date: "Innovation & Knowledge Exchange",
-    title: "Technical tracks, expo & cultural evening",
-    venue: "Multiple halls",
-    blocks: [
-      { title: "Technical Tracks", kind: "Sessions", room: "Tracks A–D" },
-      { title: "Innovation Expo", kind: "Showcase", room: "Expo Hall" },
-      { title: "Chapter Presentations", kind: "Plenary", room: "Main hall" },
-      { title: "Interactive Event Space", kind: "Open programme", room: "Open area" },
-      { title: "Cultural Evening", kind: "Reception", room: "Open lawns" },
-      { title: "Networking Activities", kind: "Networking", room: "On site" },
-    ],
-  },
-  {
-    label: "Day 2",
-    date: "Industry & Startup Focus",
-    title: "Showcases, technical sessions & valedictory",
-    venue: "Multiple halls",
-    blocks: [
-      { title: "Startup Showcase", kind: "Showcase", room: "Hall B" },
-      { title: "Industrial Showcase", kind: "Showcase", room: "Hall C" },
-      { title: "Technical Sessions", kind: "Sessions", room: "Tracks A–D" },
-      { title: "Interactive Event Space", kind: "Open programme", room: "Open area" },
-      { title: "Valedictory Ceremony", kind: "Ceremony", room: "Main hall" },
-    ],
-  },
-  {
-    label: "Day 3",
-    date: "Heritage Experience",
-    title: "Heritage visit & cultural exploration",
-    venue: "Off-site",
-    blocks: [
-      { title: "Heritage Visit", kind: "Excursion", room: "Off-site" },
-      { title: "Community Networking", kind: "Networking", room: "Off-site" },
-      { title: "Cultural Exploration", kind: "Excursion", room: "Off-site" },
-    ],
-  },
-];
+const days = timelineData.days;
 
 
 export function Agenda() {
@@ -73,7 +22,7 @@ export function Agenda() {
             </h2>
           </div>
           <div className="text-sm text-ivory/80 max-w-xs">
-            8 October – 2 November 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
+            8 – 11 October 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
           </div>
         </div>
 

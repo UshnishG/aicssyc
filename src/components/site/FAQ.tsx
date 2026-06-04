@@ -4,7 +4,7 @@ import { Plus, Search } from "lucide-react";
 
 const faqs = [
   { q: "What is AICSSYC 2026?", a: "The All India Computer Society Student & Young Professional Congress — a flagship initiative of the IEEE Computer Society SYP that brings together students, young professionals, researchers and industry leaders for technical sessions, workshops, discussions and networking." },
-  { q: "When and where is it happening?", a: "October 8 to November 2, 2026, at the TP Ganesan Auditorium, SRM Institute of Science and Technology, Kattankulathur. The core programme runs from October 8 to 11, followed by extended activities." },
+  { q: "When and where is it happening?", a: "8 to 11 October 2026, at the TP Ganesan Auditorium, SRM Institute of Science and Technology, Kattankulathur." },
   { q: "What is the theme of the 2026 edition?", a: "‘Where Agent Meets Humans’ — exploring the design, behaviour and impact of intelligent agents working alongside people across research, industry and everyday life." },
   { q: "Which themes are covered?", a: "Six tracks: Research & Academia, Management & Strategy, Agents & Human Interaction, AI & Intelligent Systems, Entrepreneurship & Innovation, and Finance & Digital Economy. Final tracks are subject to change." },
   { q: "Who should attend?", a: "Students, young professionals, researchers, faculty, entrepreneurs and industry practitioners — particularly IEEE and IEEE Computer Society members and chapter office-bearers from across India." },
