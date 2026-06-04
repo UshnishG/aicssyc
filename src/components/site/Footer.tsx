@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="h-9 w-9 inline-flex items-center justify-center rounded-sm bg-gold text-midnight font-display font-bold">
+              <span className="h-9 w-9 inline-flex items-center justify-center rounded-sm bg-gold text-ivory font-display font-bold">
                 A
               </span>
               <div>

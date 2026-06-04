@@ -66,7 +66,7 @@ export function Tickets() {
         </div>
 
         {/* Accommodation toggle */}
-        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/[0.03] p-5 md:p-6">
+        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/5/[0.03] p-5 md:p-6">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">Optional add-on</p>
             <p className="mt-2 font-display text-xl text-ivory">
@@ -81,16 +81,16 @@ export function Tickets() {
             onClick={() => setAccommodation((v) => !v)}
             className={`relative inline-flex h-9 w-[180px] items-center rounded-sm border transition ${
               accommodation
-                ? "bg-gold border-gold text-midnight"
+                ? "bg-gold border-gold text-ivory"
                 : "bg-transparent border-white/20 text-ivory"
             }`}
           >
             <span
               className={`absolute top-1 bottom-1 w-[86px] rounded-sm transition-all ${
-                accommodation ? "left-[90px] bg-midnight" : "left-1 bg-white/10"
+                accommodation ? "left-[90px] bg-midnight" : "left-1 bg-white/5/10"
               }`}
             />
-            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-midnight" : "text-ivory"}`}>
+            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-ivory" : "text-ivory"}`}>
               No stay
             </span>
             <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-gold" : "text-ivory/55"}`}>
@@ -110,30 +110,30 @@ export function Tickets() {
                 key={t.name}
                 className={`relative p-8 md:p-10 border flex flex-col ${
                   t.popular
-                    ? "bg-ivory text-midnight border-gold"
-                    : "bg-white/[0.03] border-white/10 text-ivory"
+                    ? "bg-transparent text-ivory border-gold"
+                    : "bg-white/5/[0.03] border-white/10 text-ivory"
                 }`}
               >
                 {t.popular && (
-                  <span className="absolute -top-3 left-8 bg-gold text-midnight text-[10px] uppercase tracking-[0.22em] px-3 py-1">
+                  <span className="absolute -top-3 left-8 bg-gold text-ivory text-[10px] uppercase tracking-[0.22em] px-3 py-1">
                     Most subsidised
                   </span>
                 )}
-                <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-midnight" : "text-ivory"}`}>
+                <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-ivory" : "text-ivory"}`}>
                   {t.name}
                 </h3>
-                <p className={`mt-2 text-sm ${t.popular ? "text-midnight/65" : "text-ivory/65"}`}>
+                <p className={`mt-2 text-sm ${t.popular ? "text-ivory/65" : "text-ivory/65"}`}>
                   {t.tagline}
                 </p>
 
                 <div className="mt-8 flex items-baseline gap-2">
                   <span className="font-display text-5xl">₹{price.toLocaleString("en-IN")}</span>
-                  <span className={`text-sm ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
+                  <span className={`text-sm ${t.popular ? "text-ivory/55" : "text-ivory/55"}`}>
                     / person
                   </span>
                 </div>
                 {accommodation && (
-                  <p className={`mt-1 text-xs ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
+                  <p className={`mt-1 text-xs ${t.popular ? "text-ivory/55" : "text-ivory/55"}`}>
                     Includes ₹2,000 accommodation
                   </p>
                 )}
@@ -142,7 +142,7 @@ export function Tickets() {
                   {features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-sm leading-relaxed">
                       <Check size={16} className={`mt-0.5 flex-shrink-0 ${t.popular ? "text-emerald" : "text-gold"}`} />
-                      <span className={t.popular ? "text-midnight/85" : "text-ivory/85"}>{f}</span>
+                      <span className={t.popular ? "text-ivory/85" : "text-ivory/85"}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -150,7 +150,7 @@ export function Tickets() {
                 {t.requirement && (
                   <p
                     className={`mt-6 text-xs leading-relaxed border-l-2 pl-3 ${
-                      t.popular ? "border-emerald text-midnight/65" : "border-gold text-ivory/65"
+                      t.popular ? "border-emerald text-ivory/65" : "border-gold text-ivory/65"
                     }`}
                   >
                     <span className="uppercase tracking-[0.16em] block mb-1">Requirement</span>
@@ -163,7 +163,7 @@ export function Tickets() {
                   className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
                     t.popular
                       ? "bg-midnight text-ivory hover:bg-midnight-deep"
-                      : "bg-gold text-midnight hover:bg-gold-soft"
+                      : "bg-gold text-ivory hover:bg-gold-soft"
                   }`}
                 >
                   Register →

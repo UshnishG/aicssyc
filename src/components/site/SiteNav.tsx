@@ -37,7 +37,7 @@ export function SiteNav() {
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-midnight font-display font-bold text-sm">
+          <span className="relative inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-ivory font-display font-bold text-sm">
             A
             <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-emerald" />
           </span>
@@ -64,7 +64,7 @@ export function SiteNav() {
           <a href="#tickets" className="text-sm text-ivory/80 hover:text-ivory">Register</a>
           <a
             href="#tickets"
-            className="inline-flex items-center gap-2 rounded-sm bg-gold px-4 py-2 text-sm font-medium text-midnight hover:bg-gold-soft transition"
+            className="inline-flex items-center gap-2 rounded-sm bg-gold px-4 py-2 text-sm font-medium text-ivory hover:bg-gold-soft transition"
           >
             Get pass
             <span aria-hidden>→</span>
@@ -102,7 +102,7 @@ export function SiteNav() {
               <a
                 href="#tickets"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-sm bg-gold px-5 py-2.5 text-sm font-medium text-midnight"
+                className="mt-2 inline-flex w-fit items-center gap-2 rounded-sm bg-gold px-5 py-2.5 text-sm font-medium text-ivory"
               >
                 Get pass →
               </a>

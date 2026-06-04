@@ -54,14 +54,14 @@ export function CallToAction() {
             <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href="#tickets"
-                className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-midnight hover:bg-gold-soft transition"
+                className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-ivory hover:bg-gold-soft transition"
               >
                 Register now
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <a
                 href="#sponsors"
-                className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5 transition"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5/5 transition"
               >
                 Become a sponsor
               </a>
