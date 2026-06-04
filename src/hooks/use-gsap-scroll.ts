@@ -74,7 +74,7 @@ export function useGsapScrollAnimations() {
       gsap.utils
         .toArray<HTMLElement>('main [aria-hidden]')
         .forEach((el) => {
-          if (!el.className.includes("absolute")) return;
+          if (!(typeof el.className === "string") || !el.className.includes("absolute")) return;
           gsap.to(el, {
             yPercent: 12,
             ease: "none",
