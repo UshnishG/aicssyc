@@ -165,17 +165,18 @@ export function Hero() {
               href="#tickets"
               className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-midnight hover:bg-gold-soft transition"
             >
-              Reserve your pass
+              Register now
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#agenda"
               className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5 transition"
             >
-              View programme
+              View timeline
             </a>
           </motion.div>
         </div>
+
 
         {/* artwork */}
         <motion.div
