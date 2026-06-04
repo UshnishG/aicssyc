@@ -5,6 +5,21 @@ import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
 
 const days = timelineData.days;
 
+// Compact pill date: "8 October 2026 · Inaugural Day" → "8 Oct"
+function shortDate(raw: string) {
+  const datePart = raw.split("·")[0].trim();
+  const [dayNum, month] = datePart.split(" ");
+  return `${dayNum} ${month ? month.slice(0, 3) : ""}`.trim();
+}
+
+// Theme/subtitle after the "·" — "Inaugural Day", "Innovation & Knowledge Exchange", …
+function dayTheme(raw: string) {
+  const parts = raw.split("·");
+  return parts.length > 1 ? parts.slice(1).join("·").trim() : "";
+}
+
+
+
 
 export function Agenda() {
   const [day, setDay] = useState(0);
