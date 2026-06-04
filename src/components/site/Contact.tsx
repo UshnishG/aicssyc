@@ -29,7 +29,7 @@ export function Contact() {
               <p className="mt-2 font-display text-lg text-ivory break-words">
                 ieeecomputersocietysrmist@gmail.com
               </p>
-              <p className="mt-4 text-sm text-ivory/60 inline-flex items-center gap-2">
+              <p className="mt-4 text-sm text-ivory/75 inline-flex items-center gap-2">
                 Send an email
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>
@@ -46,7 +46,7 @@ export function Contact() {
               <p className="mt-2 font-display text-lg text-ivory">
                 @ieeecs_srmist
               </p>
-              <p className="mt-4 text-sm text-ivory/60 inline-flex items-center gap-2">
+              <p className="mt-4 text-sm text-ivory/75 inline-flex items-center gap-2">
                 Follow updates
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </p>

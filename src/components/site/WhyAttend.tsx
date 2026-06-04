@@ -64,7 +64,7 @@ export function WhyAttend() {
                   <span className="flex h-12 w-12 items-center justify-center bg-midnight text-gold">
                     <Icon size={20} />
                   </span>
-                  <span className="text-xs uppercase tracking-[0.22em] text-ivory/50">
+                  <span className="text-xs uppercase tracking-[0.22em] text-ivory/70">
                     0{idx + 1}
                   </span>
                 </div>

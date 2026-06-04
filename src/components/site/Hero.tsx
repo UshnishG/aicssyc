@@ -151,7 +151,7 @@ export function Hero() {
             <div className="h-10 w-px bg-white/15" />
             <div>
               <p className="text-ivory">TP Ganesan Auditorium</p>
-              <p className="text-ivory/60">SRM IST, Kattankulathur</p>
+              <p className="text-ivory/75">SRM IST, Kattankulathur</p>
             </div>
           </motion.div>
 

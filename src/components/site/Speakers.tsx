@@ -68,7 +68,7 @@ export function Speakers() {
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
               The voices shaping <em className="italic font-normal text-emerald">AICSSYC 2026.</em>
             </h2>
-            <p className="mt-6 text-ivory/65 max-w-xl">
+            <p className="mt-6 text-ivory/80 max-w-xl">
               A curated line-up of researchers, engineers, architects and entrepreneurs.
               More speakers to be announced — final list subject to change.
             </p>
@@ -121,7 +121,7 @@ export function Speakers() {
               <Avatar initials={s.initials} />
               <div className="p-4">
                 <p className="font-display text-base text-ivory leading-tight">{s.name}</p>
-                <p className="text-xs text-ivory/60 mt-1">{s.org}</p>
+                <p className="text-xs text-ivory/75 mt-1">{s.org}</p>
               </div>
 
               <div className="absolute inset-0 bg-midnight/95 text-ivory opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
@@ -143,7 +143,7 @@ export function Speakers() {
             </motion.div>
           ))}
         </div>
-        <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/55">
+        <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/75">
           More speakers being announced · subject to change
         </p>
       </div>

@@ -37,17 +37,17 @@ export function FAQ() {
           </h2>
 
           <div className="mt-10 relative max-w-md">
-            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-ivory/45" />
+            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-ivory/70" />
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Search FAQs…"
               aria-label="Search frequently asked questions"
-              className="w-full bg-transparent border border-ivory/20 pl-11 pr-4 py-3.5 text-sm placeholder:text-ivory/45 focus:outline-none focus:border-ivory/20 rounded-sm"
+              className="w-full bg-transparent border border-ivory/20 pl-11 pr-4 py-3.5 text-sm placeholder:text-ivory/70 focus:outline-none focus:border-ivory/20 rounded-sm"
             />
           </div>
 
-          <p className="mt-8 text-sm text-ivory/65 max-w-sm">
+          <p className="mt-8 text-sm text-ivory/80 max-w-sm">
             Can't find your answer? Email{" "}
             <a href="mailto:contact@aicssyc2026.in" className="text-ivory border-b border-ivory/30 hover:border-ivory/20">
               contact@aicssyc2026.in
@@ -58,7 +58,7 @@ export function FAQ() {
 
         <div className="divide-y divide-midnight/15 border-y border-ivory/15">
           {filtered.length === 0 && (
-            <p className="py-8 text-ivory/55">No questions match "{q}".</p>
+            <p className="py-8 text-ivory/75">No questions match "{q}".</p>
           )}
           {filtered.map((f, i) => {
             const isOpen = open === i;

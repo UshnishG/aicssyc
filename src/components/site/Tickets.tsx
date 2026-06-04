@@ -58,7 +58,7 @@ export function Tickets() {
               Three passes. <em className="italic font-normal text-gold">One congress.</em>
             </h2>
           </div>
-          <p className="text-ivory/65 max-w-sm">
+          <p className="text-ivory/80 max-w-sm">
             Every pass includes full event access, technical tracks, keynotes,
             Innovation Expo, delegate kit, meals, networking events and a
             participation certificate.
@@ -66,12 +66,12 @@ export function Tickets() {
         </div>
 
         {/* Accommodation toggle */}
-        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/[0.04] p-5 md:p-6">
+        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-midnight-deep/55 p-5 md:p-6">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">Optional add-on</p>
             <p className="mt-2 font-display text-xl text-ivory">
               SRM IST campus accommodation
-              <span className="text-ivory/55 text-base ml-2">+ ₹2,000</span>
+              <span className="text-ivory/75 text-base ml-2">+ ₹2,000</span>
             </p>
           </div>
           <button
@@ -93,7 +93,7 @@ export function Tickets() {
             <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-ivory" : "text-ivory"}`}>
               No stay
             </span>
-            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-gold" : "text-ivory/55"}`}>
+            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-gold" : "text-ivory/75"}`}>
               + Stay
             </span>
           </button>
@@ -111,7 +111,7 @@ export function Tickets() {
                 className={`relative p-8 md:p-10 border flex flex-col ${
                   t.popular
                     ? "bg-transparent text-ivory border-gold"
-                    : "bg-white/[0.04] border-white/10 text-ivory"
+                    : "bg-midnight-deep/55 border-white/10 text-ivory"
                 }`}
               >
                 {t.popular && (
@@ -122,18 +122,18 @@ export function Tickets() {
                 <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-ivory" : "text-ivory"}`}>
                   {t.name}
                 </h3>
-                <p className={`mt-2 text-sm ${t.popular ? "text-ivory/65" : "text-ivory/65"}`}>
+                <p className={`mt-2 text-sm ${t.popular ? "text-ivory/80" : "text-ivory/80"}`}>
                   {t.tagline}
                 </p>
 
                 <div className="mt-8 flex items-baseline gap-2">
                   <span className="font-display text-5xl">₹{price.toLocaleString("en-IN")}</span>
-                  <span className={`text-sm ${t.popular ? "text-ivory/55" : "text-ivory/55"}`}>
+                  <span className={`text-sm ${t.popular ? "text-ivory/75" : "text-ivory/75"}`}>
                     / person
                   </span>
                 </div>
                 {accommodation && (
-                  <p className={`mt-1 text-xs ${t.popular ? "text-ivory/55" : "text-ivory/55"}`}>
+                  <p className={`mt-1 text-xs ${t.popular ? "text-ivory/75" : "text-ivory/75"}`}>
                     Includes ₹2,000 accommodation
                   </p>
                 )}
@@ -150,7 +150,7 @@ export function Tickets() {
                 {t.requirement && (
                   <p
                     className={`mt-6 text-xs leading-relaxed border-l-2 pl-3 ${
-                      t.popular ? "border-emerald text-ivory/65" : "border-gold text-ivory/65"
+                      t.popular ? "border-emerald text-ivory/80" : "border-gold text-ivory/80"
                     }`}
                   >
                     <span className="uppercase tracking-[0.16em] block mb-1">Requirement</span>
