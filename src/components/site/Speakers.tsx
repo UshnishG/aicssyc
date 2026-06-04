@@ -1,17 +1,24 @@
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import speakersData from "@/data/speakers.json";
-import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants, Reveal } from "./Reveal";
+import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants } from "./Reveal";
 
+// Treat every speaker (including the previously "featured" one) as equal.
 const featured = speakersData.featured;
-const speakers = speakersData.speakers;
+const allSpeakers = [
+  {
+    name: featured.name,
+    org: featured.role,
+    focus: featured.topic,
+    initials: featured.initials,
+    linkedin: featured.linkedin,
+  },
+  ...speakersData.speakers,
+];
 
-
-function Avatar({ initials, large }: { initials: string; large?: boolean }) {
+function Avatar({ initials }: { initials: string }) {
   return (
-    <div
-      className={`relative ${large ? "h-full w-full" : "aspect-[4/5] w-full"} overflow-hidden bg-gradient-to-br from-emerald via-midnight to-midnight-deep flex items-center justify-center`}
-    >
+    <div className="relative aspect-[4/5] w-full overflow-hidden bg-gradient-to-br from-emerald via-midnight to-midnight-deep flex items-center justify-center">
       <div aria-hidden className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-atmosphere)" }} />
       <span className="relative font-display text-5xl md:text-6xl text-gold/90 tracking-tight">
         {initials}
@@ -37,42 +44,8 @@ export function Speakers() {
           </div>
         </RevealGroup>
 
-        {/* Featured */}
-        <Reveal direction="blur" distance={40}>
-        <article className="grid md:grid-cols-[1.1fr_1fr] gap-0 mb-16 bg-midnight text-ivory">
-          <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[460px]">
-            <Avatar initials={featured.initials} large />
-            <span className="absolute top-5 left-5 text-[10px] uppercase tracking-[0.22em] text-gold bg-midnight/60 backdrop-blur px-3 py-1.5">
-              Featured · Day 0
-            </span>
-          </div>
-          <div className="p-8 md:p-12 flex flex-col justify-between">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-gold">{featured.topic}</p>
-              <h3 className="mt-4 font-display text-3xl md:text-5xl leading-tight text-balance">
-                {featured.name}
-              </h3>
-              <p className="mt-2 text-ivory/70">{featured.role}</p>
-              <p className="mt-8 text-ivory/80 leading-relaxed max-w-[55ch]">{featured.bio}</p>
-            </div>
-            <div className="mt-10 flex items-center gap-3">
-              <a
-                href={featured.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`LinkedIn — ${featured.name}`}
-                className="inline-flex items-center gap-2 border border-white/15 px-4 py-2.5 text-xs uppercase tracking-[0.16em] hover:border-gold hover:text-gold transition"
-              >
-                <Linkedin size={14} /> LinkedIn
-              </a>
-            </div>
-          </div>
-        </article>
-        </Reveal>
-
-        {/* Wall */}
         <CardGrid className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10" stagger={0.08}>
-          {speakers.map((s) => (
+          {allSpeakers.map((s) => (
             <motion.div
               key={s.name}
               variants={itemVariants}
