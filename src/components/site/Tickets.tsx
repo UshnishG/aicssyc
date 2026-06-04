@@ -166,23 +166,67 @@ export function Tickets() {
                   </p>
                 )}
 
-                <a
-                  href="https://konfhub.com/aicssyc-2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
-                    t.popular
-                      ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
-                      : "bg-gold text-ivory hover:bg-gold-soft"
-                  }`}
-                >
-                  Register →
-                </a>
+                {t.popular && !accommodation ? (
+                  <button
+                    type="button"
+                    onClick={() => setShowWidget(true)}
+                    className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
+                      t.popular
+                        ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
+                        : "bg-gold text-ivory hover:bg-gold-soft"
+                    }`}
+                  >
+                    Register →
+                  </button>
+                ) : (
+                  <a
+                    href="https://konfhub.com/aicssyc-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
+                      t.popular
+                        ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
+                        : "bg-gold text-ivory hover:bg-gold-soft"
+                    }`}
+                  >
+                    Register →
+                  </a>
+                )}
               </motion.article>
             );
           })}
         </div>
       </div>
+
+      {showWidget && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={() => setShowWidget(false)}
+        >
+          <div
+            className="relative w-full max-w-2xl bg-white rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowWidget(false)}
+              aria-label="Close"
+              className="absolute top-2 right-2 z-10 w-8 h-8 inline-flex items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80 transition"
+            >
+              ×
+            </button>
+            <iframe
+              src="https://konfhub.com/widget/aicssyc-2026?desc=false&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=1e1f24&ticketCl=1e1f24&btnColor=002E6E&fontFamily=Hind&borderRadius=10&widget_type=quick&screen=2&tickets=104339&ticketId=104339%7C1"
+              id="konfhub-widget"
+              title="Register for AICSSYC 2026 — IEEE CS Member Pass"
+              width="100%"
+              height="500"
+              allow="payment"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
