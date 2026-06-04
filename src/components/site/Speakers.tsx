@@ -18,7 +18,7 @@ const photoMap: Record<string, string> = {
 
 // Treat every speaker (including the previously "featured" one) as equal.
 const featured = speakersData.featured;
-const allSpeakers = [
+const speakerPool = [
   {
     name: featured.name,
     org: featured.role,
@@ -29,6 +29,16 @@ const allSpeakers = [
   },
   ...speakersData.speakers,
 ];
+
+// Explicit display order requested by the organisers.
+const displayOrder = ["eric", "andrew", "shivam", "utkarsh", "nikky"];
+const allSpeakers = displayOrder
+  .map((key) => speakerPool.find((s) => s.photo === key))
+  .filter((s): s is (typeof speakerPool)[number] => Boolean(s));
+
+// Vertical float offsets per column to break the rigid grid.
+const floatOffsets = ["md:translate-y-0", "md:translate-y-10", "md:-translate-y-6", "md:translate-y-14", "md:translate-y-2"];
+const floatDelays = [0, 0.6, 0.3, 0.9, 0.45];
 
 function Avatar({ initials, photo, name }: { initials: string; photo?: string; name: string }) {
   const photoUrl = photo ? photoMap[photo] : undefined;
@@ -68,12 +78,15 @@ export function Speakers() {
           </div>
         </RevealGroup>
 
-        <CardGrid className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10" stagger={0.08}>
-          {allSpeakers.map((s) => (
+        <CardGrid className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 md:gap-x-8 md:gap-y-4 bg-transparent" stagger={0.1}>
+          {allSpeakers.map((s, i) => (
             <motion.div
               key={s.name}
               variants={itemVariants}
-              className="group relative bg-transparent"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: floatDelays[i % floatDelays.length] }}
+              whileHover={{ y: -16, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
+              className={`group relative bg-transparent ${floatOffsets[i % floatOffsets.length]}`}
             >
               <Avatar initials={s.initials} photo={s.photo} name={s.name} />
               <div className="p-4">
