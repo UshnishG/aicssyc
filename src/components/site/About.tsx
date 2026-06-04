@@ -1,70 +1,67 @@
 import { motion } from "framer-motion";
 
 const editions = [
-  { year: "2015", note: "Inaugural · 600 delegates" },
-  { year: "2018", note: "Expanded to 3 tracks" },
-  { year: "2021", note: "Hybrid edition · 78 countries" },
-  { year: "2024", note: "Record 3,800 delegates" },
-  { year: "2026", note: "Lisbon · Edition XII", current: true },
+  { year: "2023", note: "AICSSYC · Strengthened SYP focus" },
+  { year: "2024", note: "Expanded chapter participation" },
+  { year: "2025", note: "Record student & YP turnout" },
+  { year: "2026", note: "SRM IST · Where Agent Meets Humans", current: true },
 ];
 
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-36 bg-ivory">
       <div className="container-editorial grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24">
-        {/* Left — storytelling */}
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-emerald font-medium">
             <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
             About the congress
           </p>
           <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
-            A five-day gathering for the people <em className="italic font-normal text-emerald">building the systems</em> that everything else runs on.
+            A flagship initiative of <em className="italic font-normal text-emerald">IEEE Computer Society SYP.</em>
           </h2>
 
           <div className="mt-10 space-y-6 text-[17px] leading-[1.7] text-midnight/75 max-w-[62ch]">
             <p>
-              Convergence is not a trade show. It is a working congress — convened by
-              IEEE and a coalition of research institutions — where the people defining
-              the next decade of computing, energy and intelligence meet, present and
-              disagree in the open.
+              The All India Computer Society Student & Young Professional Congress
+              (AICSSYC) 2026 brings together students, young professionals,
+              researchers and industry leaders to exchange ideas, foster innovation
+              and build meaningful connections.
             </p>
             <p>
-              Every track is curated by a programme committee of practising researchers
-              and senior engineers. Every keynote is a first showing. Every conversation
-              is on the record.
+              Since its inception, the Congress has evolved into a vibrant platform
+              featuring technical sessions, workshops, panel discussions, networking
+              opportunities and collaborative experiences that inspire growth within
+              the computing community.
             </p>
           </div>
 
           <div className="mt-12 grid sm:grid-cols-2 gap-8 max-w-xl">
             <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Mission</p>
-              <p className="mt-3 text-midnight/80 leading-relaxed">
-                Move applied research from journal to deployment by giving it a stage
-                worth the work.
+              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Theme</p>
+              <p className="mt-3 font-display text-2xl text-midnight leading-snug">
+                Where Agent Meets Humans
               </p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Vision</p>
-              <p className="mt-3 text-midnight/80 leading-relaxed">
-                The world's most consequential annual gathering for technology that
-                matters at scale.
+              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Hosted by</p>
+              <p className="mt-3 text-midnight/85 leading-relaxed">
+                SRM Institute of Science and Technology, Kattankulathur — in
+                partnership with IEEE Computer Society.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Right — stat block + timeline */}
         <div className="relative">
           <div className="relative bg-midnight text-ivory p-8 md:p-10 grain overflow-hidden">
             <div aria-hidden className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-gold/15 blur-3xl" />
-            <p className="text-xs uppercase tracking-[0.22em] text-gold">By the numbers</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-gold">At a glance</p>
             <div className="mt-6 grid grid-cols-2 gap-y-8 gap-x-6">
               {[
-                { v: "12", l: "Editions delivered" },
-                { v: "94%", l: "Return attendance" },
-                { v: "$2.1B", l: "Funded post-event" },
-                { v: "640", l: "Papers presented" },
+                { v: "4", l: "Core programme days" },
+                { v: "6", l: "Curated themes" },
+                { v: "5+", l: "Featured speakers" },
+                { v: "3", l: "Pass tiers" },
               ].map((s) => (
                 <div key={s.l}>
                   <p className="font-display text-4xl md:text-5xl text-ivory">{s.v}</p>
@@ -74,9 +71,8 @@ export function About() {
             </div>
           </div>
 
-          {/* Timeline */}
           <div className="mt-10 pl-1">
-            <p className="text-xs uppercase tracking-[0.22em] text-midnight/60 mb-6">Editions</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-midnight/60 mb-6">Recent editions</p>
             <ol className="relative border-l border-midnight/15 ml-2">
               {editions.map((e, i) => (
                 <motion.li

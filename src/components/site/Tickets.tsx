@@ -1,67 +1,56 @@
-import { useState, useMemo } from "react";
 import { Check } from "lucide-react";
 
 type Tier = {
   name: string;
   tagline: string;
-  base: number;
+  price: number;
   features: string[];
+  requirement?: string;
   popular?: boolean;
 };
 
 const tiers: Tier[] = [
   {
-    name: "Delegate",
-    tagline: "Full programme access.",
-    base: 1290,
+    name: "IEEE Computer Society Member",
+    tagline: "Our most exclusive tier, at our lowest subsidised rate.",
+    price: 1000,
     features: [
-      "All keynotes, panels and tracks",
-      "Proceedings volume + recordings",
-      "Opening reception",
-      "Daily breakfast & lunch",
+      "Full event access across all four days",
+      "All standard attendee perks",
+      "Catering, networking and event swag",
+      "Daily lucky-draw entries",
     ],
-  },
-  {
-    name: "Practitioner",
-    tagline: "For the people doing the work.",
-    base: 1890,
+    requirement:
+      "Valid IEEE CS membership ID required and verified prior to approval.",
     popular: true,
-    features: [
-      "Everything in Delegate",
-      "All hands-on workshops & hack days",
-      "Curated 1:1 matchmaking (10 meetings)",
-      "Gala dinner at Jerónimos",
-      "Office hours with speakers",
-    ],
   },
   {
-    name: "Executive",
-    tagline: "For leaders setting direction.",
-    base: 3490,
+    name: "IEEE Member",
+    tagline: "For active IEEE members outside the Computer Society.",
+    price: 1500,
     features: [
-      "Everything in Practitioner",
-      "Private leaders' breakfasts (×3)",
-      "Roundtables with regulators",
-      "Reserved auditorium seating",
-      "Lounge access throughout",
+      "Complete event access",
+      "Catering and networking opportunities",
+      "All standard attendee perks",
+      "Daily lucky-draw entries",
+    ],
+    requirement:
+      "Valid IEEE membership ID required and verified prior to approval.",
+  },
+  {
+    name: "General Admission",
+    tagline: "Standard entry for students, professionals and tech enthusiasts.",
+    price: 2000,
+    features: [
+      "Full access to the entire event",
+      "Participation in all open sessions",
+      "Networking with industry specialists",
+      "Daily lucky-draw entries and event swag",
     ],
   },
 ];
 
 export function Tickets() {
-  const [accommodation, setAccommodation] = useState(false);
-  const [discount, setDiscount] = useState<"none" | "student" | "ieee">("none");
-
-  const calc = useMemo(() => {
-    return (base: number) => {
-      let p = base;
-      if (discount === "student") p = Math.round(p * 0.5);
-      else if (discount === "ieee") p = Math.round(p * 0.8);
-      if (accommodation) p += 780;
-      return p;
-    };
-  }, [accommodation, discount]);
-
   return (
     <section id="tickets" className="relative py-24 md:py-36 bg-midnight text-ivory grain overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-atmosphere)" }} />
@@ -73,52 +62,15 @@ export function Tickets() {
               Passes
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
-              Three passes. <em className="italic font-normal text-gold">Pick the one</em> that fits your week.
+              Three passes. <em className="italic font-normal text-gold">One congress.</em>
             </h2>
           </div>
           <p className="text-ivory/65 max-w-sm">
-            All passes include the full five days. Discounts and accommodation can be combined.
+            Every pass includes the full four-day programme, catering, networking
+            and entry into daily lucky draws.
           </p>
         </div>
 
-        {/* Toggles */}
-        <div className="flex flex-wrap gap-4 mb-10 items-center">
-          <div className="inline-flex border border-white/15 rounded-sm overflow-hidden">
-            {(["none", "student", "ieee"] as const).map((d) => (
-              <button
-                key={d}
-                onClick={() => setDiscount(d)}
-                className={`px-4 py-2.5 text-xs uppercase tracking-[0.16em] transition ${
-                  discount === d ? "bg-gold text-midnight" : "text-ivory/70 hover:text-ivory"
-                }`}
-              >
-                {d === "none" ? "Standard" : d === "student" ? "Student −50%" : "IEEE −20%"}
-              </button>
-            ))}
-          </div>
-
-          <label className="inline-flex items-center gap-3 cursor-pointer select-none ml-auto">
-            <span className="text-sm text-ivory/75">Include 4-night accommodation</span>
-            <span
-              role="switch"
-              aria-checked={accommodation}
-              tabIndex={0}
-              onClick={() => setAccommodation((v) => !v)}
-              onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setAccommodation((v) => !v)}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
-                accommodation ? "bg-gold" : "bg-white/15"
-              }`}
-            >
-              <span
-                className={`inline-block h-5 w-5 rounded-full bg-ivory transition ${
-                  accommodation ? "translate-x-5" : "translate-x-0.5"
-                }`}
-              />
-            </span>
-          </label>
-        </div>
-
-        {/* Tiers */}
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((t) => (
             <article
@@ -131,10 +83,10 @@ export function Tickets() {
             >
               {t.popular && (
                 <span className="absolute -top-3 left-8 bg-gold text-midnight text-[10px] uppercase tracking-[0.22em] px-3 py-1">
-                  Most chosen
+                  Most subsidised
                 </span>
               )}
-              <h3 className={`font-display text-3xl ${t.popular ? "text-midnight" : "text-ivory"}`}>
+              <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-midnight" : "text-ivory"}`}>
                 {t.name}
               </h3>
               <p className={`mt-2 text-sm ${t.popular ? "text-midnight/65" : "text-ivory/65"}`}>
@@ -142,16 +94,11 @@ export function Tickets() {
               </p>
 
               <div className="mt-8 flex items-baseline gap-2">
-                <span className="font-display text-5xl">€{calc(t.base).toLocaleString()}</span>
+                <span className="font-display text-5xl">₹{t.price.toLocaleString("en-IN")}</span>
                 <span className={`text-sm ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
                   / person
                 </span>
               </div>
-              {discount !== "none" && (
-                <p className={`text-xs mt-1 ${t.popular ? "text-emerald" : "text-gold"}`}>
-                  Discount applied · was €{accommodation ? (t.base + 780).toLocaleString() : t.base.toLocaleString()}
-                </p>
-              )}
 
               <ul className="mt-8 space-y-3 flex-1">
                 {t.features.map((f) => (
@@ -162,23 +109,30 @@ export function Tickets() {
                 ))}
               </ul>
 
+              {t.requirement && (
+                <p
+                  className={`mt-6 text-xs leading-relaxed border-l-2 pl-3 ${
+                    t.popular ? "border-emerald text-midnight/65" : "border-gold text-ivory/65"
+                  }`}
+                >
+                  <span className="uppercase tracking-[0.16em] block mb-1">Requirement</span>
+                  {t.requirement}
+                </p>
+              )}
+
               <a
                 href="#"
-                className={`mt-10 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
+                className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
                   t.popular
                     ? "bg-midnight text-ivory hover:bg-midnight-deep"
                     : "bg-gold text-midnight hover:bg-gold-soft"
                 }`}
               >
-                Reserve {t.name} pass →
+                Register →
               </a>
             </article>
           ))}
         </div>
-
-        <p className="mt-8 text-xs text-ivory/55">
-          Group rates available for teams of 5+. Visa invitation letters issued within 48 hours of registration.
-        </p>
       </div>
     </section>
   );

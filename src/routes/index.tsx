@@ -11,9 +11,9 @@ import { Sponsors } from "@/components/site/Sponsors";
 import { FAQ } from "@/components/site/FAQ";
 import { Footer } from "@/components/site/Footer";
 
-const title = "Convergence 2026 — IEEE Flagship Technology Congress · Lisbon";
+const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
 const description =
-  "Five days for the researchers, engineers and founders building the systems that everything else runs on. October 14–18, 2026 · Lisbon Congress Centre.";
+  "The All India Computer Society Student & Young Professional Congress 2026. Theme: Where Agent Meets Humans. October 8 – November 2, 2026 at TP Ganesan Auditorium, SRM IST.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,15 +33,15 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Event",
-          name: "Convergence 2026 — IEEE Flagship Technology Congress",
-          startDate: "2026-10-14",
-          endDate: "2026-10-18",
+          name: "AICSSYC 2026 — IEEE Computer Society SYP Congress",
+          startDate: "2026-10-08",
+          endDate: "2026-11-02",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
             "@type": "Place",
-            name: "Lisbon Congress Centre",
-            address: "Praça das Indústrias, 1300-307 Lisboa, Portugal",
+            name: "TP Ganesan Auditorium, SRM Institute of Science and Technology",
+            address: "Kattankulathur, Tamil Nadu, India",
           },
           description,
         }),
