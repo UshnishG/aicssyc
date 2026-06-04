@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cpu, Zap, ShieldCheck, Globe2, Atom, Network } from "lucide-react";
+import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
 
 const themes = [
   {
