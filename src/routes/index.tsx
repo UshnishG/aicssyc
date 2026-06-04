@@ -12,6 +12,8 @@ import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
+import { ConstellationBackground } from "@/components/site/ConstellationBackground";
+import { LoadingScreen } from "@/components/site/LoadingScreen";
 
 const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
 const description =
@@ -55,7 +57,9 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="text-ivory min-h-screen">
+    <div className="text-ivory min-h-screen relative">
+      <LoadingScreen />
+      <ConstellationBackground />
       <SiteNav />
       <main>
         <Hero />
