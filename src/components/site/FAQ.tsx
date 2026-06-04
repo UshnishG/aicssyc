@@ -93,10 +93,10 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </CardGrid>
       </div>
     </section>
   );
