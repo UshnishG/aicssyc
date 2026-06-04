@@ -240,19 +240,36 @@ export function Tickets() {
                   </p>
                 )}
 
-                <button
-                  type="button"
-                  onClick={() => setActiveTier(t)}
-                  aria-label={`Register for ${t.name}`}
-                  className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
-                    t.popular
-                      ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
-                      : "bg-gold text-ivory hover:bg-gold-soft"
-                  }`}
-                >
-                  Register
-                  <span aria-hidden>→</span>
-                </button>
+                {t.registerUrl ? (
+                  <a
+                    href={t.registerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Register for ${t.name} (opens KonfHub checkout in a new tab)`}
+                    className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
+                      t.popular
+                        ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
+                        : "bg-gold text-ivory hover:bg-gold-soft"
+                    }`}
+                  >
+                    Register
+                    <span aria-hidden>→</span>
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setActiveTier(t)}
+                    aria-label={`Register for ${t.name}`}
+                    className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
+                      t.popular
+                        ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
+                        : "bg-gold text-ivory hover:bg-gold-soft"
+                    }`}
+                  >
+                    Register
+                    <span aria-hidden>→</span>
+                  </button>
+                )}
               </motion.article>
             );
           })}
