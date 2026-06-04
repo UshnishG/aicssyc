@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { Check } from "lucide-react";
 
 type Tier = {
   name: string;
   tagline: string;
-  price: number;
-  features: string[];
+  basePrice: number;
   requirement?: string;
   popular?: boolean;
 };
@@ -13,13 +13,7 @@ const tiers: Tier[] = [
   {
     name: "IEEE Computer Society Member",
     tagline: "Reserved for active IEEE Computer Society members.",
-    price: 1000,
-    features: [
-      "Full event access",
-      "Technical tracks, keynotes & Innovation Expo",
-      "Delegate kit, meals & networking events",
-      "Participation certificate",
-    ],
+    basePrice: 1000,
     requirement:
       "Valid IEEE CS Membership ID required and verified prior to approval.",
     popular: true,
@@ -27,31 +21,29 @@ const tiers: Tier[] = [
   {
     name: "IEEE Member",
     tagline: "For active IEEE members who are not IEEE CS members.",
-    price: 1500,
-    features: [
-      "Full event access",
-      "Technical tracks, keynotes & Innovation Expo",
-      "Delegate kit, meals & networking events",
-      "Participation certificate",
-    ],
+    basePrice: 1500,
     requirement:
       "Valid IEEE Membership ID required and verified prior to approval.",
   },
   {
     name: "General Admission",
     tagline: "Open to students, professionals, researchers and technology enthusiasts.",
-    price: 2000,
-    features: [
-      "Full event access",
-      "Technical tracks, keynotes & Innovation Expo",
-      "Delegate kit, meals & networking events",
-      "Participation certificate",
-    ],
+    basePrice: 2000,
   },
 ];
 
+const baseFeatures = [
+  "Full event access",
+  "Technical tracks, keynotes & Innovation Expo",
+  "Delegate kit, meals & networking events",
+  "Participation certificate",
+];
+
+const ACCOMMODATION_FEE = 2000;
 
 export function Tickets() {
+  const [accommodation, setAccommodation] = useState(false);
+
   return (
     <section id="tickets" className="relative py-24 md:py-36 bg-midnight text-ivory grain overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-atmosphere)" }} />
@@ -73,86 +65,112 @@ export function Tickets() {
           </p>
         </div>
 
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {tiers.map((t) => (
-            <article
-              key={t.name}
-              className={`relative p-8 md:p-10 border flex flex-col ${
-                t.popular
-                  ? "bg-ivory text-midnight border-gold"
-                  : "bg-white/[0.03] border-white/10 text-ivory"
+        {/* Accommodation toggle */}
+        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/[0.03] p-5 md:p-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-gold">Optional add-on</p>
+            <p className="mt-2 font-display text-xl text-ivory">
+              SRM IST campus accommodation
+              <span className="text-ivory/55 text-base ml-2">+ ₹2,000</span>
+            </p>
+          </div>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={accommodation}
+            onClick={() => setAccommodation((v) => !v)}
+            className={`relative inline-flex h-9 w-[180px] items-center rounded-sm border transition ${
+              accommodation
+                ? "bg-gold border-gold text-midnight"
+                : "bg-transparent border-white/20 text-ivory"
+            }`}
+          >
+            <span
+              className={`absolute top-1 bottom-1 w-[86px] rounded-sm transition-all ${
+                accommodation ? "left-[90px] bg-midnight" : "left-1 bg-white/10"
               }`}
-            >
-              {t.popular && (
-                <span className="absolute -top-3 left-8 bg-gold text-midnight text-[10px] uppercase tracking-[0.22em] px-3 py-1">
-                  Most subsidised
-                </span>
-              )}
-              <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-midnight" : "text-ivory"}`}>
-                {t.name}
-              </h3>
-              <p className={`mt-2 text-sm ${t.popular ? "text-midnight/65" : "text-ivory/65"}`}>
-                {t.tagline}
-              </p>
-
-              <div className="mt-8 flex items-baseline gap-2">
-                <span className="font-display text-5xl">₹{t.price.toLocaleString("en-IN")}</span>
-                <span className={`text-sm ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
-                  / person
-                </span>
-              </div>
-
-              <ul className="mt-8 space-y-3 flex-1">
-                {t.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm leading-relaxed">
-                    <Check size={16} className={`mt-0.5 flex-shrink-0 ${t.popular ? "text-emerald" : "text-gold"}`} />
-                    <span className={t.popular ? "text-midnight/85" : "text-ivory/85"}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {t.requirement && (
-                <p
-                  className={`mt-6 text-xs leading-relaxed border-l-2 pl-3 ${
-                    t.popular ? "border-emerald text-midnight/65" : "border-gold text-ivory/65"
-                  }`}
-                >
-                  <span className="uppercase tracking-[0.16em] block mb-1">Requirement</span>
-                  {t.requirement}
-                </p>
-              )}
-
-              <a
-                href="#"
-                className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
-                  t.popular
-                    ? "bg-midnight text-ivory hover:bg-midnight-deep"
-                    : "bg-gold text-midnight hover:bg-gold-soft"
-                }`}
-              >
-                Register →
-              </a>
-            </article>
-          ))}
+            />
+            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-midnight" : "text-ivory"}`}>
+              No stay
+            </span>
+            <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-gold" : "text-ivory/55"}`}>
+              + Stay
+            </span>
+          </button>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-[1fr_auto] gap-6 items-start border border-white/10 bg-white/[0.03] p-6 md:p-8">
-          <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-gold">
-              Optional add-on · Accommodation
-            </p>
-            <p className="mt-3 font-display text-2xl text-ivory leading-snug">
-              Add SRM IST campus accommodation for <span className="text-gold">+ ₹2,000</span>.
-            </p>
-            <p className="mt-2 text-sm text-ivory/65">
-              Updated pass pricing with accommodation: IEEE CS Member ₹3,000 ·
-              IEEE Member ₹3,500 · General Admission ₹4,000.
-            </p>
-          </div>
-          <div className="text-xs uppercase tracking-[0.18em] text-ivory/55 md:text-right">
-            Includes campus stay<br />at SRM IST, Kattankulathur
-          </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {tiers.map((t) => {
+            const price = t.basePrice + (accommodation ? ACCOMMODATION_FEE : 0);
+            const features = accommodation
+              ? [...baseFeatures, "SRM IST campus accommodation included"]
+              : baseFeatures;
+            return (
+              <article
+                key={t.name}
+                className={`relative p-8 md:p-10 border flex flex-col ${
+                  t.popular
+                    ? "bg-ivory text-midnight border-gold"
+                    : "bg-white/[0.03] border-white/10 text-ivory"
+                }`}
+              >
+                {t.popular && (
+                  <span className="absolute -top-3 left-8 bg-gold text-midnight text-[10px] uppercase tracking-[0.22em] px-3 py-1">
+                    Most subsidised
+                  </span>
+                )}
+                <h3 className={`font-display text-2xl md:text-[1.7rem] leading-tight ${t.popular ? "text-midnight" : "text-ivory"}`}>
+                  {t.name}
+                </h3>
+                <p className={`mt-2 text-sm ${t.popular ? "text-midnight/65" : "text-ivory/65"}`}>
+                  {t.tagline}
+                </p>
+
+                <div className="mt-8 flex items-baseline gap-2">
+                  <span className="font-display text-5xl">₹{price.toLocaleString("en-IN")}</span>
+                  <span className={`text-sm ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
+                    / person
+                  </span>
+                </div>
+                {accommodation && (
+                  <p className={`mt-1 text-xs ${t.popular ? "text-midnight/55" : "text-ivory/55"}`}>
+                    Includes ₹2,000 accommodation
+                  </p>
+                )}
+
+                <ul className="mt-8 space-y-3 flex-1">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-sm leading-relaxed">
+                      <Check size={16} className={`mt-0.5 flex-shrink-0 ${t.popular ? "text-emerald" : "text-gold"}`} />
+                      <span className={t.popular ? "text-midnight/85" : "text-ivory/85"}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {t.requirement && (
+                  <p
+                    className={`mt-6 text-xs leading-relaxed border-l-2 pl-3 ${
+                      t.popular ? "border-emerald text-midnight/65" : "border-gold text-ivory/65"
+                    }`}
+                  >
+                    <span className="uppercase tracking-[0.16em] block mb-1">Requirement</span>
+                    {t.requirement}
+                  </p>
+                )}
+
+                <a
+                  href="#"
+                  className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
+                    t.popular
+                      ? "bg-midnight text-ivory hover:bg-midnight-deep"
+                      : "bg-gold text-midnight hover:bg-gold-soft"
+                  }`}
+                >
+                  Register →
+                </a>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
