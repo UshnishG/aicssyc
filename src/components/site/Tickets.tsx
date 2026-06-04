@@ -45,6 +45,8 @@ const ACCOMMODATION_FEE = 2000;
 
 export function Tickets() {
   const [accommodation, setAccommodation] = useState(false);
+  const [showWidget, setShowWidget] = useState(false);
+
 
   return (
     <section id="tickets" className="relative py-24 md:py-36 bg-midnight/60 text-ivory grain overflow-hidden">
