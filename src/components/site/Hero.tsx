@@ -73,9 +73,9 @@ function NetworkCanvas() {
 }
 
 const stats = [
-  { value: "500+", label: "Delegates" },
-  { value: "20+", label: "Speakers" },
-  { value: "15+", label: "States represented" },
+  { value: "300+", label: "Delegates" },
+  { value: "10+", label: "Speakers" },
+  { value: "20+", label: "States represented" },
   { value: "National", label: "IEEE CS Initiative" },
 ];
 
