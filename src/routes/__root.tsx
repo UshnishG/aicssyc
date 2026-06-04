@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "AICSSYC 2026" },
+      { name: "description", content: "Tech Congress Hub is a premium, modern website for a flagship technology congress." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "AICSSYC 2026" },
+      { property: "og:description", content: "Tech Congress Hub is a premium, modern website for a flagship technology congress." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "AICSSYC 2026" },
+      { name: "twitter:description", content: "Tech Congress Hub is a premium, modern website for a flagship technology congress." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
     ],
     links: [
       {
