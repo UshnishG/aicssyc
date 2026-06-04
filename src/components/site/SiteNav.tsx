@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/aicssyc-logo.png.asset.json";
 
 const links = [
   { label: "About", href: "#about" },
