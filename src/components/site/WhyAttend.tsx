@@ -39,38 +39,20 @@ export function WhyAttend() {
   return (
     <section className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial">
-        <div className="max-w-3xl mb-16">
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-xs uppercase tracking-[0.22em] text-emerald"
-          >
-            <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-            Why attend
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance"
-          >
+        <RevealGroup className="max-w-3xl mb-16">
+          <Eyebrow color="emerald">Why attend</Eyebrow>
+          <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
             Why you should attend.
-          </motion.h2>
-        </div>
+          </Heading>
+        </RevealGroup>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-midnight/10 border border-ivory/10">
+        <CardGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-midnight/10 border border-ivory/10" stagger={0.1}>
           {cards.map((c, idx) => {
             const Icon = c.icon;
             return (
               <motion.article
                 key={c.title}
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.7, delay: (idx % 3) * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                variants={itemVariants}
                 whileHover={{ y: -6, transition: { duration: 0.3 } }}
                 className="relative bg-transparent p-8 md:p-10 flex flex-col"
               >
@@ -97,7 +79,7 @@ export function WhyAttend() {
               </motion.article>
             );
           })}
-        </div>
+        </CardGrid>
       </div>
     </section>
   );
