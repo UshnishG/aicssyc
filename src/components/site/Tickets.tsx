@@ -66,7 +66,7 @@ export function Tickets() {
         </div>
 
         {/* Accommodation toggle */}
-        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/5/[0.03] p-5 md:p-6">
+        <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-white/[0.04] p-5 md:p-6">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">Optional add-on</p>
             <p className="mt-2 font-display text-xl text-ivory">
@@ -111,7 +111,7 @@ export function Tickets() {
                 className={`relative p-8 md:p-10 border flex flex-col ${
                   t.popular
                     ? "bg-transparent text-ivory border-gold"
-                    : "bg-white/5/[0.03] border-white/10 text-ivory"
+                    : "bg-white/[0.04] border-white/10 text-ivory"
                 }`}
               >
                 {t.popular && (
