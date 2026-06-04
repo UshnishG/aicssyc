@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Search } from "lucide-react";
+import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants } from "./Reveal";
 
 const faqs = [
   { q: "What is AICSSYC 2026?", a: "The All India Computer Society Student & Young Professional Congress — a flagship initiative of the IEEE Computer Society SYP that brings together students, young professionals, researchers and industry leaders for technical sessions, workshops, discussions and networking." },
@@ -27,16 +28,13 @@ export function FAQ() {
   return (
     <section id="faq" className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial grid lg:grid-cols-[0.9fr_1.1fr] gap-16">
-        <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-emerald">
-            <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-            Questions
-          </p>
-          <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
+        <RevealGroup>
+          <Eyebrow color="emerald">Questions</Eyebrow>
+          <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
             Everything you'd ask <em className="italic font-normal text-emerald">at the door.</em>
-          </h2>
+          </Heading>
 
-          <div className="mt-10 relative max-w-md">
+          <Body className="mt-10 relative max-w-md">
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-ivory/70" />
             <input
               value={q}
@@ -45,25 +43,27 @@ export function FAQ() {
               aria-label="Search frequently asked questions"
               className="w-full bg-transparent border border-ivory/20 pl-11 pr-4 py-3.5 text-sm placeholder:text-ivory/70 focus:outline-none focus:border-ivory/20 rounded-sm"
             />
-          </div>
+          </Body>
 
-          <p className="mt-8 text-sm text-ivory/80 max-w-sm">
-            Can't find your answer? Email{" "}
-            <a href="mailto:contact@aicssyc2026.in" className="text-ivory border-b border-ivory/30 hover:border-ivory/20">
-              contact@aicssyc2026.in
-            </a>
-            .
-          </p>
-        </div>
+          <Body className="mt-8 text-sm text-ivory/80 max-w-sm">
+            <p>
+              Can't find your answer? Email{" "}
+              <a href="mailto:contact@aicssyc2026.in" className="text-ivory border-b border-ivory/30 hover:border-ivory/20">
+                contact@aicssyc2026.in
+              </a>
+              .
+            </p>
+          </Body>
+        </RevealGroup>
 
-        <div className="divide-y divide-midnight/15 border-y border-ivory/15">
+        <CardGrid className="divide-y divide-midnight/15 border-y border-ivory/15" stagger={0.05}>
           {filtered.length === 0 && (
             <p className="py-8 text-ivory/75">No questions match "{q}".</p>
           )}
           {filtered.map((f, i) => {
             const isOpen = open === i;
             return (
-              <div key={f.q}>
+              <motion.div key={f.q} variants={itemVariants}>
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
@@ -93,10 +93,10 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </CardGrid>
       </div>
     </section>
   );

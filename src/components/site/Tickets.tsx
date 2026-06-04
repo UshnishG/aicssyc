@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
+import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
 
 type Tier = {
   name: string;
@@ -49,22 +50,21 @@ export function Tickets() {
     <section id="tickets" className="relative py-24 md:py-36 bg-midnight/60 text-ivory grain overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-atmosphere)" }} />
       <div className="container-editorial relative">
-        <div className="grid lg:grid-cols-[1fr_auto] items-end gap-8 mb-12">
+        <RevealGroup className="grid lg:grid-cols-[1fr_auto] items-end gap-8 mb-12">
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.22em] text-gold">
-              <span className="inline-block h-px w-8 align-middle bg-gold mr-3" />
-              Delegate pass & ticket cost
-            </p>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
+            <Eyebrow color="gold">Delegate pass & ticket cost</Eyebrow>
+            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
               Three passes. <em className="italic font-normal text-gold">One congress.</em>
-            </h2>
+            </Heading>
           </div>
-          <p className="text-ivory/80 max-w-sm">
-            Every pass includes full event access, technical tracks, keynotes,
-            Innovation Expo, delegate kit, meals, networking events and a
-            participation certificate.
-          </p>
-        </div>
+          <Body className="text-ivory/80 max-w-sm">
+            <p>
+              Every pass includes full event access, technical tracks, keynotes,
+              Innovation Expo, delegate kit, meals, networking events and a
+              participation certificate.
+            </p>
+          </Body>
+        </RevealGroup>
 
         {/* Accommodation toggle */}
         <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-midnight-deep/55 p-5 md:p-6">

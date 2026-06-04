@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import speakersData from "@/data/speakers.json";
+import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants, Reveal } from "./Reveal";
 
 const featured = speakersData.featured;
 const speakers = speakersData.speakers;
@@ -23,24 +24,21 @@ export function Speakers() {
   return (
     <section id="speakers" className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
+        <RevealGroup className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.22em] text-emerald">
-              <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-              Distinguished speakers & industry experts
-            </p>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
+            <Eyebrow color="emerald">Distinguished speakers & industry experts</Eyebrow>
+            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
               The voices shaping <em className="italic font-normal text-emerald">AICSSYC 2026.</em>
-            </h2>
-            <p className="mt-6 text-ivory/80 max-w-xl">
+            </Heading>
+            <Body className="mt-6 text-ivory/80 max-w-xl">
               A curated line-up of researchers, engineers, architects and entrepreneurs.
               More speakers to be announced — final list subject to change.
-            </p>
-
+            </Body>
           </div>
-        </div>
+        </RevealGroup>
 
         {/* Featured */}
+        <Reveal direction="blur" distance={40}>
         <article className="grid md:grid-cols-[1.1fr_1fr] gap-0 mb-16 bg-midnight text-ivory">
           <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[460px]">
             <Avatar initials={featured.initials} large />
@@ -70,16 +68,14 @@ export function Speakers() {
             </div>
           </div>
         </article>
+        </Reveal>
 
         {/* Wall */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10">
-          {speakers.map((s, i) => (
+        <CardGrid className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10" stagger={0.08}>
+          {speakers.map((s) => (
             <motion.div
               key={s.name}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ delay: (i % 4) * 0.05 }}
+              variants={itemVariants}
               className="group relative bg-transparent"
             >
               <Avatar initials={s.initials} />
@@ -106,7 +102,7 @@ export function Speakers() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </CardGrid>
         <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/75">
           More speakers being announced · subject to change
         </p>
