@@ -59,6 +59,8 @@ const tiers: Tier[] = [
     basePrice: 2000,
     registerUrl:
       "https://konfhub.com/checkout/aicssyc-2026?ticketId=104341%7C1%3B&selectedCode=EARLYBIRD",
+    registerUrlWithAccommodation:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104344%7C1%3B&selectedCode=EARLYBIRD",
   },
 ];
 
