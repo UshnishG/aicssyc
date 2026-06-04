@@ -136,6 +136,24 @@ export function Tickets() {
             </article>
           ))}
         </div>
+
+        <div className="mt-12 grid md:grid-cols-[1fr_auto] gap-6 items-start border border-white/10 bg-white/[0.03] p-6 md:p-8">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-gold">
+              Optional add-on · Accommodation
+            </p>
+            <p className="mt-3 font-display text-2xl text-ivory leading-snug">
+              Add SRM IST campus accommodation for <span className="text-gold">+ ₹2,000</span>.
+            </p>
+            <p className="mt-2 text-sm text-ivory/65">
+              Updated pass pricing with accommodation: IEEE CS Member ₹3,000 ·
+              IEEE Member ₹3,500 · General Admission ₹4,000.
+            </p>
+          </div>
+          <div className="text-xs uppercase tracking-[0.18em] text-ivory/55 md:text-right">
+            Includes campus stay<br />at SRM IST, Kattankulathur
+          </div>
+        </div>
       </div>
     </section>
   );
