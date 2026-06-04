@@ -68,16 +68,14 @@ export function Speakers() {
             </div>
           </div>
         </article>
+        </Reveal>
 
         {/* Wall */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10">
-          {speakers.map((s, i) => (
+        <CardGrid className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-midnight/10" stagger={0.08}>
+          {speakers.map((s) => (
             <motion.div
               key={s.name}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ delay: (i % 4) * 0.05 }}
+              variants={itemVariants}
               className="group relative bg-transparent"
             >
               <Avatar initials={s.initials} />
