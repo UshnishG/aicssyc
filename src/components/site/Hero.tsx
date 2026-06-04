@@ -73,9 +73,9 @@ function NetworkCanvas() {
 }
 
 const stats = [
-  { value: "500+", label: "Delegates" },
-  { value: "20+", label: "Speakers" },
-  { value: "15+", label: "States represented" },
+  { value: "300+", label: "Delegates" },
+  { value: "10+", label: "Speakers" },
+  { value: "20+", label: "States represented" },
   { value: "National", label: "IEEE CS Initiative" },
 ];
 
@@ -145,7 +145,7 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <span className="font-display text-3xl text-gold">Oct 8</span>
               <span className="text-ivory/70 leading-tight">
-                — Nov 2<br />2026
+                — Oct 11<br />2026
               </span>
             </div>
             <div className="h-10 w-px bg-white/10" />

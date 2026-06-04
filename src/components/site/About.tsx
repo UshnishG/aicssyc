@@ -1,12 +1,3 @@
-import { motion } from "framer-motion";
-
-const editions = [
-  { year: "2023", note: "AICSSYC · Strengthened SYP focus" },
-  { year: "2024", note: "Expanded chapter participation" },
-  { year: "2025", note: "Record student & YP turnout" },
-  { year: "2026", note: "SRM IST · Where Agent Meets Humans", current: true },
-];
-
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-36 bg-ivory">
@@ -83,33 +74,6 @@ export function About() {
             </div>
           </div>
 
-          <div className="mt-10 pl-1">
-            <p className="text-xs uppercase tracking-[0.22em] text-midnight/60 mb-6">Recent editions</p>
-            <ol className="relative border-l border-midnight/15 ml-2">
-              {editions.map((e, i) => (
-                <motion.li
-                  key={e.year}
-                  initial={{ opacity: 0, x: -8 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.06 }}
-                  className="relative pl-6 pb-5 last:pb-0"
-                >
-                  <span
-                    className={`absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full ${
-                      e.current ? "bg-gold ring-4 ring-gold/20" : "bg-midnight/30"
-                    }`}
-                  />
-                  <div className="flex items-baseline gap-4">
-                    <span className={`font-display text-lg ${e.current ? "text-emerald" : "text-midnight"}`}>
-                      {e.year}
-                    </span>
-                    <span className="text-sm text-midnight/65">{e.note}</span>
-                  </div>
-                </motion.li>
-              ))}
-            </ol>
-          </div>
         </div>
       </div>
     </section>

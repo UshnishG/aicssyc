@@ -9,12 +9,13 @@ import { WhyAttend } from "@/components/site/WhyAttend";
 import { Tickets } from "@/components/site/Tickets";
 import { Sponsors } from "@/components/site/Sponsors";
 import { FAQ } from "@/components/site/FAQ";
+import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
 
 const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
 const description =
-  "The All India Computer Society Student & Young Professional Congress 2026. Theme: Where Agent Meets Humans. October 8 – November 2, 2026 at TP Ganesan Auditorium, SRM IST.";
+  "The All India Computer Society Student & Young Professional Congress 2026. Theme: Where Agent Meets Humans. October 8 – 11, 2026 at TP Ganesan Auditorium, SRM IST.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/")({
           "@type": "Event",
           name: "AICSSYC 2026 — IEEE Computer Society SYP Congress",
           startDate: "2026-10-08",
-          endDate: "2026-11-02",
+          endDate: "2026-10-11",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
           location: {
@@ -66,6 +67,7 @@ function Index() {
         <Tickets />
         <Sponsors />
         <FAQ />
+        <Contact />
         <CallToAction />
       </main>
       <Footer />
