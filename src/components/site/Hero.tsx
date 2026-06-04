@@ -73,10 +73,10 @@ function NetworkCanvas() {
 }
 
 const stats = [
-  { value: "1,000+", label: "Delegates" },
-  { value: "6", label: "Themes" },
-  { value: "4 tracks", label: "Technical talks" },
-  { value: "4 days", label: "Core programme" },
+  { value: "500+", label: "Delegates" },
+  { value: "20+", label: "Speakers" },
+  { value: "15+", label: "States represented" },
+  { value: "National", label: "IEEE CS Initiative" },
 ];
 
 export function Hero() {
