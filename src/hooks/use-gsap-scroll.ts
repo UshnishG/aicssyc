@@ -12,7 +12,8 @@ export function useGsapScrollAnimations() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) return;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (reduced || isMobile) return;
 
     const ctx = gsap.context(() => {
       // Headings — fade + rise as they enter
