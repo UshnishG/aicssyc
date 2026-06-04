@@ -45,7 +45,7 @@ export function Tickets() {
   const [accommodation, setAccommodation] = useState(false);
 
   return (
-    <section id="tickets" className="relative py-24 md:py-36 bg-midnight text-ivory grain overflow-hidden">
+    <section id="tickets" className="relative py-24 md:py-36 bg-midnight/60 text-ivory grain overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-60" style={{ background: "var(--gradient-atmosphere)" }} />
       <div className="container-editorial relative">
         <div className="grid lg:grid-cols-[1fr_auto] items-end gap-8 mb-12">
@@ -87,7 +87,7 @@ export function Tickets() {
           >
             <span
               className={`absolute top-1 bottom-1 w-[86px] rounded-sm transition-all ${
-                accommodation ? "left-[90px] bg-midnight" : "left-1 bg-white/5/10"
+                accommodation ? "left-[90px] bg-midnight/60" : "left-1 bg-white/5/10"
               }`}
             />
             <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-ivory" : "text-ivory"}`}>
@@ -162,7 +162,7 @@ export function Tickets() {
                   href="#"
                   className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition ${
                     t.popular
-                      ? "bg-midnight text-ivory hover:bg-midnight-deep"
+                      ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
                       : "bg-gold text-ivory hover:bg-gold-soft"
                   }`}
                 >

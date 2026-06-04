@@ -22,7 +22,7 @@ export function Contact() {
           <div className="grid sm:grid-cols-2 gap-4">
             <a
               href="mailto:ieeecomputersocietysrmist@gmail.com"
-              className="group block bg-midnight text-ivory p-8 grain transition hover:bg-midnight-deep"
+              className="group block bg-midnight/60 text-ivory p-8 grain transition hover:bg-midnight-deep/70"
             >
               <Mail size={22} className="text-gold" />
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-gold/80">Email</p>

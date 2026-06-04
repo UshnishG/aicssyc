@@ -4,7 +4,7 @@ export function CallToAction() {
   return (
     <section
       id="join"
-      className="relative bg-midnight-deep text-ivory grain overflow-hidden border-t border-white/8"
+      className="relative bg-midnight-deep/70 text-ivory grain overflow-hidden border-t border-white/8"
     >
       <div
         aria-hidden
