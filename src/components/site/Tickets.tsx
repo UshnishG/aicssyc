@@ -22,6 +22,8 @@ type Tier = {
   ticketId?: string;
   /** External register URL; when set, the Register button links out instead of opening the widget dialog. */
   registerUrl?: string;
+  /** External register URL used when the accommodation add-on is toggled on. */
+  registerUrlWithAccommodation?: string;
 };
 
 const tiers: Tier[] = [
@@ -35,6 +37,8 @@ const tiers: Tier[] = [
     popular: true,
     registerUrl:
       "https://konfhub.com/checkout/aicssyc-2026?ticketId=104339%7C1%3B&selectedCode=EARLYBIRD",
+    registerUrlWithAccommodation:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104342%7C1%3B&selectedCode=EARLYBIRD",
   },
   {
     id: "ieee",
@@ -245,7 +249,11 @@ export function Tickets() {
 
                 {t.registerUrl ? (
                   <a
-                    href={t.registerUrl}
+                    href={
+                      accommodation && t.registerUrlWithAccommodation
+                        ? t.registerUrlWithAccommodation
+                        : t.registerUrl
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Register for ${t.name} (opens KonfHub checkout in a new tab)`}
