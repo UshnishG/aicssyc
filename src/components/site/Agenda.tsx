@@ -44,7 +44,7 @@ export function Agenda() {
           <div
             role="tablist"
             aria-label="Select congress day"
-            className="relative grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1.5 rounded-full border border-ivory/15 bg-midnight/40"
+            className="relative mx-auto grid w-full max-w-2xl grid-cols-4 gap-1 p-1 rounded-full border border-ivory/15 bg-midnight/40"
           >
             {days.map((d, i) => {
               const active = day === i;
@@ -53,8 +53,9 @@ export function Agenda() {
                   key={d.label}
                   role="tab"
                   aria-selected={active}
+                  aria-label={`${d.label} — ${d.date}`}
                   onClick={() => setDay(i)}
-                  className={`relative z-10 flex flex-col items-center justify-center text-center px-3 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                  className={`relative z-10 flex min-w-0 flex-col items-center justify-center text-center px-2 sm:px-3 py-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                     active ? "text-midnight" : "text-ivory/80 hover:text-ivory"
                   }`}
                 >
@@ -65,17 +66,27 @@ export function Agenda() {
                       transition={{ type: "spring", stiffness: 500, damping: 38 }}
                     />
                   )}
-                  <span className={`block text-[10px] uppercase tracking-[0.22em] font-medium ${active ? "text-midnight/70" : "text-gold/80"}`}>
+                  <span
+                    className={`block text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-medium leading-none ${
+                      active ? "text-midnight/70" : "text-gold/80"
+                    }`}
+                  >
                     {d.label}
                   </span>
-                  <span className="block text-xs sm:text-sm mt-0.5 font-medium whitespace-nowrap">
-                    {d.date}
+                  <span className="block text-[11px] sm:text-sm mt-1 font-medium whitespace-nowrap">
+                    {shortDate(d.date)}
                   </span>
                 </button>
               );
             })}
           </div>
+          <p className="mt-3 text-center text-xs sm:text-sm text-ivory/70">
+            <span className="text-gold">{days[day].label}</span>
+            <span className="mx-2 text-ivory/40">·</span>
+            <span>{dayTheme(days[day].date)}</span>
+          </p>
         </div>
+
 
 
         <AnimatePresence mode="wait">
