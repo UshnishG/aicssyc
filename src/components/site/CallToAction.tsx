@@ -39,7 +39,7 @@ export function CallToAction() {
               <div>
                 <p className="text-[10px] uppercase tracking-[0.22em] text-gold/80">Dates</p>
                 <p className="mt-2 font-display text-xl text-ivory leading-snug">
-                  8 Oct — 2 Nov<br />2026
+                  8 — 11 Oct<br />2026
                 </p>
               </div>
               <div>
