@@ -5,6 +5,7 @@
     "topic": "Featured Speaker · AICSSYC 2026",
     "bio": "Joining AICSSYC 2026 as a featured voice on high-scale artificial systems and the evolving relationship between intelligent agents and the people who work with them.",
     "initials": "SS",
+    "photo": "shivam",
     "linkedin": "https://www.linkedin.com/in/shivamshivam96/"
   },
   "speakers": [
@@ -13,6 +14,7 @@
       "org": "Principal Software Architect",
       "focus": "Enterprise Distributed Systems",
       "initials": "US",
+      "photo": "utkarsh",
       "linkedin": "https://www.linkedin.com/in/utkarsh-siddharth-5bb11b126/"
     },
     {
@@ -20,6 +22,7 @@
       "org": "Global Management Consultant",
       "focus": "Strategy & Venture Engineering",
       "initials": "EB",
+      "photo": "eric",
       "linkedin": "https://www.linkedin.com/in/ericberkowitz/"
     },
     {
@@ -27,6 +30,7 @@
       "org": "Enterprise Cloud Architect",
       "focus": "Secure Systems Infrastructure",
       "initials": "AS",
+      "photo": "andrew",
       "linkedin": "https://www.linkedin.com/in/andrewseelytampa/"
     },
     {
@@ -34,6 +38,7 @@
       "org": "Co-Founder & Tech Entrepreneur",
       "focus": "Innovation & Startup Leadership",
       "initials": "NJ",
+      "photo": "nikky",
       "linkedin": "https://www.linkedin.com/in/nikkykumarjha/"
     }
   ]
