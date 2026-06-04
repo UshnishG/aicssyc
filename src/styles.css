@@ -91,7 +91,7 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; background-color: var(--midnight-deep); }
+  html { scroll-behavior: smooth; background-color: var(--midnight-deep); overflow-x: hidden; }
   body {
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -106,6 +106,7 @@
     background-position: center top, center top;
     background-attachment: fixed, fixed;
     background-repeat: no-repeat, no-repeat;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
