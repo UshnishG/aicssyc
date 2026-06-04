@@ -106,24 +106,35 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.05 }}
-            className="font-display text-[clamp(2.75rem,6.2vw,5.75rem)] leading-[0.98] tracking-tight text-balance"
+            className="font-display text-[clamp(2.25rem,5.2vw,4.75rem)] leading-[1.02] tracking-tight text-balance"
           >
-            Where <em className="italic font-normal text-gold">Agent</em>
+            All India Computer Society
             <br />
-            meets Humans.
+            <em className="italic font-normal text-gold">Student & Young Professional</em>
+            <br />
+            Congress 2026
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-8 max-w-[58ch] text-lg md:text-xl leading-relaxed text-ivory/75"
+            transition={{ duration: 0.9, delay: 0.12 }}
+            className="mt-6 font-display italic text-xl md:text-2xl text-gold/90"
           >
-            The All India Computer Society Student & Young Professional Congress
-            convenes students, researchers, young professionals and industry leaders
-            to exchange ideas, foster innovation and build lasting connections in
-            the computing community.
+            Where Agent meets Humans.
           </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="mt-6 max-w-[58ch] text-lg leading-relaxed text-ivory/75"
+          >
+            India's flagship IEEE Computer Society Student & Young Professional
+            Congress — bringing together students, researchers, industry leaders,
+            entrepreneurs, innovators and technology professionals.
+          </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
