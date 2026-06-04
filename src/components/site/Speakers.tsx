@@ -1,7 +1,20 @@
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import speakersData from "@/data/speakers.json";
+import andrewAsset from "@/assets/speakers/andrew.png.asset.json";
+import ericAsset from "@/assets/speakers/eric.png.asset.json";
+import utkarshAsset from "@/assets/speakers/utkarsh.png.asset.json";
+import shivamAsset from "@/assets/speakers/shivam.png.asset.json";
+import nikkyAsset from "@/assets/speakers/nikky.png.asset.json";
 import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants } from "./Reveal";
+
+const photoMap: Record<string, string> = {
+  andrew: andrewAsset.url,
+  eric: ericAsset.url,
+  utkarsh: utkarshAsset.url,
+  shivam: shivamAsset.url,
+  nikky: nikkyAsset.url,
+};
 
 // Treat every speaker (including the previously "featured" one) as equal.
 const featured = speakersData.featured;
@@ -11,18 +24,29 @@ const allSpeakers = [
     org: featured.role,
     focus: featured.topic,
     initials: featured.initials,
+    photo: featured.photo,
     linkedin: featured.linkedin,
   },
   ...speakersData.speakers,
 ];
 
-function Avatar({ initials }: { initials: string }) {
+function Avatar({ initials, photo, name }: { initials: string; photo?: string; name: string }) {
+  const photoUrl = photo ? photoMap[photo] : undefined;
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden bg-gradient-to-br from-emerald via-midnight to-midnight-deep flex items-center justify-center">
       <div aria-hidden className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-atmosphere)" }} />
-      <span className="relative font-display text-5xl md:text-6xl text-gold/90 tracking-tight">
-        {initials}
-      </span>
+      {photoUrl ? (
+        <img
+          src={photoUrl}
+          alt={`Portrait of ${name}`}
+          loading="lazy"
+          className="relative h-full w-full object-cover object-center"
+        />
+      ) : (
+        <span className="relative font-display text-5xl md:text-6xl text-gold/90 tracking-tight">
+          {initials}
+        </span>
+      )}
     </div>
   );
 }
@@ -51,7 +75,7 @@ export function Speakers() {
               variants={itemVariants}
               className="group relative bg-transparent"
             >
-              <Avatar initials={s.initials} />
+              <Avatar initials={s.initials} photo={s.photo} name={s.name} />
               <div className="p-4">
                 <p className="font-display text-base text-ivory leading-tight">{s.name}</p>
                 <p className="text-xs text-ivory/75 mt-1">{s.org}</p>
