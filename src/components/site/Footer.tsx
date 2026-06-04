@@ -18,12 +18,8 @@ export function Footer() {
       <div className="container-editorial py-20 md:py-24">
         <div className="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="AICSSYC 2026" className="h-12 w-auto object-contain" />
-              <div>
-                <p className="font-display text-lg">AICSSYC 2026</p>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-slate-mist">IEEE CS · SYP Flagship</p>
-              </div>
+            <div className="flex items-center">
+              <img src={logoAsset.url} alt="AICSSYC 2026" className="h-16 w-auto object-contain" />
             </div>
             <p className="mt-6 text-ivory/65 leading-relaxed max-w-sm">
               The All India Computer Society Student & Young Professional Congress —
