@@ -3,9 +3,9 @@ import { Linkedin } from "lucide-react";
 
 const featured = {
   name: "Shivam Shivam",
-  role: "Featured Speaker · AICSSYC 2026",
-  topic: "Flagship session · Day 0",
-  bio: "Joining AICSSYC 2026 as a featured voice on agentic systems and the evolving relationship between intelligent agents and the people who work with them.",
+  role: "Founding Technical Partner · High Scale Artificial Systems",
+  topic: "Featured Speaker · AICSSYC 2026",
+  bio: "Joining AICSSYC 2026 as a featured voice on high-scale artificial systems and the evolving relationship between intelligent agents and the people who work with them.",
   initials: "SS",
   linkedin: "https://www.linkedin.com/in/shivamshivam96/",
 };
@@ -13,33 +13,34 @@ const featured = {
 const speakers = [
   {
     name: "Utkarsh Siddharth",
-    org: "Featured Speaker",
-    focus: "AI & intelligent systems",
+    org: "Principal Software Architect",
+    focus: "Enterprise Distributed Systems",
     initials: "US",
     linkedin: "https://www.linkedin.com/in/utkarsh-siddharth-5bb11b126/",
   },
   {
     name: "Eric Berkowitz",
-    org: "Featured Speaker",
-    focus: "Industry leadership",
+    org: "Global Management Consultant",
+    focus: "Strategy & Venture Engineering",
     initials: "EB",
     linkedin: "https://www.linkedin.com/in/ericberkowitz/",
   },
   {
     name: "Andrew Seely",
-    org: "Featured Speaker",
-    focus: "Engineering at scale",
+    org: "Enterprise Cloud Architect",
+    focus: "Secure Systems Infrastructure",
     initials: "AS",
     linkedin: "https://www.linkedin.com/in/andrewseelytampa/",
   },
   {
     name: "Nikky Kumar Jha",
-    org: "Featured Speaker",
-    focus: "Innovation & strategy",
+    org: "Co-Founder & Tech Entrepreneur",
+    focus: "Innovation & Startup Leadership",
     initials: "NJ",
     linkedin: "https://www.linkedin.com/in/nikkykumarjha/",
   },
 ];
+
 
 function Avatar({ initials, large }: { initials: string; large?: boolean }) {
   return (
@@ -62,15 +63,16 @@ export function Speakers() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.22em] text-emerald">
               <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-              Speakers
+              Distinguished speakers & industry experts
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
               The voices shaping <em className="italic font-normal text-emerald">AICSSYC 2026.</em>
             </h2>
             <p className="mt-6 text-midnight/65 max-w-xl">
-              A growing line-up of researchers, engineers and leaders. More speakers to be
-              announced — final list subject to change.
+              A curated line-up of researchers, engineers, architects and entrepreneurs.
+              More speakers to be announced — final list subject to change.
             </p>
+
           </div>
         </div>
 
@@ -119,8 +121,9 @@ export function Speakers() {
               <Avatar initials={s.initials} />
               <div className="p-4">
                 <p className="font-display text-base text-midnight leading-tight">{s.name}</p>
-                <p className="text-xs text-midnight/60 mt-1">{s.focus}</p>
+                <p className="text-xs text-midnight/60 mt-1">{s.org}</p>
               </div>
+
               <div className="absolute inset-0 bg-midnight/95 text-ivory opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
                 <p className="text-xs uppercase tracking-[0.18em] text-gold">Focus</p>
                 <p className="font-display text-xl mt-2">{s.focus}</p>

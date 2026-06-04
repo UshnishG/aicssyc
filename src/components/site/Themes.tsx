@@ -6,52 +6,53 @@ const themes = [
   {
     icon: Atom,
     title: "Research & Academia",
-    blurb: "Cutting-edge research, peer dialogue and the pipeline from lab to deployment.",
+    blurb: "Advancing research methodologies, publication excellence, collaborative innovation and academic impact.",
     topics: ["Applied research showcases", "Paper presentations", "Academic collaborations", "Student research tracks"],
-    outcomes: ["Publication-ready feedback", "Research partner intros", "Mentorship pathways"],
+    outcomes: ["Publication-ready feedback", "Research partner introductions", "Mentorship pathways"],
     speakers: "Research track",
-  },
-  {
-    icon: Network,
-    title: "Management & Strategy",
-    blurb: "How technical decisions become organisational outcomes — and careers.",
-    topics: ["Tech leadership", "Product strategy", "Career frameworks", "Team scaling"],
-    outcomes: ["Leadership playbooks", "Strategic decision tools", "Mentor connections"],
-    speakers: "Strategy track",
-  },
-  {
-    icon: Cpu,
-    title: "Agents & Human Interaction",
-    blurb: "The headline theme — designing systems where agents and humans work together well.",
-    topics: ["Agentic workflows", "Human-in-the-loop design", "Conversational interfaces", "Trust & UX"],
-    outcomes: ["Working interaction patterns", "Live demos", "Design-research collaborations"],
-    speakers: "Flagship track",
   },
   {
     icon: ShieldCheck,
     title: "AI & Intelligent Systems",
-    blurb: "From foundation models to embedded intelligence — what's shipping right now.",
-    topics: ["LLMs & multimodal models", "On-device intelligence", "Evaluations", "Responsible AI"],
+    blurb: "Exploring LLMs, machine learning, computer vision, reinforcement learning, neural architectures and AI infrastructure.",
+    topics: ["LLMs & multimodal models", "Computer vision & RL", "Neural architectures", "AI infrastructure"],
     outcomes: ["Production-ready patterns", "Open benchmarks", "Hands-on workshop output"],
     speakers: "AI track",
   },
   {
+    icon: Cpu,
+    title: "Agents & Human Interaction",
+    blurb: "Human–AI collaboration, multi-agent systems, intelligent interfaces, alignment and interaction design.",
+    topics: ["Agentic workflows", "Multi-agent systems", "Intelligent interfaces", "Alignment & trust"],
+    outcomes: ["Working interaction patterns", "Live demos", "Design-research collaborations"],
+    speakers: "Flagship track",
+  },
+  {
     icon: Zap,
     title: "Entrepreneurship & Innovation",
-    blurb: "The path from student project to funded startup — told by people who've walked it.",
-    topics: ["Startup showcase", "Founder Q&A", "Pitch fundamentals", "IP & co-founder dynamics"],
-    outcomes: ["Investor & accelerator intros", "Pitch feedback", "Co-founder matchmaking"],
+    blurb: "Startups, venture creation, product-market fit, scaling technology ventures and innovation ecosystems.",
+    topics: ["Startup showcase", "Founder Q&A", "Product-market fit", "Scaling ventures"],
+    outcomes: ["Investor & accelerator introductions", "Pitch feedback", "Co-founder matchmaking"],
     speakers: "Startup track",
+  },
+  {
+    icon: Network,
+    title: "Management & Strategy",
+    blurb: "Technology leadership, operational excellence, organisational growth and engineering management.",
+    topics: ["Tech leadership", "Operational excellence", "Engineering management", "Organisational growth"],
+    outcomes: ["Leadership playbooks", "Strategic decision tools", "Mentor connections"],
+    speakers: "Strategy track",
   },
   {
     icon: Globe2,
     title: "Finance & Digital Economy",
-    blurb: "Where computing meets capital — fintech, payments and the platforms underneath.",
-    topics: ["Digital payments", "Fintech architecture", "Crypto & regulation", "Open banking"],
-    outcomes: ["Industry case studies", "Career pathways into fintech", "Cross-sector intros"],
+    blurb: "FinTech, digital assets, Web3, digital economy and the future of financial infrastructure.",
+    topics: ["FinTech architecture", "Digital assets & Web3", "Digital payments", "Future financial infrastructure"],
+    outcomes: ["Industry case studies", "Career pathways into fintech", "Cross-sector introductions"],
     speakers: "Finance track",
   },
 ];
+
 
 export function Themes() {
   const [active, setActive] = useState(0);
@@ -68,7 +69,7 @@ export function Themes() {
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">
               <span className="inline-block h-px w-8 align-middle bg-gold mr-3" />
-              Programme tracks
+              Core engineering & innovation themes
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
               Six tracks. <em className="italic font-normal text-gold">One coherent argument</em> about what to build.
@@ -77,8 +78,10 @@ export function Themes() {
           <p className="md:max-w-sm md:justify-self-end text-ivory/65 leading-relaxed">
             Hover or tap a track to expand. Each is curated end-to-end by a dedicated
             programme committee.
+            <span className="block mt-3 text-[10px] uppercase tracking-[0.22em] text-gold/80">Final themes subject to change</span>
           </p>
         </div>
+
 
         <div className="grid lg:grid-cols-[380px_1fr] gap-8 lg:gap-12">
           {/* Track list */}

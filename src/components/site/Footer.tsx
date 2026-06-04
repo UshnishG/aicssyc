@@ -81,7 +81,7 @@ export function Footer() {
             <p className="text-ivory/65 text-sm mt-1">
               SRM Institute of Science<br />and Technology<br />Kattankulathur, Tamil Nadu
             </p>
-            <p className="mt-4 text-sm text-ivory/65">Oct 8 — Nov 2, 2026</p>
+            <p className="mt-4 text-sm text-ivory/65">8 October – 2 November 2026</p>
           </div>
 
           <div>

@@ -12,43 +12,44 @@ type Tier = {
 const tiers: Tier[] = [
   {
     name: "IEEE Computer Society Member",
-    tagline: "Our most exclusive tier, at our lowest subsidised rate.",
+    tagline: "Reserved for active IEEE Computer Society members.",
     price: 1000,
     features: [
-      "Full event access across all four days",
-      "All standard attendee perks",
-      "Catering, networking and event swag",
-      "Daily lucky-draw entries",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
     requirement:
-      "Valid IEEE CS membership ID required and verified prior to approval.",
+      "Valid IEEE CS Membership ID required and verified prior to approval.",
     popular: true,
   },
   {
     name: "IEEE Member",
-    tagline: "For active IEEE members outside the Computer Society.",
+    tagline: "For active IEEE members who are not IEEE CS members.",
     price: 1500,
     features: [
-      "Complete event access",
-      "Catering and networking opportunities",
-      "All standard attendee perks",
-      "Daily lucky-draw entries",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
     requirement:
-      "Valid IEEE membership ID required and verified prior to approval.",
+      "Valid IEEE Membership ID required and verified prior to approval.",
   },
   {
     name: "General Admission",
-    tagline: "Standard entry for students, professionals and tech enthusiasts.",
+    tagline: "Open to students, professionals, researchers and technology enthusiasts.",
     price: 2000,
     features: [
-      "Full access to the entire event",
-      "Participation in all open sessions",
-      "Networking with industry specialists",
-      "Daily lucky-draw entries and event swag",
+      "Full event access",
+      "Technical tracks, keynotes & Innovation Expo",
+      "Delegate kit, meals & networking events",
+      "Participation certificate",
     ],
   },
 ];
+
 
 export function Tickets() {
   return (
@@ -59,17 +60,19 @@ export function Tickets() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.22em] text-gold">
               <span className="inline-block h-px w-8 align-middle bg-gold mr-3" />
-              Passes
+              Delegate pass & ticket cost
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
               Three passes. <em className="italic font-normal text-gold">One congress.</em>
             </h2>
           </div>
           <p className="text-ivory/65 max-w-sm">
-            Every pass includes the full four-day programme, catering, networking
-            and entry into daily lucky draws.
+            Every pass includes full event access, technical tracks, keynotes,
+            Innovation Expo, delegate kit, meals, networking events and a
+            participation certificate.
           </p>
         </div>
+
 
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((t) => (
@@ -132,6 +135,24 @@ export function Tickets() {
               </a>
             </article>
           ))}
+        </div>
+
+        <div className="mt-12 grid md:grid-cols-[1fr_auto] gap-6 items-start border border-white/10 bg-white/[0.03] p-6 md:p-8">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-gold">
+              Optional add-on · Accommodation
+            </p>
+            <p className="mt-3 font-display text-2xl text-ivory leading-snug">
+              Add SRM IST campus accommodation for <span className="text-gold">+ ₹2,000</span>.
+            </p>
+            <p className="mt-2 text-sm text-ivory/65">
+              Updated pass pricing with accommodation: IEEE CS Member ₹3,000 ·
+              IEEE Member ₹3,500 · General Admission ₹4,000.
+            </p>
+          </div>
+          <div className="text-xs uppercase tracking-[0.18em] text-ivory/55 md:text-right">
+            Includes campus stay<br />at SRM IST, Kattankulathur
+          </div>
         </div>
       </div>
     </section>
