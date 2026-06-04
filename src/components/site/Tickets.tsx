@@ -20,6 +20,8 @@ type Tier = {
   popular?: boolean;
   /** Konfhub ticket id; when omitted, the widget opens on the full ticket list. */
   ticketId?: string;
+  /** External register URL; when set, the Register button links out instead of opening the widget dialog. */
+  registerUrl?: string;
 };
 
 const tiers: Tier[] = [
@@ -31,6 +33,8 @@ const tiers: Tier[] = [
     requirement:
       "Valid IEEE CS Membership ID required and verified prior to approval.",
     popular: true,
+    registerUrl:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104339%7C1%3B&selectedCode=EARLYBIRD",
   },
   {
     id: "ieee",
