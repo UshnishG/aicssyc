@@ -73,10 +73,10 @@ function NetworkCanvas() {
 }
 
 const stats = [
-  { value: "4,200+", label: "Delegates" },
-  { value: "180", label: "Speakers" },
-  { value: "32", label: "Countries" },
-  { value: "5 days", label: "Programme" },
+  { value: "1,000+", label: "Delegates" },
+  { value: "6", label: "Themes" },
+  { value: "4 tracks", label: "Technical talks" },
+  { value: "4 days", label: "Core programme" },
 ];
 
 export function Hero() {
