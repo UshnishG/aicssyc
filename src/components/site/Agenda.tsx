@@ -68,17 +68,17 @@ export function Agenda() {
               <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
               Official congress roadmap
             </p>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
+            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
               The full <em className="italic font-normal text-emerald">congress timeline.</em>
             </h2>
           </div>
-          <div className="text-sm text-midnight/65 max-w-xs">
+          <div className="text-sm text-ivory/65 max-w-xs">
             8 October – 2 November 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
           </div>
         </div>
 
 
-        <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-3 bg-[color:var(--muted)]/95 backdrop-blur border-y border-midnight/10">
+        <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-3 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
             {days.map((d, i) => {
               const active = day === i;
@@ -88,11 +88,11 @@ export function Agenda() {
                   onClick={() => setDay(i)}
                   className={`flex-shrink-0 text-left px-5 py-3 border transition rounded-sm ${
                     active
-                      ? "bg-midnight text-ivory border-midnight"
-                      : "bg-ivory text-midnight border-midnight/15 hover:border-midnight/40"
+                      ? "bg-midnight text-ivory border-ivory/20"
+                      : "bg-transparent text-ivory border-ivory/15 hover:border-ivory/40"
                   }`}
                 >
-                  <span className={`block text-[10px] uppercase tracking-[0.18em] ${active ? "text-gold" : "text-midnight/55"}`}>
+                  <span className={`block text-[10px] uppercase tracking-[0.18em] ${active ? "text-gold" : "text-ivory/55"}`}>
                     {d.label}
                   </span>
                   <span className="block text-sm mt-1 whitespace-nowrap">{d.date}</span>
@@ -120,26 +120,26 @@ export function Agenda() {
           >
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-emerald">{days[day].label}</p>
-              <h3 className="mt-3 font-display text-3xl text-midnight leading-tight text-balance">
+              <h3 className="mt-3 font-display text-3xl text-ivory leading-tight text-balance">
                 {days[day].title}
               </h3>
-              <p className="mt-4 text-midnight/65 text-sm">
+              <p className="mt-4 text-ivory/65 text-sm">
                 {days[day].blocks.length} programmed blocks · Venue: {days[day].venue}.
               </p>
             </div>
 
-            <ol className="relative border-l border-midnight/15">
+            <ol className="relative border-l border-ivory/15">
               {days[day].blocks.map((b, i) => (
                 <li key={i} className="relative pl-8 pb-6 last:pb-0">
                   <span className="absolute -left-[5px] top-3 h-2.5 w-2.5 rounded-full bg-gold ring-4 ring-ivory" />
-                  <div className="bg-ivory border border-midnight/10 p-5 hover:border-midnight/30 transition">
+                  <div className="bg-transparent border border-ivory/10 p-5 hover:border-ivory/30 transition">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                       <span className="text-[10px] uppercase tracking-[0.18em] text-emerald bg-emerald/10 px-2 py-0.5 rounded-sm">
                         {b.kind}
                       </span>
-                      <span className="text-xs text-midnight/55">{b.room}</span>
+                      <span className="text-xs text-ivory/55">{b.room}</span>
                     </div>
-                    <p className="font-display text-xl text-midnight leading-tight">{b.title}</p>
+                    <p className="font-display text-xl text-ivory leading-tight">{b.title}</p>
                   </div>
                 </li>
               ))}

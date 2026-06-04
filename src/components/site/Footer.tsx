@@ -1,3 +1,5 @@
+import logoAsset from "@/assets/aicssyc-logo.png.asset.json";
+
 const quickNav = [
   { label: "About", href: "#about" },
   { label: "Themes", href: "#themes" },
@@ -10,16 +12,14 @@ const quickNav = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-midnight-deep text-ivory grain overflow-hidden">
+    <footer className="relative bg-midnight-deep/85 text-ivory grain overflow-hidden border-t border-white/10 backdrop-blur-sm">
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="container-editorial py-20 md:py-24">
         <div className="grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="h-9 w-9 inline-flex items-center justify-center rounded-sm bg-gold text-midnight font-display font-bold">
-                A
-              </span>
+            <div className="flex items-center gap-3">
+              <img src={logoAsset.url} alt="AICSSYC 2026" className="h-12 w-auto object-contain" />
               <div>
                 <p className="font-display text-lg">AICSSYC 2026</p>
                 <p className="text-[10px] uppercase tracking-[0.22em] text-slate-mist">IEEE CS · SYP Flagship</p>

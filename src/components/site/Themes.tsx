@@ -102,8 +102,8 @@ export function Themes() {
                   <span
                     className={`flex h-10 w-10 items-center justify-center rounded-sm transition ${
                       isActive
-                        ? "bg-gold text-midnight"
-                        : "bg-white/5 text-ivory/70 group-hover:bg-white/10"
+                        ? "bg-gold text-ivory"
+                        : "bg-white/5 text-ivory/70 group-hover:bg-white/15"
                     }`}
                   >
                     <Icon size={18} />
@@ -134,7 +134,7 @@ export function Themes() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="relative h-full p-8 md:p-10 border border-white/10 bg-white/[0.02]"
+                className="relative h-full p-8 md:p-10 border border-white/10 bg-white/[0.03]"
               >
                 <div aria-hidden className="absolute top-0 left-0 h-1 w-16 bg-gold" />
                 <p className="text-xs uppercase tracking-[0.2em] text-gold">

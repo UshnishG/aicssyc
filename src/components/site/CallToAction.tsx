@@ -4,7 +4,7 @@ export function CallToAction() {
   return (
     <section
       id="join"
-      className="relative bg-midnight-deep text-ivory grain overflow-hidden border-t border-white/8"
+      className="relative bg-midnight-deep/70 text-ivory grain overflow-hidden border-t border-white/8"
     >
       <div
         aria-hidden
@@ -54,7 +54,7 @@ export function CallToAction() {
             <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href="#tickets"
-                className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-midnight hover:bg-gold-soft transition"
+                className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-ivory hover:bg-gold-soft transition"
               >
                 Register now
                 <span className="transition-transform group-hover:translate-x-1">→</span>

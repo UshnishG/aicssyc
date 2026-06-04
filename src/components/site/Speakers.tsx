@@ -57,7 +57,7 @@ function Avatar({ initials, large }: { initials: string; large?: boolean }) {
 
 export function Speakers() {
   return (
-    <section id="speakers" className="relative py-24 md:py-36 bg-ivory">
+    <section id="speakers" className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
@@ -65,10 +65,10 @@ export function Speakers() {
               <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
               Distinguished speakers & industry experts
             </p>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
+            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
               The voices shaping <em className="italic font-normal text-emerald">AICSSYC 2026.</em>
             </h2>
-            <p className="mt-6 text-midnight/65 max-w-xl">
+            <p className="mt-6 text-ivory/65 max-w-xl">
               A curated line-up of researchers, engineers, architects and entrepreneurs.
               More speakers to be announced — final list subject to change.
             </p>
@@ -116,12 +116,12 @@ export function Speakers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ delay: (i % 4) * 0.05 }}
-              className="group relative bg-ivory"
+              className="group relative bg-transparent"
             >
               <Avatar initials={s.initials} />
               <div className="p-4">
-                <p className="font-display text-base text-midnight leading-tight">{s.name}</p>
-                <p className="text-xs text-midnight/60 mt-1">{s.org}</p>
+                <p className="font-display text-base text-ivory leading-tight">{s.name}</p>
+                <p className="text-xs text-ivory/60 mt-1">{s.org}</p>
               </div>
 
               <div className="absolute inset-0 bg-midnight/95 text-ivory opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
@@ -134,7 +134,7 @@ export function Speakers() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`LinkedIn — ${s.name}`}
-                    className="inline-flex items-center gap-2 border border-white/15 px-3 py-1.5 text-xs hover:bg-gold hover:text-midnight hover:border-gold transition"
+                    className="inline-flex items-center gap-2 border border-white/15 px-3 py-1.5 text-xs hover:bg-gold hover:text-ivory hover:border-gold transition"
                   >
                     <Linkedin size={12} /> LinkedIn
                   </a>
@@ -143,7 +143,7 @@ export function Speakers() {
             </motion.div>
           ))}
         </div>
-        <p className="mt-8 text-xs uppercase tracking-[0.18em] text-midnight/55">
+        <p className="mt-8 text-xs uppercase tracking-[0.18em] text-ivory/55">
           More speakers being announced · subject to change
         </p>
       </div>

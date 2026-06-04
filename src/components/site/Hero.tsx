@@ -81,11 +81,11 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[color:var(--midnight-deep)] text-ivory grain">
-      {/* atmosphere */}
+    <section className="relative min-h-screen overflow-hidden text-ivory grain">
+      {/* subtle atmosphere overlay — lets fixed bg image bleed through */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-90"
+        className="absolute inset-0 opacity-30"
         style={{ background: "var(--gradient-atmosphere)" }}
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
@@ -148,7 +148,7 @@ export function Hero() {
                 — Oct 11<br />2026
               </span>
             </div>
-            <div className="h-10 w-px bg-white/10" />
+            <div className="h-10 w-px bg-white/15" />
             <div>
               <p className="text-ivory">TP Ganesan Auditorium</p>
               <p className="text-ivory/60">SRM IST, Kattankulathur</p>
@@ -163,7 +163,7 @@ export function Hero() {
           >
             <a
               href="#tickets"
-              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-midnight hover:bg-gold-soft transition"
+              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-ivory hover:bg-gold-soft transition"
             >
               Register now
               <span className="transition-transform group-hover:translate-x-1">→</span>
