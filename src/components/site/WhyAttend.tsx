@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Hammer, Users, Rocket, PartyPopper, Award } from "lucide-react";
+import { RevealGroup, Eyebrow, Heading, CardGrid, itemVariants } from "./Reveal";
 
 const cards = [
   {
