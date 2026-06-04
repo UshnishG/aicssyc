@@ -81,11 +81,11 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[color:var(--midnight-deep)] text-ivory grain">
-      {/* atmosphere */}
+    <section className="relative min-h-screen overflow-hidden text-ivory grain">
+      {/* subtle atmosphere overlay — lets fixed bg image bleed through */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-90"
+        className="absolute inset-0 opacity-30"
         style={{ background: "var(--gradient-atmosphere)" }}
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
