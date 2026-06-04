@@ -22,7 +22,7 @@ export function Agenda() {
             </h2>
           </div>
           <div className="text-sm text-ivory/80 max-w-xs">
-            8 October – 2 November 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
+            8 – 11 October 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
           </div>
         </div>
 
