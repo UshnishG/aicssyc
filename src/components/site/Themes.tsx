@@ -69,7 +69,7 @@ export function Themes() {
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">
               <span className="inline-block h-px w-8 align-middle bg-gold mr-3" />
-              Programme tracks
+              Core engineering & innovation themes
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
               Six tracks. <em className="italic font-normal text-gold">One coherent argument</em> about what to build.
@@ -78,8 +78,10 @@ export function Themes() {
           <p className="md:max-w-sm md:justify-self-end text-ivory/65 leading-relaxed">
             Hover or tap a track to expand. Each is curated end-to-end by a dedicated
             programme committee.
+            <span className="block mt-3 text-[10px] uppercase tracking-[0.22em] text-gold/80">Final themes subject to change</span>
           </p>
         </div>
+
 
         <div className="grid lg:grid-cols-[380px_1fr] gap-8 lg:gap-12">
           {/* Track list */}
