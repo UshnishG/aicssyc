@@ -74,16 +74,17 @@ export function Agenda() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.22em] text-emerald">
               <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-              Four days. One programme.
+              Official congress roadmap
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
               The full <em className="italic font-normal text-emerald">congress timeline.</em>
             </h2>
           </div>
           <div className="text-sm text-midnight/65 max-w-xs">
-            October 8 — 11, 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
+            8 October – 2 November 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
           </div>
         </div>
+
 
         <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-3 bg-[color:var(--muted)]/95 backdrop-blur border-y border-midnight/10">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
