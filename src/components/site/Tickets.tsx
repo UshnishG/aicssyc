@@ -59,17 +59,19 @@ export function Tickets() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.22em] text-gold">
               <span className="inline-block h-px w-8 align-middle bg-gold mr-3" />
-              Passes
+              Delegate pass & ticket cost
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
               Three passes. <em className="italic font-normal text-gold">One congress.</em>
             </h2>
           </div>
           <p className="text-ivory/65 max-w-sm">
-            Every pass includes the full four-day programme, catering, networking
-            and entry into daily lucky draws.
+            Every pass includes full event access, technical tracks, keynotes,
+            Innovation Expo, delegate kit, meals, networking events and a
+            participation certificate.
           </p>
         </div>
+
 
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((t) => (
