@@ -1,0 +1,40 @@
+{
+  "featured": {
+    "name": "Shivam Shivam",
+    "role": "Founding Technical Partner · High Scale Artificial Systems",
+    "topic": "Featured Speaker · AICSSYC 2026",
+    "bio": "Joining AICSSYC 2026 as a featured voice on high-scale artificial systems and the evolving relationship between intelligent agents and the people who work with them.",
+    "initials": "SS",
+    "linkedin": "https://www.linkedin.com/in/shivamshivam96/"
+  },
+  "speakers": [
+    {
+      "name": "Utkarsh Siddharth",
+      "org": "Principal Software Architect",
+      "focus": "Enterprise Distributed Systems",
+      "initials": "US",
+      "linkedin": "https://www.linkedin.com/in/utkarsh-siddharth-5bb11b126/"
+    },
+    {
+      "name": "Eric Berkowitz",
+      "org": "Global Management Consultant",
+      "focus": "Strategy & Venture Engineering",
+      "initials": "EB",
+      "linkedin": "https://www.linkedin.com/in/ericberkowitz/"
+    },
+    {
+      "name": "Andrew Seely",
+      "org": "Enterprise Cloud Architect",
+      "focus": "Secure Systems Infrastructure",
+      "initials": "AS",
+      "linkedin": "https://www.linkedin.com/in/andrewseelytampa/"
+    },
+    {
+      "name": "Nikky Kumar Jha",
+      "org": "Co-Founder & Tech Entrepreneur",
+      "focus": "Innovation & Startup Leadership",
+      "initials": "NJ",
+      "linkedin": "https://www.linkedin.com/in/nikkykumarjha/"
+    }
+  ]
+}
