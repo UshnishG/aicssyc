@@ -25,36 +25,43 @@ export function Agenda() {
         </RevealGroup>
 
 
-        <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-3 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
-          <div className="flex gap-2 overflow-x-auto no-scrollbar">
+        <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-4 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
+          <div
+            role="tablist"
+            aria-label="Select congress day"
+            className="relative grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1.5 rounded-full border border-ivory/15 bg-midnight/40"
+          >
             {days.map((d, i) => {
               const active = day === i;
               return (
                 <button
                   key={d.label}
+                  role="tab"
+                  aria-selected={active}
                   onClick={() => setDay(i)}
-                  className={`flex-shrink-0 text-left px-5 py-3 border transition rounded-sm ${
-                    active
-                      ? "bg-midnight text-ivory border-ivory/20"
-                      : "bg-transparent text-ivory border-ivory/15 hover:border-ivory/40"
+                  className={`relative z-10 flex flex-col items-center justify-center text-center px-3 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                    active ? "text-midnight" : "text-ivory/80 hover:text-ivory"
                   }`}
                 >
-                  <span className={`block text-[10px] uppercase tracking-[0.18em] ${active ? "text-gold" : "text-ivory/75"}`}>
+                  {active && (
+                    <motion.span
+                      layoutId="agenda-day-pill"
+                      className="absolute inset-0 -z-10 rounded-full bg-gold shadow-[var(--shadow-gold)]"
+                      transition={{ type: "spring", stiffness: 500, damping: 38 }}
+                    />
+                  )}
+                  <span className={`block text-[10px] uppercase tracking-[0.22em] font-medium ${active ? "text-midnight/70" : "text-gold/80"}`}>
                     {d.label}
                   </span>
-                  <span className="block text-sm mt-1 whitespace-nowrap">{d.date}</span>
+                  <span className="block text-xs sm:text-sm mt-0.5 font-medium whitespace-nowrap">
+                    {d.date}
+                  </span>
                 </button>
               );
             })}
           </div>
-          <div className="mt-3 h-px bg-midnight/10 relative">
-            <motion.div
-              className="absolute left-0 top-0 h-px bg-gold"
-              animate={{ width: `${((day + 1) / days.length) * 100}%` }}
-              transition={{ duration: 0.4 }}
-            />
-          </div>
         </div>
+
 
         <AnimatePresence mode="wait">
           <motion.div
