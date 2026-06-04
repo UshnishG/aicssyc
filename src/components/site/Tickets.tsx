@@ -288,19 +288,22 @@ export function Tickets() {
               </DialogClose>
             </div>
           </DialogHeader>
-          <div className="relative bg-midnight-deep">
-            {activeTier && (
-              <iframe
-                key={activeTier.id}
-                src={buildWidgetUrl(activeTier.ticketId)}
-                title={`Register for ${activeTier.name} — AICSSYC 2026`}
-                width="100%"
-                height="520"
-                allow="payment"
-                className="block w-full border-0"
-              />
-            )}
+          <div className="relative p-4 md:p-5">
+            <div className="rounded-[12px] overflow-hidden bg-[#FBF7EC] ring-1 ring-gold/40 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)]">
+              {activeTier && (
+                <iframe
+                  key={activeTier.id}
+                  src={buildWidgetUrl(activeTier.ticketId)}
+                  title={`Register for ${activeTier.name} — AICSSYC 2026`}
+                  width="100%"
+                  height="560"
+                  allow="payment"
+                  className="block w-full border-0 bg-[#FBF7EC]"
+                />
+              )}
+            </div>
           </div>
+
           <div className="relative px-6 py-3 border-t border-white/10 text-[11px] text-ivory/60 flex items-center justify-between gap-3">
             <span>Powered by KonfHub · Secure checkout</span>
             <a
