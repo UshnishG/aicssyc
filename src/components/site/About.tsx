@@ -1,15 +1,21 @@
+import { Reveal } from "./Reveal";
+
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24">
         <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-emerald font-medium">
-            <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-            About the congress
-          </p>
-          <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-            The flagship <em className="italic font-normal text-emerald">national congress.</em>
-          </h2>
+          <Reveal direction="right" distance={30}>
+            <p className="text-xs uppercase tracking-[0.22em] text-emerald font-medium">
+              <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
+              About the congress
+            </p>
+          </Reveal>
+          <Reveal direction="blur" delay={0.1} distance={40}>
+            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
+              The flagship <em className="italic font-normal text-emerald">national congress.</em>
+            </h2>
+          </Reveal>
 
           <div className="mt-10 space-y-6 text-[17px] leading-[1.7] text-ivory/75 max-w-[62ch]">
             <p>
@@ -55,9 +61,9 @@ export function About() {
 
         </div>
 
-        <div className="relative">
+        <Reveal direction="scale" delay={0.15} className="relative">
           <div className="relative bg-midnight text-ivory p-8 md:p-10 grain overflow-hidden">
-            <div aria-hidden className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-gold/15 blur-3xl" />
+            <div aria-hidden className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-gold/15 blur-3xl animate-pulse" />
             <p className="text-xs uppercase tracking-[0.22em] text-gold">At a glance</p>
             <div className="mt-6 grid grid-cols-2 gap-y-8 gap-x-6">
               {[
@@ -74,7 +80,7 @@ export function About() {
             </div>
           </div>
 
-        </div>
+        </Reveal>
       </div>
     </section>
   );

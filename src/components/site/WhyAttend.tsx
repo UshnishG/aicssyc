@@ -39,13 +39,25 @@ export function WhyAttend() {
     <section className="relative py-24 md:py-36 bg-transparent">
       <div className="container-editorial">
         <div className="max-w-3xl mb-16">
-          <p className="text-xs uppercase tracking-[0.22em] text-emerald">
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-xs uppercase tracking-[0.22em] text-emerald"
+          >
             <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
             Why attend
-          </p>
-          <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance"
+          >
             Why you should attend.
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-midnight/10 border border-ivory/10">
@@ -54,16 +66,21 @@ export function WhyAttend() {
             return (
               <motion.article
                 key={c.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (idx % 3) * 0.08 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: (idx % 3) * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
                 className="relative bg-transparent p-8 md:p-10 flex flex-col"
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="flex h-12 w-12 items-center justify-center bg-midnight text-gold">
+                  <motion.span
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="flex h-12 w-12 items-center justify-center bg-midnight text-gold"
+                  >
                     <Icon size={20} />
-                  </span>
+                  </motion.span>
                   <span className="text-xs uppercase tracking-[0.22em] text-ivory/70">
                     0{idx + 1}
                   </span>

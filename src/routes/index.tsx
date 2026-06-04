@@ -12,7 +12,6 @@ import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
-import { useGsapScrollAnimations } from "@/hooks/use-gsap-scroll";
 
 const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
 const description =
@@ -55,7 +54,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  useGsapScrollAnimations();
   return (
     <div className="text-ivory min-h-screen">
       <SiteNav />
