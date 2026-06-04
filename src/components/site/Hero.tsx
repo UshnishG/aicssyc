@@ -193,12 +193,17 @@ export function Hero() {
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <NetworkCanvas />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-6">
             <div className="text-center">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Congress</p>
-              <p className="font-display text-7xl text-ivory mt-1">'26</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Theme · 2026</p>
+              <p className="font-display text-3xl md:text-4xl text-ivory mt-3 leading-[1.05]">
+                Where <em className="italic font-normal text-gold">Agents</em>
+                <br />
+                Meet Humans
+              </p>
             </div>
           </div>
+
         </motion.div>
       </div>
 
