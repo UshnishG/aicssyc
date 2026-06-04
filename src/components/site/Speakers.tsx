@@ -121,8 +121,9 @@ export function Speakers() {
               <Avatar initials={s.initials} />
               <div className="p-4">
                 <p className="font-display text-base text-midnight leading-tight">{s.name}</p>
-                <p className="text-xs text-midnight/60 mt-1">{s.focus}</p>
+                <p className="text-xs text-midnight/60 mt-1">{s.org}</p>
               </div>
+
               <div className="absolute inset-0 bg-midnight/95 text-ivory opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
                 <p className="text-xs uppercase tracking-[0.18em] text-gold">Focus</p>
                 <p className="font-display text-xl mt-2">{s.focus}</p>
