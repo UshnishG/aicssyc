@@ -66,6 +66,7 @@ function Index() {
         <Tickets />
         <Sponsors />
         <FAQ />
+        <CallToAction />
       </main>
       <Footer />
     </div>
