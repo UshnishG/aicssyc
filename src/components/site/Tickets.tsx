@@ -51,6 +51,8 @@ const tiers: Tier[] = [
     name: "General Admission",
     tagline: "Open to students, professionals, researchers and technology enthusiasts.",
     basePrice: 2000,
+    registerUrl:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104341%7C1%3B&selectedCode=EARLYBIRD",
   },
 ];
 
