@@ -39,15 +39,14 @@ export function Footer() {
             <p className="text-ivory/65 text-sm mt-1">
               SRM Institute of Science<br />and Technology<br />Kattankulathur, Tamil Nadu
             </p>
-            <p className="mt-4 text-sm text-ivory/65">8 October – 2 November 2026</p>
+            <p className="mt-4 text-sm text-ivory/65">8 – 11 October 2026</p>
           </div>
 
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-slate-mist mb-5">Contact</p>
             <ul className="space-y-2 text-sm">
-              <li><a href="mailto:contact@aicssyc2026.in" className="text-ivory/80 hover:text-gold">contact@aicssyc2026.in</a></li>
-              <li><a href="mailto:sponsors@aicssyc2026.in" className="text-ivory/80 hover:text-gold">sponsors@aicssyc2026.in</a></li>
-              <li><a href="mailto:press@aicssyc2026.in" className="text-ivory/80 hover:text-gold">press@aicssyc2026.in</a></li>
+              <li><a href="mailto:ieeecomputersocietysrmist@gmail.com" className="text-ivory/80 hover:text-gold break-words">ieeecomputersocietysrmist@gmail.com</a></li>
+              <li><a href="https://www.instagram.com/ieeecs_srmist/" target="_blank" rel="noopener noreferrer" className="text-ivory/80 hover:text-gold">@ieeecs_srmist</a></li>
             </ul>
           </div>
 
