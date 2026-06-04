@@ -37,6 +37,8 @@ const tiers: Tier[] = [
     popular: true,
     registerUrl:
       "https://konfhub.com/checkout/aicssyc-2026?ticketId=104339%7C1%3B&selectedCode=EARLYBIRD",
+    registerUrlWithAccommodation:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104342%7C1%3B&selectedCode=EARLYBIRD",
   },
   {
     id: "ieee",
