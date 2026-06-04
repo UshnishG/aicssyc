@@ -148,7 +148,7 @@ export function Hero() {
                 — Oct 11<br />2026
               </span>
             </div>
-            <div className="h-10 w-px bg-white/5/10" />
+            <div className="h-10 w-px bg-white/15" />
             <div>
               <p className="text-ivory">TP Ganesan Auditorium</p>
               <p className="text-ivory/60">SRM IST, Kattankulathur</p>
@@ -170,7 +170,7 @@ export function Hero() {
             </a>
             <a
               href="#agenda"
-              className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5/5 transition"
+              className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5 transition"
             >
               View timeline
             </a>

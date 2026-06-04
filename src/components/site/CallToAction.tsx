@@ -61,7 +61,7 @@ export function CallToAction() {
               </a>
               <a
                 href="#sponsors"
-                className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5/5 transition"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5 transition"
               >
                 Become a sponsor
               </a>

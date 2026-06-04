@@ -103,7 +103,7 @@ export function Themes() {
                     className={`flex h-10 w-10 items-center justify-center rounded-sm transition ${
                       isActive
                         ? "bg-gold text-ivory"
-                        : "bg-white/5/5 text-ivory/70 group-hover:bg-white/5/10"
+                        : "bg-white/5 text-ivory/70 group-hover:bg-white/15"
                     }`}
                   >
                     <Icon size={18} />

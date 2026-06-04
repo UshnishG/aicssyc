@@ -87,7 +87,7 @@ export function Tickets() {
           >
             <span
               className={`absolute top-1 bottom-1 w-[86px] rounded-sm transition-all ${
-                accommodation ? "left-[90px] bg-midnight/60" : "left-1 bg-white/5/10"
+                accommodation ? "left-[90px] bg-midnight/60" : "left-1 bg-white/15"
               }`}
             />
             <span className={`relative z-10 flex-1 text-center text-xs font-medium uppercase tracking-[0.16em] ${accommodation ? "text-ivory" : "text-ivory"}`}>
