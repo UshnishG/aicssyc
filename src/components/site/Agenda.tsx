@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import timelineData from "@/data/timeline.json";
+import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
 
 const days = timelineData.days;
 
@@ -11,20 +12,17 @@ export function Agenda() {
   return (
     <section id="agenda" className="relative py-24 md:py-36 bg-[color:var(--muted)]">
       <div className="container-editorial">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <RevealGroup className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.22em] text-emerald">
-              <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-              Official congress roadmap
-            </p>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
+            <Eyebrow color="emerald">Official congress roadmap</Eyebrow>
+            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
               The full <em className="italic font-normal text-emerald">congress timeline.</em>
-            </h2>
+            </Heading>
           </div>
-          <div className="text-sm text-ivory/80 max-w-xs">
+          <Body className="text-sm text-ivory/80 max-w-xs">
             8 – 11 October 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
-          </div>
-        </div>
+          </Body>
+        </RevealGroup>
 
 
         <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-3 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
