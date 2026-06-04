@@ -63,15 +63,16 @@ export function Speakers() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.22em] text-emerald">
               <span className="inline-block h-px w-8 align-middle bg-emerald mr-3" />
-              Speakers
+              Distinguished speakers & industry experts
             </p>
             <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-midnight text-balance">
               The voices shaping <em className="italic font-normal text-emerald">AICSSYC 2026.</em>
             </h2>
             <p className="mt-6 text-midnight/65 max-w-xl">
-              A growing line-up of researchers, engineers and leaders. More speakers to be
-              announced — final list subject to change.
+              A curated line-up of researchers, engineers, architects and entrepreneurs.
+              More speakers to be announced — final list subject to change.
             </p>
+
           </div>
         </div>
 
