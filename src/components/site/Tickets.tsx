@@ -40,6 +40,7 @@ const tiers: Tier[] = [
     basePrice: 1500,
     requirement:
       "Valid IEEE Membership ID required and verified prior to approval.",
+    ticketId: "104339",
   },
   {
     id: "general",
