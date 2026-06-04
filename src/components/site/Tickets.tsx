@@ -43,7 +43,8 @@ const tiers: Tier[] = [
     basePrice: 1500,
     requirement:
       "Valid IEEE Membership ID required and verified prior to approval.",
-    ticketId: "104339",
+    registerUrl:
+      "https://konfhub.com/checkout/aicssyc-2026?ticketId=104340%7C1%3B&selectedCode=EARLYBIRD",
   },
   {
     id: "general",
