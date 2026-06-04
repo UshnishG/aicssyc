@@ -115,14 +115,6 @@ export function Hero() {
             Congress 2026
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.12 }}
-            className="mt-6 font-display italic text-xl md:text-2xl text-gold/90"
-          >
-            Where Agent meets Humans.
-          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
