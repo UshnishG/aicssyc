@@ -48,37 +48,39 @@
 :root {
   --radius: 0.5rem;
 
-  --midnight: oklch(0.18 0.025 250);
-  --midnight-deep: oklch(0.13 0.025 250);
-  --emerald: oklch(0.34 0.065 165);
-  --gold: oklch(0.74 0.13 80);
-  --gold-soft: oklch(0.82 0.09 80);
-  --ivory: oklch(0.975 0.008 90);
-  --slate-mist: oklch(0.72 0.012 250);
+  /* Deep teal & gold brand palette */
+  --midnight: oklch(0.22 0.04 200);
+  --midnight-deep: oklch(0.16 0.035 200);
+  --teal-deep: oklch(0.20 0.045 195);
+  --emerald: oklch(0.42 0.07 180);
+  --gold: oklch(0.76 0.13 75);
+  --gold-soft: oklch(0.84 0.10 78);
+  --ivory: oklch(0.975 0.012 85);
+  --slate-mist: oklch(0.72 0.012 200);
 
-  --background: var(--ivory);
-  --foreground: var(--midnight);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--midnight);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--midnight);
-  --primary: var(--midnight);
-  --primary-foreground: var(--ivory);
+  --background: var(--midnight-deep);
+  --foreground: var(--ivory);
+  --card: oklch(0.20 0.04 200);
+  --card-foreground: var(--ivory);
+  --popover: oklch(0.20 0.04 200);
+  --popover-foreground: var(--ivory);
+  --primary: var(--gold);
+  --primary-foreground: var(--midnight-deep);
   --secondary: var(--emerald);
   --secondary-foreground: var(--ivory);
-  --muted: oklch(0.94 0.008 90);
-  --muted-foreground: oklch(0.45 0.015 250);
+  --muted: oklch(0.25 0.03 200);
+  --muted-foreground: oklch(0.78 0.015 200);
   --accent: var(--gold);
-  --accent-foreground: var(--midnight);
+  --accent-foreground: var(--midnight-deep);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.88 0.012 90);
-  --input: oklch(0.88 0.012 90);
+  --border: color-mix(in oklab, var(--ivory) 12%, transparent);
+  --input: color-mix(in oklab, var(--ivory) 14%, transparent);
   --ring: var(--gold);
 
-  --gradient-atmosphere: radial-gradient(ellipse at top right, color-mix(in oklab, var(--gold) 18%, transparent), transparent 60%), radial-gradient(ellipse at bottom left, color-mix(in oklab, var(--emerald) 25%, transparent), transparent 55%);
+  --gradient-atmosphere: radial-gradient(ellipse at top right, color-mix(in oklab, var(--gold) 22%, transparent), transparent 60%), radial-gradient(ellipse at bottom left, color-mix(in oklab, var(--emerald) 28%, transparent), transparent 55%);
   --gradient-gold: linear-gradient(135deg, var(--gold), var(--gold-soft));
-  --shadow-editorial: 0 30px 60px -20px color-mix(in oklab, var(--midnight) 35%, transparent);
+  --shadow-editorial: 0 30px 60px -20px color-mix(in oklab, black 55%, transparent);
   --shadow-gold: 0 20px 40px -15px color-mix(in oklab, var(--gold) 40%, transparent);
 }
 
@@ -89,21 +91,29 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background-color: var(--midnight-deep); }
   body {
-    background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    background-color: var(--midnight-deep);
+    background-image:
+      linear-gradient(180deg, color-mix(in oklab, var(--midnight-deep) 55%, transparent), color-mix(in oklab, var(--midnight-deep) 78%, transparent)),
+      url("/__l5e/assets-v1/478c816e-1203-4a57-9a48-d78a4a303f36/aicssyc-bg.png");
+    background-size: cover, cover;
+    background-position: center top, center top;
+    background-attachment: fixed, fixed;
+    background-repeat: no-repeat, no-repeat;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     line-height: 1.05;
+    color: var(--ivory);
   }
-  ::selection { background: var(--gold); color: var(--midnight); }
+  ::selection { background: var(--gold); color: var(--midnight-deep); }
 }
 
 @utility container-editorial {
