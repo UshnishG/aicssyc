@@ -67,6 +67,7 @@ function Index() {
         <Tickets />
         <Sponsors />
         <FAQ />
+        <Contact />
         <CallToAction />
       </main>
       <Footer />
