@@ -88,8 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "All India Computer Society Student & Young Professional Congress 2026" },
       { name: "twitter:description", content: "IEEE CS SYP Congress 2026 · SRM IST · 8–11 October. Where Agents Meet Humans." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
+      { property: "og:image", content: "https://aicssyc.ieeecssrm.in/banner.jpg" },
+      { name: "twitter:image", content: "https://aicssyc.ieeecssrm.in/banner.jpg" },
     ],
     links: [
       {

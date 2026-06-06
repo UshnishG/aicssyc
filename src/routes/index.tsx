@@ -29,12 +29,15 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "All India Computer Society Student & Young Professional Congress 2026" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://aicssyc.vercel.app/" },
-      { property: "og:image", content: "https://aicssyc.vercel.app/banner.jpg" },
+      { property: "og:url", content: "https://aicssyc.ieeecssrm.in/" },
+      { property: "og:image", content: "https://aicssyc.ieeecssrm.in/banner.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://aicssyc.vercel.app/banner.jpg" },
+      { name: "twitter:image", content: "https://aicssyc.ieeecssrm.in/banner.jpg" },
     ],
-    links: [{ rel: "canonical", href: "https://aicssyc.vercel.app/" }],
+    links: [
+      { rel: "canonical", href: "https://aicssyc.ieeecssrm.in/" },
+      { rel: "alternate", href: "https://aicssyc.in/" }
+    ],
     scripts: [
       {
         type: "application/ld+json",

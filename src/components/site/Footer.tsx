@@ -53,15 +53,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-3 items-center">
             <a href="/code-of-conduct" className="hover:text-ivory transition">Code of conduct</a>
             <a href="/privacy" className="hover:text-ivory transition">Privacy</a>
-            <span className="hidden md:inline-block text-white/10" aria-hidden>|</span>
-            <a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald/70" aria-hidden></span>
-              robots.txt
-            </a>
-            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold/70" aria-hidden></span>
-              llms.txt
-            </a>
+
           </div>
         </div>
       </div>
