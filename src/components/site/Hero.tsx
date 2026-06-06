@@ -40,7 +40,6 @@ function NetworkCanvas() {
         if (n.x < 0 || n.x > w) n.vx *= -1;
         if (n.y < 0 || n.y > h) n.vy *= -1;
       }
-      // links
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const a = nodes[i], b = nodes[j];
@@ -72,17 +71,9 @@ function NetworkCanvas() {
   return <canvas ref={ref} className="absolute inset-0 h-full w-full" aria-hidden />;
 }
 
-const stats = [
-  { value: "300+", label: "Delegates" },
-  { value: "10+", label: "Speakers" },
-  { value: "20+", label: "States represented" },
-  { value: "National", label: "IEEE CS Initiative" },
-];
-
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden text-ivory grain">
-      {/* subtle atmosphere overlay — lets fixed bg image bleed through */}
       <div
         aria-hidden
         className="absolute inset-0 opacity-30"
@@ -90,60 +81,49 @@ export function Hero() {
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-      <div className="container-editorial relative pt-32 md:pt-40 pb-20 lg:pb-32 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
+      <div className="container-editorial relative pt-32 md:pt-40 pb-20 lg:pb-28 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-center">
         <div className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-slate-mist mb-8"
+            className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.28em] text-slate-mist mb-10"
           >
-            <span className="h-px w-8 bg-gold" />
-            IEEE Computer Society · SYP Flagship · AICSSYC 2026
+            <span className="h-px w-10 bg-gold" />
+            IEEE Computer Society · SYP Flagship
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30, filter: "blur(14px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.1, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-[clamp(2.25rem,5.2vw,4.75rem)] leading-[1.02] tracking-tight text-balance"
+            className="font-display text-[clamp(2.5rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.02em] text-balance"
           >
-            All India Computer Society
+            All India<br />
+            Computer Society
             <br />
-            <em className="italic font-normal text-gold">Student & Young Professional</em>
+            <span className="editorial-italic text-gold">Student &amp; Young<br />Professional</span>
             <br />
             Congress 2026
           </motion.h1>
-
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="mt-6 max-w-[58ch] text-lg leading-relaxed text-ivory/75"
-          >
-            India's flagship IEEE Computer Society Student & Young Professional
-            Congress — bringing together students, researchers, industry leaders,
-            entrepreneurs, innovators and technology professionals.
-          </motion.p>
-
 
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm"
+            className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-5"
           >
-            <div className="flex items-center gap-3">
-              <span className="font-display text-3xl text-gold">Oct 8</span>
-              <span className="text-ivory/70 leading-tight">
-                — Oct 11<br />2026
-              </span>
-            </div>
-            <div className="h-10 w-px bg-white/15" />
             <div>
-              <p className="text-ivory">TP Ganesan Auditorium</p>
-              <p className="text-ivory/75">SRM IST, Kattankulathur</p>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">Dates</p>
+              <p className="mt-2 font-display text-2xl text-ivory leading-tight">
+                8 — 11 October <span className="text-ivory/60">2026</span>
+              </p>
+            </div>
+            <div className="h-12 w-px bg-white/15" />
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">Venue</p>
+              <p className="mt-2 text-ivory leading-tight">TP Ganesan Auditorium</p>
+              <p className="text-ivory/70 text-sm">SRM IST, Kattankulathur</p>
             </div>
           </motion.div>
 
@@ -151,28 +131,27 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.35 }}
-            className="mt-10 flex flex-wrap gap-3"
+            className="mt-12 flex flex-wrap items-center gap-4"
           >
             <a
               href="https://konfhub.com/aicssyc-2026"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-medium text-ivory hover:bg-gold-soft transition"
+              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-7 py-4 text-sm font-medium text-ivory hover:bg-gold-soft transition"
             >
               Register now
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#agenda"
-              className="inline-flex items-center gap-2 rounded-sm border border-white/15 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-white/5 transition"
+              className="inline-flex items-center gap-2 text-sm text-ivory/80 hover:text-ivory transition border-b border-ivory/20 hover:border-gold pb-1"
             >
-              View timeline
+              View congress timeline →
             </a>
           </motion.div>
         </div>
 
-
-        {/* artwork */}
+        {/* orbit artwork */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -189,33 +168,13 @@ export function Hero() {
             <div className="text-center">
               <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Theme · 2026</p>
               <p className="font-display text-3xl md:text-4xl text-ivory mt-3 leading-[1.05]">
-                Where <em className="italic font-normal text-gold">Agents</em>
+                Where <em className="editorial-italic font-normal text-gold">Agents</em>
                 <br />
                 Meet Humans
               </p>
             </div>
           </div>
-
         </motion.div>
-      </div>
-
-      {/* stats strip */}
-      <div className="relative border-t border-white/8">
-        <div className="container-editorial grid grid-cols-2 md:grid-cols-4">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className={`py-8 ${i !== 0 ? "md:border-l" : ""} ${i % 2 === 1 ? "border-l" : ""} md:border-l border-white/8 px-4 md:px-8`}
-            >
-              <p className="font-display text-3xl md:text-4xl text-ivory">{s.value}</p>
-              <p className="text-xs uppercase tracking-[0.18em] text-slate-mist mt-2">{s.label}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

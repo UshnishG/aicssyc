@@ -1,5 +1,5 @@
 import partnersData from "@/data/partners.json";
-import { RevealGroup, Eyebrow, Heading, Body, Reveal } from "./Reveal";
+import { Reveal } from "./Reveal";
 
 type Partner = {
   name: string;
@@ -14,24 +14,17 @@ export function Sponsors() {
   const hasPartners = partners.length > 0;
 
   return (
-    <section id="sponsors" className="relative py-24 md:py-36 bg-transparent overflow-hidden">
+    <section id="sponsors" className="relative section-rhythm bg-transparent">
       <div className="container-editorial">
-        <RevealGroup className="grid md:grid-cols-[1fr_auto] items-end gap-8 mb-16">
-          <div className="max-w-2xl">
-            <Eyebrow color="emerald">Partners & sponsors</Eyebrow>
-            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-              Built with the organisations <em className="italic font-normal text-emerald">our delegates already work with.</em>
-            </Heading>
-          </div>
-          <Body>
-            <a href="mailto:ieeecomputersocietysrmist@gmail.com" className="text-sm text-ivory border-b border-ivory/30 hover:border-ivory/20 pb-0.5">
-              Partnership prospectus →
-            </a>
-          </Body>
-        </RevealGroup>
+        <Reveal direction="up" distance={32} className="max-w-3xl">
+          <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
+            Partners &amp;
+            <span className="editorial-italic text-emerald"> sponsor lineup.</span>
+          </h2>
+        </Reveal>
 
         {hasPartners ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-ivory/10 border border-ivory/15">
+          <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-ivory/10 border border-ivory/15">
             {partners.map((p) => {
               const inner = (
                 <div className="aspect-[3/2] flex flex-col items-center justify-center gap-2 bg-midnight-deep/55 hover:bg-midnight-deep/75 transition p-6 text-center">
@@ -55,26 +48,19 @@ export function Sponsors() {
             })}
           </div>
         ) : (
-          <Reveal direction="blur" distance={36}>
-            <div className="relative border border-ivory/15 bg-midnight-deep/55 px-8 md:px-14 py-16 md:py-20 text-center">
-              <p className="text-xs uppercase tracking-[0.32em] text-emerald">Partners & sponsor lineup</p>
-              <p className="mt-6 font-display text-3xl md:text-5xl text-ivory leading-tight text-balance">
-                To be announced soon.
-              </p>
-              <p className="mt-5 max-w-xl mx-auto text-ivory/80 leading-relaxed">
-                Founding partners, principal sponsors and programme partners for
-                AICSSYC 2026 will be unveiled in the coming weeks. To collaborate
-                with the congress, write to us.
-              </p>
-              <a
-                href="mailto:ieeecomputersocietysrmist@gmail.com"
-                className="mt-8 inline-flex items-center gap-2 bg-midnight text-ivory px-6 py-3.5 text-sm font-medium hover:bg-midnight-deep transition"
-              >
-                Become a sponsor
-                <span aria-hidden>→</span>
-              </a>
-            </div>
-          </Reveal>
+          <div className="mt-16 grid md:grid-cols-[1fr_auto] items-end gap-10 hairline-top pt-12">
+            <p className="font-editorial italic text-2xl md:text-3xl text-ivory/85 leading-snug prose-measure">
+              Founding partners, principal sponsors and programme partners for the
+              2026 edition will be unveiled in the coming weeks.
+            </p>
+            <a
+              href="mailto:ieeecomputersocietysrmist@gmail.com"
+              className="group inline-flex items-center gap-2 text-sm text-ivory border-b border-ivory/30 hover:border-gold pb-1 transition whitespace-nowrap"
+            >
+              Become a sponsor
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
         )}
       </div>
     </section>

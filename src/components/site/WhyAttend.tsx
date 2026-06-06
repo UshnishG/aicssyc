@@ -1,84 +1,63 @@
 import { motion } from "framer-motion";
-import { Sparkles, Hammer, Users, Rocket, PartyPopper, Award } from "lucide-react";
-import { RevealGroup, Eyebrow, Heading, CardGrid, itemVariants } from "./Reveal";
+import { Reveal, CardGrid, itemVariants } from "./Reveal";
 
-const cards = [
+const benefits = [
   {
-    icon: Sparkles,
-    title: "Discover emerging technologies & future trends",
-    body: "Keynotes and technical sessions across six curated themes spanning AI, agents, FinTech and beyond.",
+    n: "01",
+    title: "Career advancement",
+    body: "Direct conversations with hiring leaders, recruiters and senior engineers from across India.",
   },
   {
-    icon: Hammer,
-    title: "Participate in hands-on workshops & leadership experiences",
-    body: "Practical workshops, competitions and leadership tracks designed for students and young professionals.",
+    n: "02",
+    title: "Research opportunities",
+    body: "Publication-ready feedback, mentorship pathways and lab introductions for student researchers.",
   },
   {
-    icon: Users,
-    title: "Connect with students, researchers, professionals & IEEE leaders",
-    body: "Meet peers from across India and engage with IEEE Computer Society leadership face-to-face.",
+    n: "03",
+    title: "Industry exposure",
+    body: "First-look access to what shipping teams at top product companies are actually building.",
   },
   {
-    icon: Rocket,
-    title: "Explore innovation, entrepreneurship & career opportunities",
-    body: "Innovation Expo, Startup Showcase and Industrial Showcase opening pathways into research and industry.",
+    n: "04",
+    title: "Entrepreneurship pathways",
+    body: "Founder Q&As, investor introductions and co-founder matchmaking through the Startup Showcase.",
   },
   {
-    icon: PartyPopper,
-    title: "Experience cultural events & meaningful networking",
-    body: "A cultural evening, heritage visit and curated networking moments built into every day of the congress.",
+    n: "05",
+    title: "Leadership development",
+    body: "Engineering-management tracks and chapter-leadership sessions for office-bearers.",
   },
   {
-    icon: Award,
-    title: "Be part of India's flagship IEEE CS SYP congress",
-    body: "Join a national-scale gathering convened by the IEEE Computer Society Student & Young Professional programme.",
+    n: "06",
+    title: "National IEEE network",
+    body: "A four-day window into the IEEE Computer Society ecosystem and chapters from every region.",
   },
 ];
 
 export function WhyAttend() {
   return (
-    <section className="relative py-24 md:py-36 bg-transparent">
+    <section className="relative section-rhythm bg-transparent">
       <div className="container-editorial">
-        <RevealGroup className="max-w-3xl mb-16">
-          <Eyebrow color="emerald">Why attend</Eyebrow>
-          <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-            Why you should attend.
-          </Heading>
-        </RevealGroup>
+        <Reveal direction="up" distance={32} className="max-w-3xl mb-20">
+          <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
+            Six reasons delegates fly in
+            <span className="editorial-italic text-emerald"> from every corner of the country.</span>
+          </h2>
+        </Reveal>
 
-        <CardGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-midnight/10 border border-ivory/10" stagger={0.1}>
-          {cards.map((c, idx) => {
-            const Icon = c.icon;
-            return (
-              <motion.article
-                key={c.title}
-                variants={itemVariants}
-                whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                className="relative bg-transparent p-8 md:p-10 flex flex-col"
-              >
-                <div className="flex items-center gap-4 mb-8">
-                  <motion.span
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex h-12 w-12 items-center justify-center bg-midnight text-gold"
-                  >
-                    <Icon size={20} />
-                  </motion.span>
-                  <span className="text-xs uppercase tracking-[0.22em] text-ivory/70">
-                    0{idx + 1}
-                  </span>
-                </div>
-
-                <h3 className="font-display text-2xl md:text-[1.7rem] text-ivory leading-[1.15] text-balance">
-                  {c.title}
-                </h3>
-
-                <p className="mt-6 text-ivory/70 text-sm leading-relaxed">
-                  {c.body}
-                </p>
-              </motion.article>
-            );
-          })}
+        <CardGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-12 md:gap-x-16" stagger={0.08}>
+          {benefits.map((b) => (
+            <motion.article key={b.title} variants={itemVariants} className="group">
+              <p className="font-mono text-xs tracking-widest text-gold/80">{b.n}</p>
+              <h3 className="mt-5 font-display text-2xl md:text-[1.65rem] text-ivory leading-tight text-balance">
+                {b.title}
+              </h3>
+              <p className="mt-4 text-ivory/65 text-[15px] leading-[1.7] prose-narrow">
+                {b.body}
+              </p>
+              <div className="mt-6 h-px w-12 bg-ivory/15 group-hover:w-24 group-hover:bg-gold transition-all duration-500" />
+            </motion.article>
+          ))}
         </CardGrid>
       </div>
     </section>

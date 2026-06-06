@@ -1,80 +1,83 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Search } from "lucide-react";
-import { RevealGroup, Eyebrow, Heading, Body, CardGrid, itemVariants } from "./Reveal";
+import { Plus } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const faqs = [
-  { q: "What is AICSSYC 2026?", a: "The All India Computer Society Student & Young Professional Congress — a flagship initiative of the IEEE Computer Society SYP that brings together students, young professionals, researchers and industry leaders for technical sessions, workshops, discussions and networking." },
-  { q: "When and where is it happening?", a: "8 to 11 October 2026, at the TP Ganesan Auditorium, SRM Institute of Science and Technology, Kattankulathur." },
-  { q: "What is the theme of the 2026 edition?", a: "‘Where Agent Meets Humans’ — exploring the design, behaviour and impact of intelligent agents working alongside people across research, industry and everyday life." },
-  { q: "Which themes are covered?", a: "Six tracks: Research & Academia, Management & Strategy, Agents & Human Interaction, AI & Intelligent Systems, Entrepreneurship & Innovation, and Finance & Digital Economy. Final tracks are subject to change." },
-  { q: "Who should attend?", a: "Students, young professionals, researchers, faculty, entrepreneurs and industry practitioners — particularly IEEE and IEEE Computer Society members and chapter office-bearers from across India." },
-  { q: "What's the difference between the three pass tiers?", a: "The IEEE CS Member pass (₹1,000) is the most subsidised tier for verified IEEE Computer Society members. The IEEE Member pass (₹1,500) is for IEEE members outside the Computer Society. The General Admission pass (₹2,000) is the standard ticket for non-IEEE attendees. All three include full event access, catering and networking." },
-  { q: "How is IEEE membership verified?", a: "A valid IEEE membership ID (or IEEE CS membership ID for the lowest tier) must be provided at registration. Verification happens before your pass is approved." },
-  { q: "Is the Day 3 heritage visit included?", a: "Yes. October 11 is a guided heritage visit. Lunch is provided; breakfast is not provided that day." },
-  { q: "Are meals included?", a: "Yes — lunch, dinner and tea breaks are included across the core programme. Day 2 dinner is provided as optional dinner packets. Day 3 includes lunch only." },
+  {
+    q: "How is IEEE membership verified for subsidised passes?",
+    a: "A valid IEEE membership ID — or an IEEE Computer Society membership ID for the lowest tier — must be entered at registration. Verification happens before your pass is approved; please use the same name as on your IEEE profile.",
+  },
+  {
+    q: "Is accommodation included with the pass?",
+    a: "Accommodation is an optional ₹2,000 add-on that can be toggled on at checkout. It covers SRM IST campus accommodation for the core programme nights.",
+  },
+  {
+    q: "What's covered for delegates travelling from outside Tamil Nadu?",
+    a: "Travel to Chennai is at the delegate's own arrangement. Once on campus, transport between programme venues is provided. The team can help coordinate group arrivals from major IEEE chapters — write in advance.",
+  },
+  {
+    q: "Are meals included across all four days?",
+    a: "Lunch, dinner and tea breaks are included across the core programme. Day 2 dinner is provided as optional packets. Day 3 (heritage visit) includes lunch only.",
+  },
+  {
+    q: "What about the Day 3 heritage visit — is it optional?",
+    a: "It is part of every pass. Day 3 is a guided heritage and cultural exploration off-site, with lunch included and breakfast on your own.",
+  },
+  {
+    q: "Will I get a participation certificate?",
+    a: "Yes. Every delegate receives a digital participation certificate after the congress. Speakers, panelists and competition winners receive separate recognition.",
+  },
+  {
+    q: "What is the refund policy?",
+    a: "Passes are non-refundable once approved, but transferable to another verified delegate of the same tier up to fourteen days before the congress. Write to the organisers to request a transfer.",
+  },
+  {
+    q: "I have a dietary or accessibility requirement — what should I do?",
+    a: "Email the organisers as soon as you've registered with the specifics. The venue is wheelchair-accessible and we accommodate dietary preferences when notified in advance.",
+  },
 ];
 
 export function FAQ() {
-  const [q, setQ] = useState("");
   const [open, setOpen] = useState<number | null>(0);
 
-  const filtered = useMemo(() => {
-    const t = q.trim().toLowerCase();
-    if (!t) return faqs;
-    return faqs.filter((f) => f.q.toLowerCase().includes(t) || f.a.toLowerCase().includes(t));
-  }, [q]);
-
   return (
-    <section id="faq" className="relative py-24 md:py-36 bg-transparent">
-      <div className="container-editorial grid lg:grid-cols-[0.9fr_1.1fr] gap-16">
-        <RevealGroup>
-          <Eyebrow color="emerald">Questions</Eyebrow>
-          <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-            Everything you'd ask <em className="italic font-normal text-emerald">at the door.</em>
-          </Heading>
+    <section id="faq" className="relative section-rhythm bg-transparent">
+      <div className="container-editorial grid lg:grid-cols-[0.7fr_1.3fr] gap-16 lg:gap-24">
+        <Reveal direction="up" distance={32}>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
+            Practical
+            <br />
+            <span className="editorial-italic text-emerald">questions, answered.</span>
+          </h2>
+          <p className="mt-8 text-sm text-ivory/70 leading-relaxed prose-narrow">
+            Anything else? Email{" "}
+            <a
+              href="mailto:ieeecomputersocietysrmist@gmail.com"
+              className="text-ivory border-b border-ivory/30 hover:border-gold pb-0.5"
+            >
+              the organising team
+            </a>
+            .
+          </p>
+        </Reveal>
 
-          <Body className="mt-10 relative max-w-md">
-            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-ivory/70" />
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search FAQs…"
-              aria-label="Search frequently asked questions"
-              className="w-full bg-transparent border border-ivory/20 pl-11 pr-4 py-3.5 text-sm placeholder:text-ivory/70 focus:outline-none focus:border-ivory/20 rounded-sm"
-            />
-          </Body>
-
-          <Body className="mt-8 text-sm text-ivory/80 max-w-sm">
-            <p>
-              Can't find your answer? Email{" "}
-              <a href="mailto:contact@aicssyc2026.in" className="text-ivory border-b border-ivory/30 hover:border-ivory/20">
-                contact@aicssyc2026.in
-              </a>
-              .
-            </p>
-          </Body>
-        </RevealGroup>
-
-        <CardGrid className="divide-y divide-midnight/15 border-y border-ivory/15" stagger={0.05}>
-          {filtered.length === 0 && (
-            <p className="py-8 text-ivory/75">No questions match "{q}".</p>
-          )}
-          {filtered.map((f, i) => {
+        <div className="hairline-top border-b border-white/10">
+          {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
-              <motion.div key={f.q} variants={itemVariants}>
+              <div key={f.q} className="border-b border-white/8 last:border-b-0">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-start justify-between gap-6 py-6 text-left group"
+                  className="w-full flex items-start justify-between gap-6 py-7 text-left group"
                 >
-                  <span className="font-display text-xl md:text-2xl text-ivory leading-snug text-balance">
+                  <span className="font-display text-xl md:text-2xl text-ivory leading-snug text-balance pr-2">
                     {f.q}
                   </span>
                   <span
-                    className={`flex-shrink-0 h-8 w-8 inline-flex items-center justify-center border border-ivory/25 transition ${
-                      isOpen ? "bg-midnight text-ivory border-ivory/20 rotate-45" : "text-ivory"
+                    className={`flex-shrink-0 h-9 w-9 inline-flex items-center justify-center border border-ivory/20 transition-all ${
+                      isOpen ? "bg-gold text-midnight border-gold rotate-45" : "text-ivory group-hover:border-gold/60"
                     }`}
                   >
                     <Plus size={16} />
@@ -86,17 +89,17 @@ export function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-6 pr-12 text-ivory/75 leading-relaxed max-w-[62ch]">{f.a}</p>
+                      <p className="pb-8 pr-16 text-ivory/70 leading-[1.75] prose-measure">{f.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </div>
             );
           })}
-        </CardGrid>
+        </div>
       </div>
     </section>
   );
