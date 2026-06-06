@@ -3,10 +3,32 @@ import { Reveal } from "./Reveal";
 
 const pointsOfContact = [
   {
+    name: "Ushnish Ghosal",
+    role: "Chair",
+    phone: "+91 78109 82910",
+    phoneHref: "+917810982910",
+    email: "ug9320@srmist.edu.in",
+  },
+  {
+    name: "Aayushman Kathayat",
+    role: "Vice Chair",
+    phone: "+91 94563 62388",
+    phoneHref: "+919456362388",
+    email: "ak1320@srmist.edu.in",
+  },
+  {
+    name: "Krishna Aggarwal",
+    role: "Secretary",
+    phone: "+91 97182 12195",
+    phoneHref: "+919718212195",
+    email: "ka2937@srmist.edu.in",
+  },
+  {
     name: "Atharv Dorle",
     role: "Technical Head",
     phone: "+91 83197 73605",
     phoneHref: "+918319773605",
+    email: "ad3638@srmist.edu.in",
   },
 ];
 
@@ -85,7 +107,7 @@ export function Contact() {
               </span>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {pointsOfContact.map((poc) => (
                 <article
                   key={poc.name}
@@ -100,18 +122,22 @@ export function Contact() {
                     </p>
                   </div>
 
-                  <a
-                    href={`tel:${poc.phoneHref}`}
-                    className="mt-6 flex items-center justify-between gap-3 border-t border-ivory/10 pt-5 text-ivory/85 transition hover:text-gold"
-                  >
-                    <span className="flex items-center gap-3">
-                      <Phone size={16} className="text-gold" />
-                      <span className="tracking-wide">{poc.phone}</span>
-                    </span>
-                    <span className="text-ivory/40 group-hover:text-gold transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
-                  </a>
+                  <div className="mt-6 border-t border-ivory/10 pt-5 space-y-3">
+                    <a
+                      href={`tel:${poc.phoneHref}`}
+                      className="flex items-center gap-3 text-ivory/85 transition hover:text-gold"
+                    >
+                      <Phone size={14} className="text-gold shrink-0" />
+                      <span className="tracking-wide text-sm">{poc.phone}</span>
+                    </a>
+                    <a
+                      href={`mailto:${poc.email}`}
+                      className="flex items-center gap-3 text-ivory/70 transition hover:text-emerald"
+                    >
+                      <Mail size={14} className="text-emerald shrink-0" />
+                      <span className="text-sm truncate">{poc.email}</span>
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
