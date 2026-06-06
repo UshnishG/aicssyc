@@ -101,7 +101,7 @@
     background-color: var(--midnight-deep);
     background-image:
       linear-gradient(180deg, color-mix(in oklab, var(--midnight-deep) 55%, transparent), color-mix(in oklab, var(--midnight-deep) 78%, transparent)),
-      url("/__l5e/assets-v1/478c816e-1203-4a57-9a48-d78a4a303f36/aicssyc-bg.png");
+      url("/bg.png");
     background-size: cover, cover;
     background-position: center top, center top;
     background-attachment: fixed, fixed;
