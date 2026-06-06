@@ -23,23 +23,29 @@ export function About() {
               01
             </p>
             <p className="mt-6 font-display italic text-xl text-ivory/70 max-w-xs">
-              India's national gathering of the computing community.
+              India's flagship IEEE Computer Society Congress.
             </p>
           </Reveal>
 
           <RevealGroup className="lg:pt-10">
             <Heading className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
-              A congress, not a conference —
-              <span className="editorial-italic text-emerald"> a four-day argument</span> about
-              what the next decade of computing should be.
+              More than a conference —
+              <span className="editorial-italic text-emerald"> a national gathering</span> of
+              ideas, innovation, culture and community.
             </Heading>
 
-            <Body className="mt-10 prose-measure text-[17px] leading-[1.75] text-ivory/75">
+            <Body className="mt-10 prose-measure text-[17px] leading-[1.75] text-ivory/75 space-y-5">
               <p>
-                AICSSYC convenes students, young professionals, researchers and
-                practitioners from every region of India — under the IEEE
-                Computer Society's Student &amp; Young Professional programme — to
-                exchange ideas, build collaborations and shape what gets built next.
+                AICSSYC brings together students, young professionals, researchers,
+                entrepreneurs, industry leaders and IEEE volunteers from across the
+                country to exchange knowledge, build meaningful connections and
+                celebrate the future of computing.
+              </p>
+              <p>
+                Across four days of keynotes, workshops, technical sessions,
+                leadership experiences, networking opportunities and cultural
+                showcases, delegates become part of a community shaping the next
+                generation of technology and innovation.
               </p>
             </Body>
 
