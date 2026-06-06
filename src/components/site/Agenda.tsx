@@ -25,19 +25,22 @@ export function Agenda() {
   const [day, setDay] = useState(0);
 
   return (
-    <section id="agenda" className="relative py-24 md:py-36 bg-[color:var(--muted)]">
+    <section id="agenda" className="relative section-rhythm bg-[color:var(--muted)]">
       <div className="container-editorial">
-        <RevealGroup className="flex flex-wrap items-end justify-between gap-6 mb-12">
+        <RevealGroup className="grid md:grid-cols-[1.4fr_1fr] items-end gap-10 mb-16">
           <div className="max-w-2xl">
-            <Eyebrow color="emerald">Official congress roadmap</Eyebrow>
-            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-              The full <em className="italic font-normal text-emerald">congress timeline.</em>
+            <Heading className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
+              The delegate
+              <span className="editorial-italic text-emerald"> journey,</span>
+              <br />
+              day by day.
             </Heading>
           </div>
-          <Body className="text-sm text-ivory/80 max-w-xs">
-            8 – 11 October 2026 · SRM IST, Kattankulathur. Schedule indicative; final agenda subject to change.
+          <Body className="text-sm text-ivory/65 md:justify-self-end max-w-xs">
+            Indicative schedule — final agenda subject to change.
           </Body>
         </RevealGroup>
+
 
 
         <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-4 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
