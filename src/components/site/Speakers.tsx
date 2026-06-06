@@ -97,9 +97,18 @@ export function Speakers() {
             <div aria-hidden className="absolute inset-0 opacity-40 pointer-events-none" style={{ background: "var(--gradient-atmosphere)" }} />
             <div className="relative">
               <p className="inline-flex items-center gap-2.5 text-[10px] uppercase tracking-[0.3em] text-gold">
-                <span className="relative inline-flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-gold opacity-75 animate-ping" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
+                <span className="relative inline-flex h-2 w-2 items-center justify-center">
+                  <motion.span
+                    aria-hidden
+                    className="absolute inline-flex h-2 w-2 rounded-full bg-gold"
+                    animate={{ scale: [1, 2.4], opacity: [0.55, 0] }}
+                    transition={{ duration: 2.4, repeat: Infinity, ease: [0.16, 1, 0.3, 1] }}
+                  />
+                  <motion.span
+                    className="relative inline-flex h-2 w-2 rounded-full bg-gold"
+                    animate={{ opacity: [0.85, 1, 0.85], scale: [1, 1.08, 1] }}
+                    transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                  />
                 </span>
                 Lineup expanding
               </p>
@@ -112,8 +121,8 @@ export function Speakers() {
                 policymakers and IEEE leaders shaping the next decade of computing.
               </p>
               <a
-                href="#register"
-                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-ivory border-b border-ivory/30 hover:border-gold hover:text-gold pb-1 transition"
+                href="#tickets"
+                className="group mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-ivory border-b border-ivory/30 hover:border-gold hover:text-gold pb-1 transition"
               >
                 Be first to know
                 <span className="transition-transform group-hover:translate-x-1">→</span>
