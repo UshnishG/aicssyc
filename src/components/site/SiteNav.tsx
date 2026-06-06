@@ -38,26 +38,40 @@ export function SiteNav() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-ivory/75 hover:text-ivory transition-colors relative group"
-            >
-              {l.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all group-hover:w-full" />
-            </a>
-          ))}
+          {links.map((l) => {
+            const isHash = l.href.startsWith("#");
+            return isHash ? (
+              <Link
+                key={l.href}
+                to="/"
+                hash={l.href.slice(1)}
+                className="text-sm text-ivory/75 hover:text-ivory transition-colors relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all group-hover:w-full" />
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-ivory/75 hover:text-ivory transition-colors relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all group-hover:w-full" />
+              </a>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="#tickets"
+          <Link
+            to="/"
+            hash="tickets"
             className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)] hover:shadow-[0_0_30px_rgba(212,166,60,0.5)] hover:bg-gold-soft transition-all duration-300"
           >
             Secure your spot
             <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
-          </a>
+          </Link>
         </div>
 
         <button
@@ -78,23 +92,37 @@ export function SiteNav() {
             className="lg:hidden bg-[color:var(--midnight-deep)] border-t border-white/5 overflow-hidden"
           >
             <div className="container-editorial py-6 flex flex-col gap-4">
-              {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="text-ivory/85 text-lg font-display"
-                >
-                  {l.label}
-                </a>
-              ))}
-              <a
-                href="#tickets"
+              {links.map((l) => {
+                const isHash = l.href.startsWith("#");
+                return isHash ? (
+                  <Link
+                    key={l.href}
+                    to="/"
+                    hash={l.href.slice(1)}
+                    onClick={() => setOpen(false)}
+                    className="text-ivory/85 text-lg font-display"
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="text-ivory/85 text-lg font-display"
+                  >
+                    {l.label}
+                  </a>
+                );
+              })}
+              <Link
+                to="/"
+                hash="tickets"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)]"
               >
                 Secure your spot →
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
