@@ -14,22 +14,24 @@ import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
 
-const title = "AICSSYC 2026 — IEEE CS SYP Congress · SRM IST, Kattankulathur";
+import { faqs } from "@/data/faqs";
+
+const title = "AICSSYC 2026 — IEEE CS SYP Congress at SRM IST";
 const description =
-  "The All India Computer Society Student & Young Professional Congress 2026. Theme: Where Agent Meets Humans. October 8 – 11, 2026 at TP Ganesan Auditorium, SRM IST.";
+  "IEEE Computer Society SYP Congress 2026 at SRM IST, Kattankulathur. Theme: Where Agents Meet Humans. 8–11 October 2026.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
-      { property: "og:title", content: title },
+      { property: "og:title", content: "AICSSYC 2026 — IEEE CS SYP Congress" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://aicssyc.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://aicssyc.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -47,6 +49,18 @@ export const Route = createFileRoute("/")({
             address: "Kattankulathur, Tamil Nadu, India",
           },
           description,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
         }),
       },
     ],
