@@ -1,6 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
-import atharvPhoto from "@/assets/poc/atharv.png.asset.json";
 
 const pointsOfContact = [
   {
@@ -8,7 +7,6 @@ const pointsOfContact = [
     role: "Technical Head",
     phone: "+91 83197 73605",
     phoneHref: "+918319773605",
-    photo: atharvPhoto.url,
   },
 ];
 
