@@ -92,9 +92,24 @@ export function Speakers() {
           ))}
         </CardGrid>
 
-        <p className="mt-24 text-center text-xs uppercase tracking-[0.3em] text-ivory/55">
-          — More speakers being announced —
-        </p>
+        <Reveal direction="up" distance={24} className="mt-24">
+          <div className="relative mx-auto max-w-3xl rounded-2xl border border-ivory/10 bg-midnight-deep/40 backdrop-blur-sm px-8 py-12 md:px-14 md:py-16 text-center overflow-hidden">
+            <div aria-hidden className="absolute inset-0 opacity-40 pointer-events-none" style={{ background: "var(--gradient-atmosphere)" }} />
+            <div className="relative">
+              <p className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-gold">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                Lineup expanding
+              </p>
+              <h3 className="mt-5 font-display text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.05] tracking-tight text-ivory">
+                More voices <span className="editorial-italic text-emerald">joining soon.</span>
+              </h3>
+              <p className="mt-5 text-sm md:text-base text-ivory/70 prose-measure mx-auto leading-relaxed">
+                The AICSSYC 2026 lineup continues to grow with leaders from academia,
+                industry, startups, government and the global IEEE community.
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
