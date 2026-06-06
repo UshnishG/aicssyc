@@ -107,7 +107,7 @@ export function Contact() {
               </span>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {pointsOfContact.map((poc) => (
                 <article
                   key={poc.name}
@@ -122,18 +122,22 @@ export function Contact() {
                     </p>
                   </div>
 
-                  <a
-                    href={`tel:${poc.phoneHref}`}
-                    className="mt-6 flex items-center justify-between gap-3 border-t border-ivory/10 pt-5 text-ivory/85 transition hover:text-gold"
-                  >
-                    <span className="flex items-center gap-3">
-                      <Phone size={16} className="text-gold" />
-                      <span className="tracking-wide">{poc.phone}</span>
-                    </span>
-                    <span className="text-ivory/40 group-hover:text-gold transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
-                  </a>
+                  <div className="mt-6 border-t border-ivory/10 pt-5 space-y-3">
+                    <a
+                      href={`tel:${poc.phoneHref}`}
+                      className="flex items-center gap-3 text-ivory/85 transition hover:text-gold"
+                    >
+                      <Phone size={14} className="text-gold shrink-0" />
+                      <span className="tracking-wide text-sm">{poc.phone}</span>
+                    </a>
+                    <a
+                      href={`mailto:${poc.email}`}
+                      className="flex items-center gap-3 text-ivory/70 transition hover:text-emerald"
+                    >
+                      <Mail size={14} className="text-emerald shrink-0" />
+                      <span className="text-sm truncate">{poc.email}</span>
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
