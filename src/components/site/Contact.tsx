@@ -1,6 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
-import atharvPhoto from "@/assets/poc/atharv.png.asset.json";
 
 const pointsOfContact = [
   {
@@ -8,7 +7,6 @@ const pointsOfContact = [
     role: "Technical Head",
     phone: "+91 83197 73605",
     phoneHref: "+918319773605",
-    photo: atharvPhoto.url,
   },
 ];
 
@@ -93,23 +91,13 @@ export function Contact() {
                   key={poc.name}
                   className="group relative overflow-hidden rounded-sm border border-ivory/10 bg-midnight-deep/40 backdrop-blur-sm p-6 transition hover:border-gold/40"
                 >
-                  <div className="flex items-center gap-5">
-                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border border-ivory/15 bg-midnight-deep">
-                      <img
-                        src={poc.photo}
-                        alt={`${poc.name} — ${poc.role}`}
-                        loading="lazy"
-                        className="h-full w-full object-cover object-top grayscale transition duration-500 group-hover:grayscale-0"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">
-                        {poc.role}
-                      </p>
-                      <p className="mt-1.5 font-display text-xl text-ivory truncate">
-                        {poc.name}
-                      </p>
-                    </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">
+                      {poc.role}
+                    </p>
+                    <p className="mt-2 font-display text-xl text-ivory truncate">
+                      {poc.name}
+                    </p>
                   </div>
 
                   <a
