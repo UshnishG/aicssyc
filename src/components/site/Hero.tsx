@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Countdown } from "./Countdown";
 import heroData from "@/data/hero.json";
 import siteConfig from "@/data/site-config.json";
 
@@ -74,12 +75,17 @@ function NetworkCanvas() {
 }
 
 export function Hero() {
+  const { scrollY } = useScroll();
+  const yBg = useTransform(scrollY, [0, 1000], [0, 300]);
+  const yOrbit = useTransform(scrollY, [0, 1000], [0, 150]);
+  const opacityBg = useTransform(scrollY, [0, 500], [0.3, 0]);
+
   return (
     <section className="relative min-h-screen overflow-hidden text-ivory grain">
-      <div
+      <motion.div
         aria-hidden
-        className="absolute inset-0 opacity-30"
-        style={{ background: "var(--gradient-atmosphere)" }}
+        className="absolute inset-0"
+        style={{ background: "var(--gradient-atmosphere)", y: yBg, opacity: opacityBg }}
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
@@ -132,14 +138,22 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <Countdown />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-12 flex flex-wrap items-center gap-4"
           >
             <a
               href="https://konfhub.com/aicssyc-2026"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-7 py-4 text-sm font-medium text-ivory hover:bg-gold-soft transition"
+              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-7 py-4 text-sm font-medium text-midnight-deep hover:bg-gold-soft transition"
             >
               Register now
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -158,6 +172,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          style={{ y: yOrbit }}
           className="relative aspect-square w-full max-w-[560px] mx-auto"
         >
           <div className="absolute inset-0 rounded-full border border-white/10" />

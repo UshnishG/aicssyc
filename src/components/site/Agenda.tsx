@@ -25,7 +25,7 @@ export function Agenda() {
   const [day, setDay] = useState(0);
 
   return (
-    <section id="agenda" className="relative section-rhythm bg-[color:var(--muted)]">
+    <section id="agenda" className="relative section-rhythm bg-transparent">
       <div className="container-editorial">
         <RevealGroup className="grid md:grid-cols-[1.4fr_1fr] items-end gap-10 mb-16">
           <div className="max-w-2xl">
@@ -36,9 +36,17 @@ export function Agenda() {
               day by day.
             </Heading>
           </div>
-          <Body className="text-sm text-ivory/65 md:justify-self-end max-w-xs">
-            Indicative schedule — final agenda subject to change.
-          </Body>
+          <div className="md:justify-self-end max-w-sm p-5 rounded-xl border border-ivory/15 bg-midnight/30 backdrop-blur-md">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+              <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-gold">
+                Schedule Notice
+              </p>
+            </div>
+            <p className="text-sm text-ivory/70 leading-relaxed">
+              The timeline presented below is indicative. The organizing committee reserves the right to modify session timings, speakers, and event flow prior to the congress.
+            </p>
+          </div>
         </RevealGroup>
 
 

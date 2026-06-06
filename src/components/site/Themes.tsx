@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Reveal } from "./Reveal";
+import { ScrollSection } from "./ScrollSection";
 
 import themesData from "@/data/themes.json";
 
@@ -10,7 +11,7 @@ export function Themes() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="themes" className="relative section-rhythm bg-midnight text-ivory grain overflow-hidden">
+    <ScrollSection id="themes" className="relative section-rhythm bg-transparent text-ivory grain overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 opacity-70"
@@ -107,6 +108,6 @@ export function Themes() {
           </div>
         </div>
       </div>
-    </section>
+    </ScrollSection>
   );
 }

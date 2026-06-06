@@ -4,7 +4,7 @@ const quickNav = siteConfig.navigation;
 
 export function Footer() {
   return (
-    <footer className="relative bg-midnight-deep/85 text-ivory grain overflow-hidden border-t border-white/10 backdrop-blur-sm">
+    <footer className="relative bg-transparent text-ivory grain overflow-hidden border-t border-white/10 backdrop-blur-sm">
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="container-editorial py-16 md:py-20">
@@ -29,7 +29,10 @@ export function Footer() {
             <p className="text-[10px] uppercase tracking-[0.24em] text-slate-mist mb-5">Contact</p>
             <ul className="space-y-2 text-sm">
               <li><a href="mailto:ieeecomputersocietysrmist@gmail.com" className="text-ivory/75 hover:text-gold break-words transition">ieeecomputersocietysrmist@gmail.com</a></li>
-              <li><a href="https://www.instagram.com/ieeecs_srmist/" target="_blank" rel="noopener noreferrer" className="text-ivory/75 hover:text-gold transition">@ieeecs_srmist</a></li>
+              <li><a href="https://www.instagram.com/ieeecs_srmist/" target="_blank" rel="noopener noreferrer" className="text-ivory/75 hover:text-gold transition">@ieeecs_srmist (IG)</a></li>
+              <li><a href="https://www.instagram.com/ieeecssyp/" target="_blank" rel="noopener noreferrer" className="text-ivory/75 hover:text-gold transition">@ieeecssyp (IG)</a></li>
+              <li><a href="https://www.linkedin.com/company/ieee-computer-society-syp" target="_blank" rel="noopener noreferrer" className="text-ivory/75 hover:text-gold transition">IEEE CS SYP (IN)</a></li>
+              <li><a href="https://www.linkedin.com/company/ieee-computer-society-srmist" target="_blank" rel="noopener noreferrer" className="text-ivory/75 hover:text-gold transition">IEEE CS SRMIST (IN)</a></li>
             </ul>
           </div>
 
@@ -45,11 +48,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-ivory/60">
+        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-xs text-ivory/60">
           <p>© 2026 AICSSYC · IEEE Computer Society SYP</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-ivory transition">Code of conduct</a>
-            <a href="#" className="hover:text-ivory transition">Privacy</a>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 items-center">
+            <a href="/code-of-conduct" className="hover:text-ivory transition">Code of conduct</a>
+            <a href="/privacy" className="hover:text-ivory transition">Privacy</a>
+            <span className="hidden md:inline-block text-white/10" aria-hidden>|</span>
+            <a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald/70" aria-hidden></span>
+              robots.txt
+            </a>
+            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold/70" aria-hidden></span>
+              llms.txt
+            </a>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { Agenda } from "@/components/site/Agenda";
 import { WhyAttend } from "@/components/site/WhyAttend";
 import { Tickets } from "@/components/site/Tickets";
 import { Sponsors } from "@/components/site/Sponsors";
+import { Location } from "@/components/site/Location";
 import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
@@ -16,7 +17,7 @@ import { Footer } from "@/components/site/Footer";
 
 import faqs from "@/data/faqs.json";
 
-const title = "AICSSYC 2026 — IEEE CS SYP Congress at SRM IST";
+const title = "All India Computer Society Student & Young Professional Congress 2026";
 const description =
   "IEEE Computer Society SYP Congress 2026 at SRM IST, Kattankulathur. Theme: Where Agents Meet Humans. 8–11 October 2026.";
 
@@ -25,11 +26,13 @@ export const Route = createFileRoute("/")({
     meta: [
       { title },
       { name: "description", content: description },
-      { property: "og:title", content: "AICSSYC 2026 — IEEE CS SYP Congress" },
+      { property: "og:title", content: "All India Computer Society Student & Young Professional Congress 2026" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://aicssyc.vercel.app/" },
+      { property: "og:image", content: "https://aicssyc.vercel.app/banner.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://aicssyc.vercel.app/banner.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://aicssyc.vercel.app/" }],
     scripts: [
@@ -93,6 +96,7 @@ function Index() {
         <WhyAttend />
         <Tickets />
         <Sponsors />
+        <Location />
         <FAQ />
         <Contact />
         <CallToAction />

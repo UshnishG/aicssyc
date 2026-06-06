@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import partnersData from "@/data/partners.json";
 import { Reveal } from "./Reveal";
 
@@ -53,13 +54,13 @@ export function Sponsors() {
               Founding partners, principal sponsors and programme partners for the
               2026 edition will be unveiled in the coming weeks.
             </p>
-            <a
-              href="mailto:ieeecomputersocietysrmist@gmail.com"
-              className="group inline-flex items-center gap-2 text-sm text-ivory border-b border-ivory/30 hover:border-gold pb-1 transition whitespace-nowrap"
+            <Link
+              to="/sponsor"
+              className="group inline-flex items-center gap-2 rounded-sm bg-ivory/10 border border-ivory/20 px-6 py-3 text-sm font-medium text-ivory hover:bg-ivory/20 hover:border-gold/50 transition whitespace-nowrap"
             >
               Become a sponsor
               <span className="transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            </Link>
           </div>
         )}
       </div>

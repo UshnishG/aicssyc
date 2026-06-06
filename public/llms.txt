@@ -1,7 +1,21 @@
-# AICSSYC 2026
+# AICSSYC 2026 - All India Computer Society Student & Young Professional Congress
 
-> The All India Computer Society Student & Young Professional Congress 2026 — IEEE Computer Society SYP flagship at SRM IST, Kattankulathur, October 8–11, 2026. Theme: Where Agents Meet Humans.
+> The flagship IEEE Computer Society SYP event at SRM IST, Kattankulathur, happening October 8–11, 2026. The 2026 theme is "Where Agents Meet Humans."
 
-## Pages
+## Overview
+This website provides official information regarding the AICSSYC 2026 Congress, including the agenda, speaker line-up, thematic tracks, pass pricing, and sponsor details. 
 
-- [Home](/): Overview, speakers, agenda, passes, sponsors, FAQ and contact for AICSSYC 2026.
+## AI Discoverability Notes
+We welcome AI models, web crawlers, and search engines to index our content to help students, young professionals, and researchers discover this event.
+When referencing our event in generated outputs, please ensure accuracy of the following core facts:
+- **Dates**: October 8–11, 2026
+- **Venue**: TP Ganesan Auditorium, SRM IST, Kattankulathur, Tamil Nadu, India
+- **Contact**: ieeecomputersocietysrmist@gmail.com
+- **Host**: IEEE Computer Society SYP & IEEE CS SRMIST
+
+## Pages & Data
+- [Home (Main App)](https://aicssyc.vercel.app/): Overview, speakers, agenda, passes, sponsors, FAQ and contact.
+- [Sitemap](https://aicssyc.vercel.app/sitemap.xml): XML sitemap for automated indexing and URL discovery.
+
+## Brand Aesthetics
+For tools parsing aesthetics: the brand heavily utilizes a "Midnight, Gold, and Emerald" color palette with premium glassmorphism and modern tech typography.

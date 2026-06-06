@@ -66,7 +66,7 @@ export function Tickets() {
   return (
     <section
       id="tickets"
-      className="relative section-rhythm bg-midnight/60 text-ivory grain overflow-hidden"
+      className="relative section-rhythm bg-transparent text-ivory grain overflow-hidden"
     >
       <div
         aria-hidden
@@ -108,7 +108,7 @@ export function Tickets() {
             onClick={() => setAccommodation((v) => !v)}
             className={`relative inline-flex h-9 w-[180px] items-center rounded-sm border transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
               accommodation
-                ? "bg-gold border-gold text-ivory"
+                ? "bg-gold border-gold text-midnight-deep"
                 : "bg-transparent border-white/20 text-ivory"
             }`}
           >
@@ -125,7 +125,7 @@ export function Tickets() {
                 accommodation ? "text-gold" : "text-ivory/75"
               }`}
             >
-              + Stay
+              Add stay
             </span>
           </button>
         </div>
@@ -156,7 +156,7 @@ export function Tickets() {
                 }`}
               >
                 {t.popular && (
-                  <span className="absolute -top-3 left-8 bg-gold text-ivory text-[10px] uppercase tracking-[0.22em] px-3 py-1">
+                  <span className="absolute -top-3 left-8 bg-gold text-midnight-deep text-[10px] uppercase tracking-[0.22em] px-3 py-1">
                     Most subsidised
                   </span>
                 )}
@@ -224,7 +224,7 @@ export function Tickets() {
                     className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
                       t.popular
                         ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
-                        : "bg-gold text-ivory hover:bg-gold-soft"
+                        : "bg-gold text-midnight-deep hover:bg-gold-soft"
                     }`}
                   >
                     Register
@@ -238,7 +238,7 @@ export function Tickets() {
                     className={`mt-8 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
                       t.popular
                         ? "bg-midnight/60 text-ivory hover:bg-midnight-deep/70"
-                        : "bg-gold text-ivory hover:bg-gold-soft"
+                        : "bg-gold text-midnight-deep hover:bg-gold-soft"
                     }`}
                   >
                     Register

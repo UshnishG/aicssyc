@@ -1,7 +1,7 @@
 {
   "days": [
     {
-      "label": "Day 0",
+      "label": "Day 1",
       "date": "8 October 2026 · Inaugural Day",
       "title": "Inauguration & opening keynotes",
       "venue": "TP Ganesan Auditorium",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "label": "Day 1",
+      "label": "Day 2",
       "date": "9 October 2026 · Innovation & Knowledge Exchange",
       "title": "Technical tracks, expo & cultural evening",
       "venue": "Multiple halls",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "label": "Day 2",
+      "label": "Day 3",
       "date": "10 October 2026 · Industry & Startup Focus",
       "title": "Showcases, technical sessions & valedictory",
       "venue": "Multiple halls",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "label": "Day 3",
+      "label": "Day 4",
       "date": "11 October 2026 · Heritage Experience",
       "title": "Heritage visit & cultural exploration",
       "venue": "Off-site",

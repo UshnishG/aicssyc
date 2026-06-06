@@ -1,4 +1,5 @@
 import { Reveal, RevealGroup, Heading, Body } from "./Reveal";
+import { ScrollSection } from "./ScrollSection";
 
 import aboutData from "@/data/about.json";
 
@@ -6,7 +7,7 @@ const markers = aboutData;
 
 export function About() {
   return (
-    <section id="about" className="relative section-rhythm bg-transparent overflow-hidden">
+    <ScrollSection id="about" className="relative section-rhythm bg-transparent overflow-hidden">
       <div className="container-editorial relative">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-16 lg:gap-24 items-start">
           {/* Oversized chapter numeral */}
@@ -57,6 +58,6 @@ export function About() {
           </RevealGroup>
         </div>
       </div>
-    </section>
+    </ScrollSection>
   );
 }

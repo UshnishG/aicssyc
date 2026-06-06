@@ -1,14 +1,15 @@
+import { Link } from '@tanstack/react-router';
 import { Reveal } from "./Reveal";
 
 export function CallToAction() {
   return (
     <section
       id="join"
-      className="relative bg-midnight-deep/70 text-ivory grain overflow-hidden border-t border-white/8"
+      className="relative bg-transparent text-ivory grain overflow-hidden border-t border-white/8"
     >
       <div
         aria-hidden
-        className="absolute inset-0 opacity-80"
+        className="absolute inset-0 opacity-40"
         style={{ background: "var(--gradient-atmosphere)" }}
       />
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
@@ -27,17 +28,18 @@ export function CallToAction() {
               href="https://konfhub.com/aicssyc-2026"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-8 py-4 text-sm font-medium text-ivory hover:bg-gold-soft transition"
+              className="group inline-flex items-center gap-2 rounded-sm bg-gold px-8 py-4 text-sm font-medium text-midnight-deep hover:bg-gold-soft transition"
             >
               Register now
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a
-              href="#sponsors"
-              className="inline-flex items-center gap-2 text-sm text-ivory/80 hover:text-ivory border-b border-ivory/20 hover:border-gold pb-1 transition"
+            <Link
+              to="/sponsor"
+              className="group inline-flex items-center gap-2 rounded-sm border border-ivory/20 bg-ivory/5 px-8 py-4 text-sm font-medium text-ivory hover:bg-ivory/10 hover:border-ivory/40 transition"
             >
-              Become a sponsor →
-            </a>
+              Become a sponsor
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
           </div>
         </Reveal>
       </div>

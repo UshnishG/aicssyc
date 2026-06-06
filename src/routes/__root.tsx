@@ -8,6 +8,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { SmoothScroll } from "../components/site/SmoothScroll";
+import { BackgroundFog } from "../components/site/BackgroundFog";
 
 import appCss from "../styles.css?url";
 
@@ -76,15 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AICSSYC 2026 — IEEE CS SYP Congress" },
+      { title: "All India Computer Society Student & Young Professional Congress 2026" },
       { name: "description", content: "AICSSYC 2026 — the IEEE Computer Society SYP Congress at SRM IST, Kattankulathur, 8–11 October 2026." },
       { name: "author", content: "IEEE Computer Society SYP" },
-      { property: "og:title", content: "AICSSYC 2026 — IEEE CS SYP Congress" },
+      { property: "og:title", content: "All India Computer Society Student & Young Professional Congress 2026" },
       { property: "og:description", content: "IEEE CS SYP Congress 2026 · SRM IST, Kattankulathur · 8–11 October. Theme: Where Agents Meet Humans." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "AICSSYC 2026" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "AICSSYC 2026 — IEEE CS SYP Congress" },
+      { name: "twitter:title", content: "All India Computer Society Student & Young Professional Congress 2026" },
       { name: "twitter:description", content: "IEEE CS SYP Congress 2026 · SRM IST · 8–11 October. Where Agents Meet Humans." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tnH5r0AXJUMgyPdGMorfcJMcPXC3/social-images/social-1780612835820-Logo_-_AICSSYC.webp" },
@@ -109,7 +111,10 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <SmoothScroll>
+          <BackgroundFog />
+          {children}
+        </SmoothScroll>
         <Scripts />
       </body>
     </html>

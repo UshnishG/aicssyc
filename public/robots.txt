@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Standard Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Allow AI/LLM Crawlers for Event Discoverability
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
 Sitemap: https://aicssyc.vercel.app/sitemap.xml

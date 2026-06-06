@@ -24,7 +24,7 @@ export function SiteNav() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[color:var(--midnight-deep)]/85 backdrop-blur-xl border-b border-white/5"
+          ? "bg-[color:var(--midnight-deep)]/95 md:bg-[color:var(--midnight-deep)]/85 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"
       }`}
     >
@@ -51,13 +51,12 @@ export function SiteNav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="#tickets" className="text-sm text-ivory/80 hover:text-ivory">Register</a>
           <a
             href="#tickets"
-            className="inline-flex items-center gap-2 rounded-sm bg-gold px-4 py-2 text-sm font-medium text-ivory hover:bg-gold-soft transition"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)] hover:shadow-[0_0_30px_rgba(212,166,60,0.5)] hover:bg-gold-soft transition-all duration-300"
           >
-            Get pass
-            <span aria-hidden>→</span>
+            Secure your spot
+            <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
           </a>
         </div>
 
@@ -92,9 +91,9 @@ export function SiteNav() {
               <a
                 href="#tickets"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-sm bg-gold px-5 py-2.5 text-sm font-medium text-ivory"
+                className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)]"
               >
-                Get pass →
+                Secure your spot →
               </a>
             </div>
           </motion.div>

@@ -1,4 +1,4 @@
-import { Instagram, Mail, Phone } from "lucide-react";
+import { Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 import contactData from "@/data/contact.json";
@@ -58,6 +58,63 @@ export function Contact() {
                     </span>
                   </span>
                   <span className="text-ivory/60 group-hover:text-emerald transition-transform group-hover:translate-x-1 mt-2">
+                    →
+                  </span>
+                </a>
+              </li>
+              <li className="border-b border-white/10">
+                <a
+                  href="https://www.instagram.com/ieeecssyp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-6 py-8 transition hover:pl-2"
+                >
+                  <span className="flex items-start gap-5">
+                    <Instagram size={20} className="text-gold mt-1.5" />
+                    <span>
+                      <span className="block text-[10px] uppercase tracking-[0.28em] text-gold">Instagram</span>
+                      <span className="block mt-2 font-display text-lg md:text-xl text-ivory">@ieeecssyp</span>
+                    </span>
+                  </span>
+                  <span className="text-ivory/60 group-hover:text-gold transition-transform group-hover:translate-x-1 mt-2">
+                    →
+                  </span>
+                </a>
+              </li>
+              <li className="border-b border-white/10">
+                <a
+                  href="https://www.linkedin.com/company/ieee-computer-society-syp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-6 py-8 transition hover:pl-2"
+                >
+                  <span className="flex items-start gap-5">
+                    <Linkedin size={20} className="text-emerald mt-1.5" />
+                    <span>
+                      <span className="block text-[10px] uppercase tracking-[0.28em] text-emerald">LinkedIn</span>
+                      <span className="block mt-2 font-display text-lg md:text-xl text-ivory">IEEE CS SYP</span>
+                    </span>
+                  </span>
+                  <span className="text-ivory/60 group-hover:text-emerald transition-transform group-hover:translate-x-1 mt-2">
+                    →
+                  </span>
+                </a>
+              </li>
+              <li className="border-b border-white/10">
+                <a
+                  href="https://www.linkedin.com/company/ieee-computer-society-srmist"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-6 py-8 transition hover:pl-2"
+                >
+                  <span className="flex items-start gap-5">
+                    <Linkedin size={20} className="text-gold mt-1.5" />
+                    <span>
+                      <span className="block text-[10px] uppercase tracking-[0.28em] text-gold">LinkedIn</span>
+                      <span className="block mt-2 font-display text-lg md:text-xl text-ivory">IEEE CS SRMIST</span>
+                    </span>
+                  </span>
+                  <span className="text-ivory/60 group-hover:text-gold transition-transform group-hover:translate-x-1 mt-2">
                     →
                   </span>
                 </a>
