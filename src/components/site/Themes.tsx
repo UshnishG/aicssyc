@@ -1,178 +1,136 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Zap, ShieldCheck, Globe2, Atom, Network } from "lucide-react";
-import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
+import { Reveal } from "./Reveal";
 
 const themes = [
   {
-    icon: Atom,
     title: "Research & Academia",
-    blurb: "Advancing research methodologies, publication excellence, collaborative innovation and academic impact.",
+    blurb: "Advancing research methodologies, publication excellence and academic impact.",
     topics: ["Applied research showcases", "Paper presentations", "Academic collaborations", "Student research tracks"],
-    outcomes: ["Publication-ready feedback", "Research partner introductions", "Mentorship pathways"],
-    speakers: "Research track",
   },
   {
-    icon: ShieldCheck,
     title: "AI & Intelligent Systems",
-    blurb: "Exploring LLMs, machine learning, computer vision, reinforcement learning, neural architectures and AI infrastructure.",
+    blurb: "Exploring LLMs, computer vision, reinforcement learning and AI infrastructure.",
     topics: ["LLMs & multimodal models", "Computer vision & RL", "Neural architectures", "AI infrastructure"],
-    outcomes: ["Production-ready patterns", "Open benchmarks", "Hands-on workshop output"],
-    speakers: "AI track",
   },
   {
-    icon: Cpu,
     title: "Agents & Human Interaction",
-    blurb: "Human–AI collaboration, multi-agent systems, intelligent interfaces, alignment and interaction design.",
+    blurb: "Human–AI collaboration, multi-agent systems and interaction design.",
     topics: ["Agentic workflows", "Multi-agent systems", "Intelligent interfaces", "Alignment & trust"],
-    outcomes: ["Working interaction patterns", "Live demos", "Design-research collaborations"],
-    speakers: "Flagship track",
   },
   {
-    icon: Zap,
     title: "Entrepreneurship & Innovation",
-    blurb: "Startups, venture creation, product-market fit, scaling technology ventures and innovation ecosystems.",
+    blurb: "Startups, venture creation, product-market fit and scaling technology ventures.",
     topics: ["Startup showcase", "Founder Q&A", "Product-market fit", "Scaling ventures"],
-    outcomes: ["Investor & accelerator introductions", "Pitch feedback", "Co-founder matchmaking"],
-    speakers: "Startup track",
   },
   {
-    icon: Network,
     title: "Management & Strategy",
-    blurb: "Technology leadership, operational excellence, organisational growth and engineering management.",
+    blurb: "Technology leadership, operational excellence and engineering management.",
     topics: ["Tech leadership", "Operational excellence", "Engineering management", "Organisational growth"],
-    outcomes: ["Leadership playbooks", "Strategic decision tools", "Mentor connections"],
-    speakers: "Strategy track",
   },
   {
-    icon: Globe2,
     title: "Finance & Digital Economy",
-    blurb: "FinTech, digital assets, Web3, digital economy and the future of financial infrastructure.",
+    blurb: "FinTech, digital assets, Web3 and the future of financial infrastructure.",
     topics: ["FinTech architecture", "Digital assets & Web3", "Digital payments", "Future financial infrastructure"],
-    outcomes: ["Industry case studies", "Career pathways into fintech", "Cross-sector introductions"],
-    speakers: "Finance track",
   },
 ];
-
 
 export function Themes() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="themes" className="relative py-24 md:py-36 bg-midnight text-ivory grain overflow-hidden">
+    <section id="themes" className="relative section-rhythm bg-midnight text-ivory grain overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 opacity-70"
         style={{ background: "var(--gradient-atmosphere)" }}
       />
+      {/* Background oversize type */}
+      <p
+        aria-hidden
+        className="pointer-events-none absolute -top-6 left-0 right-0 text-center display-mega text-ivory/[0.04] select-none whitespace-nowrap"
+      >
+        PROGRAMME
+      </p>
+
       <div className="container-editorial relative">
-        <RevealGroup className="grid md:grid-cols-[auto_1fr] md:items-end gap-8 mb-16">
-          <div>
-            <Eyebrow color="gold">Core engineering & innovation themes</Eyebrow>
-            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
-              Six tracks. <em className="italic font-normal text-gold">One coherent argument</em> about what to build.
-            </Heading>
-          </div>
-          <Body className="md:max-w-sm md:justify-self-end text-ivory/80 leading-relaxed">
-            Hover or tap a track to expand. Each is curated end-to-end by a dedicated
-            programme committee.
-            <span className="block mt-3 text-[10px] uppercase tracking-[0.22em] text-gold/80">Final themes subject to change</span>
-          </Body>
-        </RevealGroup>
+        <Reveal direction="up" distance={32} className="max-w-3xl">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-gold">Programme · Six tracks</p>
+          <h2 className="mt-6 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-balance">
+            One coherent argument
+            <span className="editorial-italic text-gold"> about what to build,</span>
+            <br />
+            told across six tracks.
+          </h2>
+        </Reveal>
 
-
-        <div className="grid lg:grid-cols-[380px_1fr] gap-8 lg:gap-12">
-          {/* Track list */}
-          <div className="flex flex-col">
+        <div className="mt-20 grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20">
+          {/* Editorial list */}
+          <ol className="hairline-top">
             {themes.map((t, i) => {
-              const Icon = t.icon;
               const isActive = active === i;
               return (
-                <button
-                  key={t.title}
-                  onClick={() => setActive(i)}
-                  onMouseEnter={() => setActive(i)}
-                  className={`group text-left border-b border-white/10 py-5 flex items-center gap-4 transition-colors ${
-                    isActive ? "text-ivory" : "text-ivory/75 hover:text-ivory/85"
-                  }`}
-                  aria-expanded={isActive}
-                >
-                  <span
-                    className={`flex h-10 w-10 items-center justify-center rounded-sm transition ${
-                      isActive
-                        ? "bg-gold text-ivory"
-                        : "bg-white/5 text-ivory/70 group-hover:bg-white/15"
-                    }`}
+                <li key={t.title} className="border-b border-white/8">
+                  <button
+                    type="button"
+                    onMouseEnter={() => setActive(i)}
+                    onFocus={() => setActive(i)}
+                    onClick={() => setActive(i)}
+                    aria-expanded={isActive}
+                    className="group w-full flex items-baseline gap-6 py-6 md:py-7 text-left transition-colors"
                   >
-                    <Icon size={18} />
-                  </span>
-                  <span className="flex-1">
-                    <span className="block font-display text-lg leading-tight">{t.title}</span>
-                    <span className="block text-xs text-ivory/70 mt-0.5">{t.speakers}</span>
-                  </span>
-                  <span
-                    className={`text-2xl font-display transition-transform ${
-                      isActive ? "text-gold rotate-0" : "rotate-[-45deg]"
-                    }`}
-                    aria-hidden
-                  >
-                    →
-                  </span>
-                </button>
+                    <span
+                      className={`font-mono text-xs tracking-widest w-8 transition-colors ${
+                        isActive ? "text-gold" : "text-ivory/40"
+                      }`}
+                    >
+                      0{i + 1}
+                    </span>
+                    <span
+                      className={`flex-1 font-display text-2xl md:text-[1.9rem] leading-tight tracking-tight transition-all ${
+                        isActive ? "text-ivory translate-x-1" : "text-ivory/55 group-hover:text-ivory/85"
+                      }`}
+                    >
+                      {t.title}
+                    </span>
+                    <span
+                      aria-hidden
+                      className={`hidden md:inline-block h-px transition-all duration-500 ${
+                        isActive ? "w-12 bg-gold" : "w-4 bg-ivory/20"
+                      }`}
+                    />
+                  </button>
+                </li>
               );
             })}
-          </div>
+          </ol>
 
-          {/* Detail panel */}
-          <div className="relative min-h-[420px]">
+          {/* Detail panel — no extra border, breathes */}
+          <div className="relative lg:pt-2">
             <AnimatePresence mode="wait">
               <motion.article
                 key={active}
-                initial={{ opacity: 0, y: 14 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="relative h-full p-8 md:p-10 border border-white/10 bg-midnight-deep/50"
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               >
-                <div aria-hidden className="absolute top-0 left-0 h-1 w-16 bg-gold" />
-                <p className="text-xs uppercase tracking-[0.2em] text-gold">
-                  Track 0{active + 1}
-                </p>
-                <h3 className="mt-3 font-display text-3xl md:text-4xl text-balance">
+                <p className="text-[10px] uppercase tracking-[0.28em] text-gold">Track 0{active + 1}</p>
+                <h3 className="mt-4 font-display text-3xl md:text-4xl text-ivory leading-tight text-balance">
                   {themes[active].title}
                 </h3>
-                <p className="mt-4 text-ivory/75 text-lg leading-relaxed max-w-[60ch]">
+                <p className="mt-6 font-editorial italic text-xl text-ivory/85 leading-snug prose-narrow">
                   {themes[active].blurb}
                 </p>
 
-                <div className="mt-10 grid md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/75 mb-4">
-                      Key topics
-                    </p>
-                    <ul className="space-y-2">
-                      {themes[active].topics.map((tp) => (
-                        <li key={tp} className="flex items-start gap-3 text-ivory/85">
-                          <span className="mt-2 h-1 w-1 rounded-full bg-gold flex-shrink-0" />
-                          {tp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] text-ivory/75 mb-4">
-                      Expected outcomes
-                    </p>
-                    <ul className="space-y-2">
-                      {themes[active].outcomes.map((tp) => (
-                        <li key={tp} className="flex items-start gap-3 text-ivory/85">
-                          <span className="mt-2 h-1 w-1 rounded-full bg-emerald flex-shrink-0" />
-                          {tp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-3 prose-measure">
+                  {themes[active].topics.map((tp) => (
+                    <li key={tp} className="flex items-start gap-3 text-ivory/85 text-sm leading-relaxed">
+                      <span className="mt-2 h-1 w-1 rounded-full bg-gold flex-shrink-0" />
+                      {tp}
+                    </li>
+                  ))}
+                </ul>
               </motion.article>
             </AnimatePresence>
           </div>

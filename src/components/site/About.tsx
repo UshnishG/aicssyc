@@ -1,79 +1,58 @@
-import { RevealGroup, Eyebrow, Heading, Body, CardGrid, RevealItem, Reveal } from "./Reveal";
+import { Reveal, RevealGroup, Heading, Body } from "./Reveal";
+
+const markers = [
+  { v: "300+", l: "Delegates" },
+  { v: "20+", l: "States represented" },
+  { v: "4", l: "Programme days" },
+  { v: "National", l: "IEEE CS flagship" },
+];
 
 export function About() {
   return (
-    <section id="about" className="relative py-24 md:py-36 bg-transparent">
-      <div className="container-editorial grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24">
-        <RevealGroup>
-          <Eyebrow color="emerald">About the congress</Eyebrow>
-          <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-ivory text-balance">
-            The flagship <em className="italic font-normal text-emerald">national congress.</em>
-          </Heading>
-
-          <Body className="mt-10 space-y-6 text-[17px] leading-[1.7] text-ivory/75 max-w-[62ch]">
-            <p>
-              The All India Computer Society Student & Young Professional Congress
-              (AICSSYC) 2026 is a flagship initiative of the IEEE Computer Society
-              SYP that brings together students, young professionals, researchers
-              and industry leaders to exchange ideas, foster innovation and build
-              meaningful connections.
+    <section id="about" className="relative section-rhythm bg-transparent overflow-hidden">
+      <div className="container-editorial relative">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-16 lg:gap-24 items-start">
+          {/* Oversized chapter numeral */}
+          <Reveal direction="up" distance={32} className="relative">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-emerald">Chapter 01</p>
+            <p
+              aria-hidden
+              className="display-mega text-ivory/[0.06] select-none mt-4"
+              style={{ lineHeight: 0.85 }}
+            >
+              01
             </p>
-            <p>
-              Since its inception, the Congress has evolved into a vibrant
-              platform featuring technical sessions, workshops, discussions,
-              networking opportunities and collaborative experiences that inspire
-              growth and innovation within the computing community.
+            <p className="mt-6 font-display italic text-xl text-ivory/70 max-w-xs">
+              India's national gathering of the computing community.
             </p>
-          </Body>
+          </Reveal>
 
-          <Body className="mt-10">
-            <blockquote className="border-l-2 border-emerald pl-5 max-w-xl">
-              <p className="font-display italic text-2xl md:text-3xl text-ivory leading-snug">
-                "Where Agent meets Humans."
-              </p>
-              <p className="mt-3 text-sm text-ivory/80 leading-relaxed">
-                Exploring the cutting-edge intersections of artificial agency,
-                collaborative machine intelligence and human systems.
-              </p>
-            </blockquote>
-          </Body>
+          <RevealGroup className="lg:pt-10">
+            <Heading className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
+              A congress, not a conference —
+              <span className="editorial-italic text-emerald"> a four-day argument</span> about
+              what the next decade of computing should be.
+            </Heading>
 
-          <CardGrid className="mt-12 grid sm:grid-cols-2 gap-8 max-w-xl" stagger={0.12}>
-            <RevealItem>
-              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Theme</p>
-              <p className="mt-3 font-display text-2xl text-ivory leading-snug">
-                Where Agent Meets Humans
+            <Body className="mt-10 prose-measure text-[17px] leading-[1.75] text-ivory/75">
+              <p>
+                AICSSYC convenes students, young professionals, researchers and
+                practitioners from every region of India — under the IEEE
+                Computer Society's Student &amp; Young Professional programme — to
+                exchange ideas, build collaborations and shape what gets built next.
               </p>
-            </RevealItem>
-            <RevealItem>
-              <p className="text-xs uppercase tracking-[0.18em] text-emerald">Hosted at</p>
-              <p className="mt-3 text-ivory/85 leading-relaxed">
-                SRM Institute of Science and Technology, Kattankulathur — in
-                partnership with the IEEE Computer Society.
-              </p>
-            </RevealItem>
-          </CardGrid>
-        </RevealGroup>
+            </Body>
 
-        <Reveal direction="scale" delay={0.15} className="relative">
-          <div className="relative bg-midnight text-ivory p-8 md:p-10 grain overflow-hidden">
-            <div aria-hidden className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-gold/15 blur-3xl animate-pulse" />
-            <p className="text-xs uppercase tracking-[0.22em] text-gold">At a glance</p>
-            <CardGrid className="mt-6 grid grid-cols-2 gap-y-8 gap-x-6" stagger={0.08}>
-              {[
-                { v: "4", l: "Core programme days" },
-                { v: "6", l: "Curated themes" },
-                { v: "5+", l: "Featured speakers" },
-                { v: "3", l: "Pass tiers" },
-              ].map((s) => (
-                <RevealItem key={s.l}>
-                  <p className="font-display text-4xl md:text-5xl text-ivory">{s.v}</p>
-                  <p className="text-xs uppercase tracking-[0.16em] text-slate-mist mt-2">{s.l}</p>
-                </RevealItem>
+            <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 hairline-top pt-8">
+              {markers.map((m) => (
+                <div key={m.l}>
+                  <p className="font-display text-3xl md:text-4xl text-ivory leading-none">{m.v}</p>
+                  <p className="mt-3 text-[10px] uppercase tracking-[0.22em] text-slate-mist">{m.l}</p>
+                </div>
               ))}
-            </CardGrid>
-          </div>
-        </Reveal>
+            </div>
+          </RevealGroup>
+        </div>
       </div>
     </section>
   );
