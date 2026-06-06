@@ -96,17 +96,28 @@ export function Speakers() {
           <div className="relative mx-auto max-w-3xl rounded-2xl border border-ivory/10 bg-midnight-deep/40 backdrop-blur-sm px-8 py-12 md:px-14 md:py-16 text-center overflow-hidden">
             <div aria-hidden className="absolute inset-0 opacity-40 pointer-events-none" style={{ background: "var(--gradient-atmosphere)" }} />
             <div className="relative">
-              <p className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-gold">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+              <p className="inline-flex items-center gap-2.5 text-[10px] uppercase tracking-[0.3em] text-gold">
+                <span className="relative inline-flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-gold opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
+                </span>
                 Lineup expanding
               </p>
               <h3 className="mt-5 font-display text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.05] tracking-tight text-ivory">
-                More voices <span className="editorial-italic text-emerald">joining soon.</span>
+                The stage is still being set.
+                <span className="block editorial-italic text-emerald mt-1">More voices, soon revealed.</span>
               </h3>
-              <p className="mt-5 text-sm md:text-base text-ivory/70 prose-measure mx-auto leading-relaxed">
-                The AICSSYC 2026 lineup continues to grow with leaders from academia,
-                industry, startups, government and the global IEEE community.
+              <p className="mt-6 text-sm md:text-base text-ivory/70 prose-measure mx-auto leading-relaxed">
+                Each week, new names join the AICSSYC 2026 stage — researchers, founders,
+                policymakers and IEEE leaders shaping the next decade of computing.
               </p>
+              <a
+                href="#register"
+                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-ivory border-b border-ivory/30 hover:border-gold hover:text-gold pb-1 transition"
+              >
+                Be first to know
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </a>
             </div>
           </div>
         </Reveal>
