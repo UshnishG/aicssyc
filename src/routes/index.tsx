@@ -28,10 +28,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "AICSSYC 2026 — IEEE CS SYP Congress" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://aicssyc.lovable.app/" },
+      { property: "og:url", content: "https://aicssyc.vercel.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aicssyc.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://aicssyc.vercel.app/" }],
     scripts: [
       {
         type: "application/ld+json",
