@@ -126,8 +126,54 @@
   @media (min-width: 768px) { padding-inline: 2.5rem; }
 }
 
+@utility container-narrow {
+  width: 100%;
+  max-width: 880px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (min-width: 768px) { padding-inline: 2.5rem; }
+}
+
 @utility text-balance {
   text-wrap: balance;
+}
+
+@utility text-pretty {
+  text-wrap: pretty;
+}
+
+@utility prose-measure {
+  max-width: 62ch;
+}
+
+@utility prose-narrow {
+  max-width: 46ch;
+}
+
+@utility section-rhythm {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @media (min-width: 768px) { padding-top: 11rem; padding-bottom: 11rem; }
+}
+
+@utility display-mega {
+  font-family: var(--font-editorial);
+  font-weight: 300;
+  font-size: clamp(5rem, 18vw, 14rem);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  font-variation-settings: "opsz" 144;
+}
+
+@utility editorial-italic {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+}
+
+@utility hairline-top {
+  border-top: 1px solid color-mix(in oklab, var(--ivory) 10%, transparent);
 }
 
 @utility grain {
