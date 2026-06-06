@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import heroData from "@/data/hero.json";
+import siteConfig from "@/data/site-config.json";
 
 // Generative network visualisation — calm, deliberate, gold on midnight.
 function NetworkCanvas() {
@@ -90,7 +92,7 @@ export function Hero() {
             className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.28em] text-slate-mist mb-10"
           >
             <span className="h-px w-10 bg-gold" />
-            IEEE Computer Society · SYP Flagship
+            {heroData.tagline}
           </motion.div>
 
           <motion.h1
@@ -116,14 +118,14 @@ export function Hero() {
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">Dates</p>
               <p className="mt-2 font-display text-2xl text-ivory leading-tight">
-                8 — 11 October <span className="text-ivory/60">2026</span>
+                {heroData.dates} <span className="text-ivory/60">{heroData.year}</span>
               </p>
             </div>
             <div className="h-12 w-px bg-white/15" />
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-gold/80">Venue</p>
-              <p className="mt-2 text-ivory leading-tight">TP Ganesan Auditorium</p>
-              <p className="text-ivory/70 text-sm">SRM IST, Kattankulathur</p>
+              <p className="mt-2 text-ivory leading-tight">{heroData.venueName}</p>
+              <p className="text-ivory/70 text-sm">{heroData.venueLocation}</p>
             </div>
           </motion.div>
 
@@ -168,9 +170,9 @@ export function Hero() {
             <div className="text-center">
               <p className="text-[10px] uppercase tracking-[0.3em] text-gold/80">Theme · 2026</p>
               <p className="font-display text-3xl md:text-4xl text-ivory mt-3 leading-[1.05]">
-                Where <em className="editorial-italic font-normal text-gold">Agents</em>
+                Where <em className="editorial-italic font-normal text-gold">{heroData.themeLine1.replace("Where ", "")}</em>
                 <br />
-                Meet Humans
+                {heroData.themeLine2}
               </p>
             </div>
           </div>

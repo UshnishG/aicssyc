@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aicssyc.lovable.app/sitemap.xml
+Sitemap: https://aicssyc.vercel.app/sitemap.xml

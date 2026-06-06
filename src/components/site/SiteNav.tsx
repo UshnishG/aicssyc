@@ -2,17 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/aicssyc-logo.png.asset.json";
+import siteConfig from "@/data/site-config.json";
 
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Themes", href: "#themes" },
-  { label: "Speakers", href: "#speakers" },
-  { label: "Agenda", href: "#agenda" },
-  { label: "Passes", href: "#tickets" },
-  { label: "Contact", href: "#contact" },
-  { label: "FAQ", href: "#faq" },
-];
+const links = siteConfig.navigation;
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +31,7 @@ export function SiteNav() {
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
         <Link to="/" aria-label="AICSSYC 2026 — Home" className="flex items-center">
           <img
-            src={logoAsset.url}
+            src="/logo.png"
             alt="AICSSYC 2026"
             className="h-12 md:h-14 w-auto object-contain"
           />

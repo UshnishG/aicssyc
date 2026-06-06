@@ -1,11 +1,8 @@
 import { Reveal, RevealGroup, Heading, Body } from "./Reveal";
 
-const markers = [
-  { v: "300+", l: "Delegates" },
-  { v: "20+", l: "States represented" },
-  { v: "4", l: "Programme days" },
-  { v: "National", l: "IEEE CS flagship" },
-];
+import aboutData from "@/data/about.json";
+
+const markers = aboutData;
 
 export function About() {
   return (

@@ -1,14 +1,6 @@
-import logoAsset from "@/assets/aicssyc-logo.png.asset.json";
+import siteConfig from "@/data/site-config.json";
 
-const quickNav = [
-  { label: "About", href: "#about" },
-  { label: "Themes", href: "#themes" },
-  { label: "Speakers", href: "#speakers" },
-  { label: "Agenda", href: "#agenda" },
-  { label: "Passes", href: "#tickets" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
+const quickNav = siteConfig.navigation;
 
 export function Footer() {
   return (
@@ -18,7 +10,7 @@ export function Footer() {
       <div className="container-editorial py-16 md:py-20">
         <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 md:gap-10">
           <div>
-            <img src={logoAsset.url} alt="AICSSYC 2026" className="h-14 w-auto object-contain" />
+            <img src="/logo.png" alt="AICSSYC 2026" className="h-14 w-auto object-contain" />
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-gold/80">A flagship of</p>
             <p className="mt-2 font-display text-lg text-ivory/90">IEEE Computer Society SYP</p>
           </div>

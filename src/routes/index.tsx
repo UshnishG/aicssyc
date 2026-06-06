@@ -14,7 +14,7 @@ import { Contact } from "@/components/site/Contact";
 import { CallToAction } from "@/components/site/CallToAction";
 import { Footer } from "@/components/site/Footer";
 
-import { faqs } from "@/data/faqs";
+import faqs from "@/data/faqs.json";
 
 const title = "AICSSYC 2026 — IEEE CS SYP Congress at SRM IST";
 const description =

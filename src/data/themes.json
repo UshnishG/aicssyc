@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Research & Academia",
+    "blurb": "Advancing research methodologies, publication excellence and academic impact.",
+    "topics": [
+      "Applied research showcases",
+      "Paper presentations",
+      "Academic collaborations",
+      "Student research tracks"
+    ]
+  },
+  {
+    "title": "AI & Intelligent Systems",
+    "blurb": "Exploring LLMs, computer vision, reinforcement learning and AI infrastructure.",
+    "topics": [
+      "LLMs & multimodal models",
+      "Computer vision & RL",
+      "Neural architectures",
+      "AI infrastructure"
+    ]
+  },
+  {
+    "title": "Agents & Human Interaction",
+    "blurb": "Human–AI collaboration, multi-agent systems and interaction design.",
+    "topics": [
+      "Agentic workflows",
+      "Multi-agent systems",
+      "Intelligent interfaces",
+      "Alignment & trust"
+    ]
+  },
+  {
+    "title": "Entrepreneurship & Innovation",
+    "blurb": "Startups, venture creation, product-market fit and scaling technology ventures.",
+    "topics": [
+      "Startup showcase",
+      "Founder Q&A",
+      "Product-market fit",
+      "Scaling ventures"
+    ]
+  },
+  {
+    "title": "Management & Strategy",
+    "blurb": "Technology leadership, operational excellence and engineering management.",
+    "topics": [
+      "Tech leadership",
+      "Operational excellence",
+      "Engineering management",
+      "Organisational growth"
+    ]
+  },
+  {
+    "title": "Finance & Digital Economy",
+    "blurb": "FinTech, digital assets, Web3 and the future of financial infrastructure.",
+    "topics": [
+      "FinTech architecture",
+      "Digital assets & Web3",
+      "Digital payments",
+      "Future financial infrastructure"
+    ]
+  }
+]

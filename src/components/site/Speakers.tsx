@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import speakersData from "@/data/speakers.json";
-import andrewAsset from "@/assets/speakers/andrew.png.asset.json";
-import ericAsset from "@/assets/speakers/eric.png.asset.json";
-import utkarshAsset from "@/assets/speakers/utkarsh.png.asset.json";
-import shivamAsset from "@/assets/speakers/shivam.png.asset.json";
-import nikkyAsset from "@/assets/speakers/nikky.png.asset.json";
 import { Reveal, CardGrid, itemVariants } from "./Reveal";
 
 const photoMap: Record<string, string> = {
-  andrew: andrewAsset.url,
-  eric: ericAsset.url,
-  utkarsh: utkarshAsset.url,
-  shivam: shivamAsset.url,
-  nikky: nikkyAsset.url,
+  andrew: "/andrew.jpeg",
+  eric: "/eric.jpeg",
+  utkarsh: "/utkarsh.jpeg",
+  shivam: "/shivam.jpeg",
+  nikky: "/nikky.jpeg",
 };
 
 const featured = speakersData.featured;

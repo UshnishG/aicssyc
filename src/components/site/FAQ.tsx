@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-import { faqs } from "@/data/faqs";
+import faqs from "@/data/faqs.json";
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);

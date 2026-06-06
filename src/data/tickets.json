@@ -1,0 +1,38 @@
+{
+  "baseFeatures": [
+    "Full event access",
+    "Technical tracks, keynotes & Innovation Expo",
+    "Delegate kit, meals & networking events",
+    "Participation certificate"
+  ],
+  "accommodationFee": 2000,
+  "tiers": [
+    {
+      "id": "ieee-cs",
+      "name": "IEEE Computer Society Member",
+      "tagline": "Reserved for active IEEE Computer Society members.",
+      "basePrice": 1000,
+      "requirement": "Valid IEEE CS Membership ID required and verified prior to approval.",
+      "popular": true,
+      "registerUrl": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104339%7C1%3B&selectedCode=EARLYBIRD",
+      "registerUrlWithAccommodation": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104342%7C1%3B&selectedCode=EARLYBIRD"
+    },
+    {
+      "id": "ieee",
+      "name": "IEEE Member",
+      "tagline": "For active IEEE members who are not IEEE CS members.",
+      "basePrice": 1500,
+      "requirement": "Valid IEEE Membership ID required and verified prior to approval.",
+      "registerUrl": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104340%7C1%3B&selectedCode=EARLYBIRD",
+      "registerUrlWithAccommodation": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104343%7C1%3B&selectedCode=EARLYBIRD"
+    },
+    {
+      "id": "general",
+      "name": "General Admission",
+      "tagline": "Open to students, professionals, researchers and technology enthusiasts.",
+      "basePrice": 2000,
+      "registerUrl": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104341%7C1%3B&selectedCode=EARLYBIRD",
+      "registerUrlWithAccommodation": "https://konfhub.com/checkout/aicssyc-2026?ticketId=104344%7C1%3B&selectedCode=EARLYBIRD"
+    }
+  ]
+}
