@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import timelineData from "@/data/timeline.json";
-import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
+import { RevealGroup, Heading, Body } from "./Reveal";
 
 const days = timelineData.days;
 

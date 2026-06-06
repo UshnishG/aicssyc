@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
-import { RevealGroup, Eyebrow, Heading, Body } from "./Reveal";
+import { RevealGroup, Heading, Body } from "./Reveal";
 import {
   Dialog,
   DialogContent,
@@ -107,7 +107,7 @@ export function Tickets() {
   return (
     <section
       id="tickets"
-      className="relative py-24 md:py-36 bg-midnight/60 text-ivory grain overflow-hidden"
+      className="relative section-rhythm bg-midnight/60 text-ivory grain overflow-hidden"
     >
       <div
         aria-hidden
@@ -115,14 +115,14 @@ export function Tickets() {
         style={{ background: "var(--gradient-atmosphere)" }}
       />
       <div className="container-editorial relative">
-        <RevealGroup className="grid lg:grid-cols-[1fr_auto] items-end gap-8 mb-12">
+        <RevealGroup className="grid lg:grid-cols-[1.3fr_1fr] items-end gap-10 mb-14">
           <div className="max-w-2xl">
-            <Eyebrow color="gold">Delegate pass & ticket cost</Eyebrow>
-            <Heading className="mt-6 font-display text-4xl md:text-6xl leading-[1.02] tracking-tight text-balance">
-              Three passes. <em className="italic font-normal text-gold">One congress.</em>
+            <Heading className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-balance">
+              Three passes.
+              <span className="editorial-italic text-gold"> One congress.</span>
             </Heading>
           </div>
-          <Body className="text-ivory/80 max-w-sm">
+          <Body className="text-ivory/65 max-w-sm md:justify-self-end text-[15px] leading-[1.7]">
             <p>
               Every pass includes full event access, technical tracks, keynotes,
               Innovation Expo, delegate kit, meals, networking events and a
@@ -130,6 +130,7 @@ export function Tickets() {
             </p>
           </Body>
         </RevealGroup>
+
 
         {/* Accommodation toggle */}
         <div className="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-white/10 bg-midnight-deep/55 p-5 md:p-6">
