@@ -96,7 +96,7 @@ export function Tickets() {
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-gold">Optional add-on</p>
             <p className="mt-2 font-display text-xl text-ivory">
-              SRM IST campus accommodation
+              Accommodation
               <span className="text-ivory/75 text-base ml-2">+ ₹2,000</span>
             </p>
           </div>
@@ -104,7 +104,7 @@ export function Tickets() {
             type="button"
             role="switch"
             aria-checked={accommodation}
-            aria-label="Toggle SRM IST campus accommodation add-on"
+            aria-label="Toggle Accommodation add-on"
             onClick={() => setAccommodation((v) => !v)}
             className={`relative inline-flex h-9 w-[180px] items-center rounded-sm border transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
               accommodation
@@ -134,7 +134,7 @@ export function Tickets() {
           {tiers.map((t) => {
             const price = t.basePrice + (accommodation ? ACCOMMODATION_FEE : 0);
             const features = accommodation
-              ? [...baseFeatures, "SRM IST campus accommodation included"]
+              ? [...baseFeatures, "Accommodation included"]
               : baseFeatures;
             return (
               <motion.article
