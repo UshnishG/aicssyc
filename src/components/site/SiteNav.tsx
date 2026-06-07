@@ -64,10 +64,16 @@ export function SiteNav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <Link 
+            to="/ambassador"
+            className="group inline-flex items-center gap-2 rounded-full border border-ivory/20 bg-ivory/5 px-4 xl:px-5 py-2 xl:py-2.5 text-xs xl:text-sm font-medium text-ivory hover:bg-ivory/10 hover:border-ivory/40 transition whitespace-nowrap"
+          >
+            Become an Ambassador
+          </Link>
           <Link
             to="/"
             hash="tickets"
-            className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)] hover:shadow-[0_0_30px_rgba(212,166,60,0.5)] hover:bg-gold-soft transition-all duration-300"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-gold px-4 xl:px-6 py-2 xl:py-2.5 text-xs xl:text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)] hover:shadow-[0_0_30px_rgba(212,166,60,0.5)] hover:bg-gold-soft transition-all duration-300 whitespace-nowrap"
           >
             Secure your spot
             <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
@@ -115,14 +121,23 @@ export function SiteNav() {
                   </a>
                 );
               })}
-              <Link
-                to="/"
-                hash="tickets"
-                onClick={() => setOpen(false)}
-                className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)]"
-              >
-                Secure your spot →
-              </Link>
+              <div className="mt-2 flex flex-col gap-3">
+                <Link 
+                  to="/ambassador"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-ivory/20 bg-ivory/5 px-6 py-3.5 text-sm font-medium text-ivory hover:bg-ivory/10 transition"
+                >
+                  Become an Ambassador
+                </Link>
+                <Link
+                  to="/"
+                  hash="tickets"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-midnight-deep shadow-[0_0_20px_rgba(212,166,60,0.3)]"
+                >
+                  Secure your spot →
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

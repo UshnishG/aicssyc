@@ -38,6 +38,12 @@
   --color-ivory: var(--ivory);
   --color-slate-mist: var(--slate-mist);
 
+  --color-cyan: var(--cyan);
+  --color-cyan-400: var(--cyan-400);
+  --color-cyan-500: var(--cyan-500);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+
   --color-ring-offset-background: var(--background);
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -58,6 +64,12 @@
   --gold-soft: oklch(0.88 0.10 80);
   --ivory: oklch(0.98 0.012 85);
   --slate-mist: oklch(0.82 0.018 195);
+  
+  --cyan: #06b6d4;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
 
   --background: var(--midnight-deep);
   --foreground: var(--ivory);

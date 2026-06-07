@@ -13,6 +13,7 @@ import { Route as SponsorRouteImport } from './routes/sponsor'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
+import { Route as AmbassadorRouteImport } from './routes/ambassador'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SponsorRoute = SponsorRouteImport.update({
@@ -35,6 +36,11 @@ const CodeOfConductRoute = CodeOfConductRouteImport.update({
   path: '/code-of-conduct',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AmbassadorRoute = AmbassadorRouteImport.update({
+  id: '/ambassador',
+  path: '/ambassador',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ambassador': typeof AmbassadorRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ambassador': typeof AmbassadorRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ambassador': typeof AmbassadorRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -65,12 +74,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/code-of-conduct' | '/privacy' | '/sitemap.xml' | '/sponsor'
+  fullPaths:
+    | '/'
+    | '/ambassador'
+    | '/code-of-conduct'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/sponsor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/code-of-conduct' | '/privacy' | '/sitemap.xml' | '/sponsor'
+  to:
+    | '/'
+    | '/ambassador'
+    | '/code-of-conduct'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/sponsor'
   id:
     | '__root__'
     | '/'
+    | '/ambassador'
     | '/code-of-conduct'
     | '/privacy'
     | '/sitemap.xml'
@@ -79,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AmbassadorRoute: typeof AmbassadorRoute
   CodeOfConductRoute: typeof CodeOfConductRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -115,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CodeOfConductRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ambassador': {
+      id: '/ambassador'
+      path: '/ambassador'
+      fullPath: '/ambassador'
+      preLoaderRoute: typeof AmbassadorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -127,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AmbassadorRoute: AmbassadorRoute,
   CodeOfConductRoute: CodeOfConductRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
