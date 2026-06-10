@@ -213,7 +213,7 @@ export function Tickets() {
 
                 <div className="mt-8">
                   <a
-                    href="https://dashboard.eqvento.in/aicssyc-2026-_QUdD8"
+                    href="https://dashboard.eqvento.in/aicssyc26-lM0m3B"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight-deep ${
