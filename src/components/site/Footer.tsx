@@ -11,7 +11,13 @@ export function Footer() {
       <div className="container-editorial py-16 md:py-20">
         <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 md:gap-10">
           <div>
-            <img src="/logo.png" alt="AICSSYC 2026" className="h-14 w-auto object-contain" />
+            <div className="flex items-center gap-4 md:gap-6">
+              <img src="/logo.png" alt="AICSSYC 2026" className="h-14 w-auto object-contain" />
+              <div className="h-8 md:h-10 w-px bg-white/20"></div>
+              <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.srmist.edu.in/wp-content/uploads/2022/01/srm-logo-white.svg" alt="SRM IST" className="h-10 md:h-12 w-auto object-contain" />
+              </a>
+            </div>
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-gold/80">A flagship of</p>
             <p className="mt-2 font-display text-lg text-ivory/90">IEEE Computer Society SYP</p>
           </div>
