@@ -29,22 +29,28 @@ export function SiteNav() {
       }`}
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
           <Link to="/" aria-label="AICSSYC 2026 — Home" className="flex items-center">
             <img
               src="/logo.png"
               alt="AICSSYC 2026"
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain"
             />
           </Link>
-          <div className="h-8 md:h-10 w-px bg-white/20"></div>
+          <div className="h-6 sm:h-8 md:h-10 w-px bg-white/20"></div>
           <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center">
             <img
               src="https://www.srmist.edu.in/wp-content/uploads/2022/01/srm-logo-white.svg"
               alt="SRM IST"
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-7 sm:h-8 md:h-10 w-auto object-contain"
             />
           </a>
+          <div className="h-6 sm:h-8 md:h-10 w-px bg-white/20"></div>
+          <img
+            src="/srm.png"
+            alt="SRM Seal"
+            className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+          />
         </div>
 
         <nav className="hidden lg:flex items-center gap-8">
