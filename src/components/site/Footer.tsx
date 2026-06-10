@@ -11,11 +11,11 @@ export function Footer() {
       <div className="container-editorial py-16 md:py-20">
         <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 md:gap-10">
           <div>
-            <div className="flex items-center gap-4 sm:gap-5 md:gap-6">
-              <img src="/logo.png" alt="AICSSYC 2026" className="h-12 sm:h-14 md:h-16 w-auto object-contain shrink-0" />
-              <div className="h-8 sm:h-10 md:h-12 w-px bg-white/20 shrink-0"></div>
+            <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
+              <img src="/logo.png" alt="AICSSYC 2026" className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0" />
+              <div className="h-6 sm:h-8 md:h-10 w-px bg-white/20 shrink-0"></div>
               <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="shrink-0">
-                <img src="/srm.png" alt="SRM IST" className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain shrink-0" />
+                <img src="/srm.png" alt="SRM IST" className="h-8 sm:h-10 md:h-12 w-auto object-contain shrink-0" />
               </a>
             </div>
             <p className="mt-6 text-xs uppercase tracking-[0.24em] text-gold/80">A flagship of</p>
