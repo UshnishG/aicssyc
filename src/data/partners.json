@@ -1,3 +1,9 @@
 {
-  "partners": []
+  "partners": [
+    {
+      "name": "Eqvento",
+      "tier": "Platform Partner",
+      "logo": "/eqvento.png"
+    }
+  ]
 }

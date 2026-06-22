@@ -150,7 +150,7 @@ export function Hero() {
             className="mt-12 flex flex-wrap items-center gap-4"
           >
             <a
-              href="https://dashboard.eqvento.in/aicssyc26-lM0m3B"
+              href="https://dashboard.eqvento.in/register/aicssyc26-lM0m3B"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-sm bg-gold px-7 py-4 text-sm font-medium text-midnight-deep hover:bg-gold-soft transition"
