@@ -159,7 +159,9 @@ export function Hero() {
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#agenda"
+              href="https://dashboard.eqvento.in/register/aicssyc26-lM0m3B"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-ivory/80 hover:text-ivory transition border-b border-ivory/20 hover:border-gold pb-1"
             >
               View congress timeline →
