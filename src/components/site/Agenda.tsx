@@ -1,142 +1,65 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Reveal, RevealGroup } from "./Reveal";
 import timelineData from "@/data/timeline.json";
-import { RevealGroup, Heading, Body } from "./Reveal";
 
 const days = timelineData.days;
 
-// Compact pill date: "8 October 2026 · Inaugural Day" → "8 Oct"
-function shortDate(raw: string) {
-  const datePart = raw.split("·")[0].trim();
+function formatDayTitle(label: string, rawDate: string) {
+  const datePart = rawDate.split("·")[0].trim();
   const [dayNum, month] = datePart.split(" ");
-  return `${dayNum} ${month ? month.slice(0, 3) : ""}`.trim();
+  return `${label} – ${dayNum} ${month ? month.slice(0, 3) : ""}`;
 }
-
-// Theme/subtitle after the "·" — "Inaugural Day", "Innovation & Knowledge Exchange", …
-function dayTheme(raw: string) {
-  const parts = raw.split("·");
-  return parts.length > 1 ? parts.slice(1).join("·").trim() : "";
-}
-
-
-
 
 export function Agenda() {
-  const [day, setDay] = useState(0);
-
   return (
     <section id="agenda" className="relative section-rhythm bg-transparent">
-      <div className="container-editorial">
-        <RevealGroup className="grid md:grid-cols-[1.4fr_1fr] items-end gap-10 mb-16">
-          <div className="max-w-2xl">
-            <Heading className="font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.02] tracking-tight text-ivory text-balance">
-              The delegate
-              <span className="editorial-italic text-emerald"> journey,</span>
-              <br />
-              day by day.
-            </Heading>
-          </div>
-          <div className="md:justify-self-end max-w-sm p-5 rounded-xl border border-ivory/15 bg-midnight/30 backdrop-blur-md">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-gold">
-                Schedule Notice
-              </p>
-            </div>
-            <p className="text-sm text-ivory/70 leading-relaxed">
-              The timeline presented below is indicative. The organizing committee reserves the right to modify session timings, speakers, and event flow prior to the congress.
-            </p>
-          </div>
-        </RevealGroup>
+      {/* Subtle grid background to match the requested style */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black_40%,transparent_100%)] pointer-events-none"></div>
 
-
-
-        <div className="sticky top-16 md:top-20 z-20 -mx-6 md:-mx-10 px-6 md:px-10 py-4 bg-[color:var(--muted)]/95 backdrop-blur border-y border-ivory/10">
-          <div
-            role="tablist"
-            aria-label="Select congress day"
-            className="relative mx-auto grid w-full max-w-2xl grid-cols-4 gap-1 p-1 rounded-full border border-ivory/15 bg-midnight/40"
-          >
-            {days.map((d, i) => {
-              const active = day === i;
-              return (
-                <button
-                  key={d.label}
-                  role="tab"
-                  aria-selected={active}
-                  aria-label={`${d.label} — ${d.date}`}
-                  onClick={() => setDay(i)}
-                  className={`relative z-10 flex min-w-0 flex-col items-center justify-center text-center px-2 sm:px-3 py-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                    active ? "text-midnight" : "text-ivory/80 hover:text-ivory"
-                  }`}
-                >
-                  {active && (
-                    <motion.span
-                      layoutId="agenda-day-pill"
-                      className="absolute inset-0 -z-10 rounded-full bg-gold shadow-[var(--shadow-gold)]"
-                      transition={{ type: "spring", stiffness: 500, damping: 38 }}
-                    />
-                  )}
-                  <span
-                    className={`block text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-medium leading-none ${
-                      active ? "text-midnight/70" : "text-gold/80"
-                    }`}
-                  >
-                    {d.label}
-                  </span>
-                  <span className="block text-[11px] sm:text-sm mt-1 font-medium whitespace-nowrap">
-                    {shortDate(d.date)}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-          <p className="mt-3 text-center text-xs sm:text-sm text-ivory/70">
-            <span className="text-gold">{days[day].label}</span>
-            <span className="mx-2 text-ivory/40">·</span>
-            <span>{dayTheme(days[day].date)}</span>
-          </p>
+      <div className="container-editorial relative z-10">
+        
+        <div className="text-center mb-16 md:mb-24">
+          <Reveal direction="up">
+            <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] text-ivory font-bold mb-4">
+              Event <span className="text-gold">Schedule</span>
+            </h2>
+            <p className="text-ivory/60 text-lg">Tentative schedule - subject to change</p>
+          </Reveal>
         </div>
 
-
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={day}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.4 }}
-            className="mt-12 grid lg:grid-cols-[280px_1fr] gap-10"
-          >
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-emerald">{days[day].label}</p>
-              <h3 className="mt-3 font-display text-3xl text-ivory leading-tight text-balance">
-                {days[day].title}
+        <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {days.map((day, dIdx) => (
+            <div key={dIdx} className="flex flex-col">
+              <h3 className="text-2xl font-display text-gold mb-10">
+                {formatDayTitle(day.label, day.date)}
               </h3>
-              <p className="mt-4 text-ivory/80 text-sm">
-                {days[day].blocks.length} programmed blocks · Venue: {days[day].venue}.
-              </p>
+              
+              <ul className="relative border-l border-gold/30 space-y-10 flex-1">
+                {day.blocks.map((block, bIdx) => (
+                  <li key={bIdx} className="relative pl-6 md:pl-8">
+                    {/* Circle marker */}
+                    <div className="absolute -left-[6px] top-1.5 h-3 w-3 rounded-full bg-gold" />
+                    
+                    {/* Time / Room */}
+                    <p className="text-xs md:text-sm font-semibold text-gold/80 mb-2 tracking-wide uppercase">
+                      {block.room}
+                    </p>
+                    
+                    {/* Title */}
+                    <h4 className="text-lg font-bold text-ivory leading-tight mb-2">
+                      {block.title}
+                    </h4>
+                    
+                    {/* Description / Kind */}
+                    <p className="text-sm text-ivory/60">
+                      {block.kind}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
+          ))}
+        </RevealGroup>
 
-            <ol className="relative border-l border-ivory/15">
-              {days[day].blocks.map((b, i) => (
-                <li key={i} className="relative pl-8 pb-6 last:pb-0">
-                  <span className="absolute -left-[5px] top-3 h-2.5 w-2.5 rounded-full bg-gold ring-4 ring-ivory" />
-                  <div className="bg-transparent border border-ivory/10 p-5 hover:border-ivory/30 transition">
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      <span className="text-[10px] uppercase tracking-[0.18em] text-emerald bg-emerald/10 px-2 py-0.5 rounded-sm">
-                        {b.kind}
-                      </span>
-                      <span className="text-xs text-ivory/75">{b.room}</span>
-                    </div>
-                    <p className="font-display text-xl text-ivory leading-tight">{b.title}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </motion.div>
-        </AnimatePresence>
       </div>
     </section>
   );

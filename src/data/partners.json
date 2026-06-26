@@ -3,7 +3,14 @@
     {
       "name": "Eqvento",
       "tier": "Platform Partner",
-      "logo": "/eqvento.png"
+      "logo": "/eqvento.png",
+      "description": "Official Platform Partner"
+    },
+    {
+      "name": "Interview Buddy",
+      "tier": "Learning Partner",
+      "logo": "/interview-buddy.png",
+      "description": "Providing access to state-of-the-art mock interviews for placements"
     }
   ]
 }
