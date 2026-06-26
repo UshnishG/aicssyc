@@ -5,8 +5,10 @@
     { "label": "Speakers", "href": "#speakers" },
     { "label": "Agenda", "href": "#agenda" },
     { "label": "Passes", "href": "#tickets" },
-    { "label": "Contact", "href": "#contact" },
-    { "label": "FAQ", "href": "#faq" }
+    { "label": "Sponsors", "href": "#sponsors" },
+    { "label": "Location", "href": "#location" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Contact", "href": "#contact" }
   ],
   "socials": {
     "instagram": "https://www.instagram.com/ieeecs_srmist/",
