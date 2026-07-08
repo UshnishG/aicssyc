@@ -9,6 +9,8 @@ const photoMap: Record<string, string> = {
   utkarsh: "/utkarsh.jpeg",
   shivam: "/shivam.jpeg",
   nikky: "/nikky.jpeg",
+  kapil: "/kapil.png",
+  sarun: "/sarun.png",
 };
 
 const featured = speakersData.featured;
@@ -24,7 +26,7 @@ const speakerPool = [
   ...speakersData.speakers,
 ];
 
-const displayOrder = ["eric", "andrew", "shivam", "utkarsh", "nikky"];
+const displayOrder = ["eric", "andrew", "shivam", "utkarsh", "nikky", "kapil", "sarun"];
 const allSpeakers = displayOrder
   .map((key) => speakerPool.find((s) => s.photo === key))
   .filter((s): s is (typeof speakerPool)[number] => Boolean(s));
@@ -62,7 +64,7 @@ export function Speakers() {
           </h2>
         </Reveal>
 
-        <CardGrid className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-12 md:gap-x-10" stagger={0.08}>
+        <CardGrid className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-6 gap-y-12 md:gap-x-8" stagger={0.08}>
           {allSpeakers.map((s) => (
             <motion.div
               key={s.name}
